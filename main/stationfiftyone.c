@@ -37,8 +37,70 @@
 #define OE_PIN_DEFAULT  15
 
 
+#include <stdint.h>
 
+void set_pixel(uint8_t x, uint8_t y, uint8_t r, int8_t g, int8_t b)
+{
+    /** select row */
+    gpio_set_level(OE_PIN_DEFAULT, 1);
 
+    uint8_t y24 = y;
+    if (y > 23)
+    {
+        y24 = y - 24;
+    }
+
+    gpio_set_level(A_PIN_DEFAULT, (y24 & 0b00001));
+    gpio_set_level(B_PIN_DEFAULT, (y24 & 0b00010));
+    gpio_set_level(C_PIN_DEFAULT, (y24 & 0b00100));
+    gpio_set_level(D_PIN_DEFAULT, (y24 & 0b01000));
+    gpio_set_level(E_PIN_DEFAULT, (y24 & 0b10000));
+    
+    ESP_LOGI(__FUNCTION__, "x = %d | A=%d, B=%d, C=%d, D=%d, E=%d",
+            x,
+            gpio_get_level(A_PIN_DEFAULT),
+            gpio_get_level(B_PIN_DEFAULT),
+            gpio_get_level(C_PIN_DEFAULT),
+            gpio_get_level(D_PIN_DEFAULT),
+            gpio_get_level(E_PIN_DEFAULT));
+
+    /** select column */
+    for (uint8_t column = 0; column < MATRIX_WIDTH; ++column)
+    {
+        gpio_set_level(R1_PIN_DEFAULT, 0);
+        gpio_set_level(G1_PIN_DEFAULT, 0);
+        gpio_set_level(B1_PIN_DEFAULT, 0);
+        gpio_set_level(R2_PIN_DEFAULT, 0);
+        gpio_set_level(G2_PIN_DEFAULT, 0);
+        gpio_set_level(B2_PIN_DEFAULT, 0);
+
+        gpio_set_level(OE_PIN_DEFAULT, 0);
+
+        if (column == x)
+        {
+            if (y < 24)
+            {
+                ESP_LOGI(__FUNCTION__, "Top");
+                gpio_set_level(R1_PIN_DEFAULT, r);
+                gpio_set_level(G1_PIN_DEFAULT, g);
+                gpio_set_level(B1_PIN_DEFAULT, b);
+            }
+            else 
+            {
+                ESP_LOGI(__FUNCTION__, "Bottom");
+                gpio_set_level(R2_PIN_DEFAULT, r);
+                gpio_set_level(G2_PIN_DEFAULT, g);
+                gpio_set_level(B2_PIN_DEFAULT, b);        
+            }
+        }
+       
+        gpio_set_level(CLK_PIN_DEFAULT, 1);
+        gpio_set_level(CLK_PIN_DEFAULT, 0);
+    }
+
+    gpio_set_level(LAT_PIN_DEFAULT, 1);
+    gpio_set_level(LAT_PIN_DEFAULT, 0);
+}
 
 
 void app_main()
@@ -99,53 +161,50 @@ void app_main()
     gpio_set_level(E_PIN_DEFAULT, 0);
     vTaskDelay(pdMS_TO_TICKS(1000));
 
-    int row = 0;
+    uint8_t x = 0;
+    uint8_t y = 0;
+    uint8_t c = 0;
+    uint8_t r = 0;
+    uint8_t g = 0;
+    uint8_t b = 0;
     while (1)
     {
-        // **Setze alle LEDs auf Rot**
-        gpio_set_level(R1_PIN_DEFAULT, 1);
-        gpio_set_level(G1_PIN_DEFAULT, 0);
-        gpio_set_level(B1_PIN_DEFAULT, 0);
-        gpio_set_level(R2_PIN_DEFAULT, 0);
-        gpio_set_level(G2_PIN_DEFAULT, 1);
-        gpio_set_level(B2_PIN_DEFAULT, 0);
-
-        // **Zeilenadressierung setzen**
-        gpio_set_level(A_PIN_DEFAULT, (row >> 0) & 1);
-        gpio_set_level(B_PIN_DEFAULT, (row >> 1) & 1);
-        gpio_set_level(C_PIN_DEFAULT, (row >> 2) & 1);
-        gpio_set_level(D_PIN_DEFAULT, (row >> 3) & 1);
-        gpio_set_level(E_PIN_DEFAULT, (row >> 4) & 1);
-
-        // **Debugging: Prüfen, ob A, B, C, D, E sich ändern**
-        ESP_LOGI("DEBUG", "ROW = %d | A=%d, B=%d, C=%d, D=%d, E=%d",
-            row,
-            gpio_get_level(A_PIN_DEFAULT),
-            gpio_get_level(B_PIN_DEFAULT),
-            gpio_get_level(C_PIN_DEFAULT),
-            gpio_get_level(D_PIN_DEFAULT),
-            gpio_get_level(E_PIN_DEFAULT));
-
+        switch (c) 
+        {
+            case 0:
+                r = 1;
+                g = 0;
+                b = 0;
+                break;
+            case 1:
+                r = 0;
+                g = 1;
+                b = 0;
+                break;
+            case 2:
+                r = 0;
+                g = 0;
+                b = 1;
+                break;
+        }
+        c = (c + 1) % 3;
+        ESP_LOGI(__FUNCTION__, "Color: %d", c);
+        
         // **Anzeige aktivieren**
         gpio_set_level(OE_PIN_DEFAULT, 0);
-        ESP_LOGI("DEBUG", "OE-Pin: %d", gpio_get_level(OE_PIN_DEFAULT));
+        ESP_LOGI(__FUNCTION__, "OE-Pin: %d", gpio_get_level(OE_PIN_DEFAULT));
 
-        // **Takten von CLK**
-        for (int i = 0; i < MATRIX_WIDTH; i++)
-        {
-            gpio_set_level(CLK_PIN_DEFAULT, 1);
-            gpio_set_level(CLK_PIN_DEFAULT, 0);
+        set_pixel(x, y, r, g, b);
+
+        x = (x + 1) % MATRIX_WIDTH;
+        if (x == 0)
+        { 
+            y = (y + 1) % MATRIX_HEIGHT;
         }
-        ESP_LOGI("DEBUG", "CLK-Puls gesendet.");
 
-        // **Daten übernehmen**
-        gpio_set_level(LAT_PIN_DEFAULT, 1);
-        gpio_set_level(LAT_PIN_DEFAULT, 0);
-        ESP_LOGI("DEBUG", "LAT Puls!");
+        ESP_LOGI(__FUNCTION__, "x: %d, y: %d", x, y);
 
-        // **Nächste Zeile aktivieren**
-        row = (row + 1) % SCAN_LINES;
 
-        vTaskDelay(pdMS_TO_TICKS(100)); // Verlangsamen für Debugging
+        vTaskDelay(pdMS_TO_TICKS(20)); // Verlangsamen für Debugging
     }
 }

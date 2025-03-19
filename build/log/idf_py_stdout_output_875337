@@ -1,0 +1,3783 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/stationfiftyone/build/stationfiftyone.elf /home/ms/Documents/stationfiftyone/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2025 19:09:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a154h ( 41300) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a17c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=0001a1a0 vaddr=3ffb0000 size=0236ch (  9068) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001c514 vaddr=40080000 size=03b04h ( 15108) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14984h ( 84356) map[0m
+[0;32mI (150) esp_image: segment 5: paddr=000349ac vaddr=40083b04 size=09294h ( 37524) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     stationfiftyone[0m
+[0;32mI (195) app_init: App version:      6047e59-dirty[0m
+[0;32mI (199) app_init: Compile time:     Mar 19 2025 18:43:49[0m
+[0;32mI (204) app_init: ELF file SHA256:  bc4e8f698...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (214) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (218) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (222) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (237) heap_init: At 3FFB2C30 len 0002D3D0 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008CD98 len 00013268 (76 KiB): IRAM[0m
+[0;32mI (260) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (278) main_task: Started on CPU0[0m
+[0;32mI (288) main_task: Calling app_main()[0m
+[0;32mI (288) gpio: GPIO[23]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (288) gpio: GPIO[22]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (298) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (308) gpio: GPIO[17]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (308) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (318) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (328) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (338) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (348) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (368) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (378) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (388) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) DEBUG: Start LED Test[0m
+[0;32mI (398) DEBUG: Setze A, B, C, D, E auf 1[0m
+[0;32mI (1398) DEBUG: Setze A, B, C, D, E auf 0[0m
+[0;32mI (2398) app_main: Color: 1[0m
+[0;32mI (2398) app_main: OE-Pin: 0[0m
+[0;32mI (2398) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2398) set_pixel: Top[0m
+[0;32mI (2398) app_main: x: 1, y: 0[0m
+[0;32mI (2598) app_main: Color: 2[0m
+[0;32mI (2598) app_main: OE-Pin: 0[0m
+[0;32mI (2598) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2598) set_pixel: Top[0m
+[0;32mI (2598) app_main: x: 2, y: 0[0m
+[0;32mI (2798) app_main: Color: 0[0m
+[0;32mI (2798) app_main: OE-Pin: 0[0m
+[0;32mI (2798) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2798) set_pixel: Top[0m
+[0;32mI (2798) app_main: x: 3, y: 0[0m
+[0;32mI (2998) app_main: Color: 1[0m
+[0;32mI (2998) app_main: OE-Pin: 0[0m
+[0;32mI (2998) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2998) set_pixel: Top[0m
+[0;32mI (2998) app_main: x: 4, y: 0[0m
+[0;32mI (3198) app_main: Color: 2[0m
+[0;32mI (3198) app_main: OE-Pin: 0[0m
+[0;32mI (3198) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3198) set_pixel: Top[0m
+[0;32mI (3198) app_main: x: 5, y: 0[0m
+[0;32mI (3398) app_main: Color: 0[0m
+[0;32mI (3398) app_main: OE-Pin: 0[0m
+[0;32mI (3398) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3398) set_pixel: Top[0m
+[0;32mI (3398) app_main: x: 6, y: 0[0m
+[0;32mI (3598) app_main: Color: 1[0m
+[0;32mI (3598) app_main: OE-Pin: 0[0m
+[0;32mI (3598) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3598) set_pixel: Top[0m
+[0;32mI (3598) app_main: x: 7, y: 0[0m
+[0;32mI (3798) app_main: Color: 2[0m
+[0;32mI (3798) app_main: OE-Pin: 0[0m
+[0;32mI (3798) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3798) set_pixel: Top[0m
+[0;32mI (3798) app_main: x: 8, y: 0[0m
+[0;32mI (3998) app_main: Color: 0[0m
+[0;32mI (3998) app_main: OE-Pin: 0[0m
+[0;32mI (3998) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3998) set_pixel: Top[0m
+[0;32mI (3998) app_main: x: 9, y: 0[0m
+[0;32mI (4198) app_main: Color: 1[0m
+[0;32mI (4198) app_main: OE-Pin: 0[0m
+[0;32mI (4198) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4198) set_pixel: Top[0m
+[0;32mI (4198) app_main: x: 10, y: 0[0m
+[0;32mI (4398) app_main: Color: 2[0m
+[0;32mI (4398) app_main: OE-Pin: 0[0m
+[0;32mI (4398) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4398) set_pixel: Top[0m
+[0;32mI (4398) app_main: x: 11, y: 0[0m
+[0;32mI (4598) app_main: Color: 0[0m
+[0;32mI (4598) app_main: OE-Pin: 0[0m
+[0;32mI (4598) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4598) set_pixel: Top[0m
+[0;32mI (4598) app_main: x: 12, y: 0[0m
+[0;32mI (4798) app_main: Color: 1[0m
+[0;32mI (4798) app_main: OE-Pin: 0[0m
+[0;32mI (4798) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4798) set_pixel: Top[0m
+[0;32mI (4798) app_main: x: 13, y: 0[0m
+[0;32mI (4998) app_main: Color: 2[0m
+[0;32mI (4998) app_main: OE-Pin: 0[0m
+[0;32mI (4998) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4998) set_pixel: Top[0m
+[0;32mI (4998) app_main: x: 14, y: 0[0m
+[0;32mI (5198) app_main: Color: 0[0m
+[0;32mI (5198) app_main: OE-Pin: 0[0m
+[0;32mI (5198) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5198) set_pixel: Top[0m
+[0;32mI (5198) app_main: x: 15, y: 0[0m
+[0;32mI (5398) app_main: Color: 1[0m
+[0;32mI (5398) app_main: OE-Pin: 0[0m
+[0;32mI (5398) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5398) set_pixel: Top[0m
+[0;32mI (5398) app_main: x: 16, y: 0[0m
+[0;32mI (5598) app_main: Color: 2[0m
+[0;32mI (5598) app_main: OE-Pin: 0[0m
+[0;32mI (5598) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5598) set_pixel: Top[0m
+[0;32mI (5598) app_main: x: 17, y: 0[0m
+[0;32mI (5798) app_main: Color: 0[0m
+[0;32mI (5798) app_main: OE-Pin: 0[0m
+[0;32mI (5798) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5798) set_pixel: Top[0m
+[0;32mI (5798) app_main: x: 18, y: 0[0m
+[0;32mI (5998) app_main: Color: 1[0m
+[0;32mI (5998) app_main: OE-Pin: 0[0m
+[0;32mI (5998) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5998) set_pixel: Top[0m
+[0;32mI (5998) app_main: x: 19, y: 0[0m
+[0;32mI (6198) app_main: Color: 2[0m
+[0;32mI (6198) app_main: OE-Pin: 0[0m
+[0;32mI (6198) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6198) set_pixel: Top[0m
+[0;32mI (6198) app_main: x: 20, y: 0[0m
+[0;32mI (6398) app_main: Color: 0[0m
+[0;32mI (6398) app_main: OE-Pin: 0[0m
+[0;32mI (6398) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6398) set_pixel: Top[0m
+[0;32mI (6398) app_main: x: 21, y: 0[0m
+[0;32mI (6598) app_main: Color: 1[0m
+[0;32mI (6598) app_main: OE-Pin: 0[0m
+[0;32mI (6598) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6598) set_pixel: Top[0m
+[0;32mI (6598) app_main: x: 22, y: 0[0m
+[0;32mI (6798) app_main: Color: 2[0m
+[0;32mI (6798) app_main: OE-Pin: 0[0m
+[0;32mI (6798) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6798) set_pixel: Top[0m
+[0;32mI (6798) app_main: x: 23, y: 0[0m
+[0;32mI (6998) app_main: Color: 0[0m
+[0;32mI (6998) app_main: OE-Pin: 0[0m
+[0;32mI (6998) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6998) set_pixel: Top[0m
+[0;32mI (6998) app_main: x: 24, y: 0[0m
+[0;32mI (7198) app_main: Color: 1[0m
+[0;32mI (7198) app_main: OE-Pin: 0[0m
+[0;32mI (7198) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7198) set_pixel: Top[0m
+[0;32mI (7198) app_main: x: 25, y: 0[0m
+[0;32mI (7398) app_main: Color: 2[0m
+[0;32mI (7398) app_main: OE-Pin: 0[0m
+[0;32mI (7398) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7398) set_pixel: Top[0m
+[0;32mI (7398) app_main: x: 26, y: 0[0m
+[0;32mI (7598) app_main: Color: 0[0m
+[0;32mI (7598) app_main: OE-Pin: 0[0m
+[0;32mI (7598) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7598) set_pixel: Top[0m
+[0;32mI (7598) app_main: x: 27, y: 0[0m
+[0;32mI (7798) app_main: Color: 1[0m
+[0;32mI (7798) app_main: OE-Pin: 0[0m
+[0;32mI (7798) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7798) set_pixel: Top[0m
+[0;32mI (7798) app_main: x: 28, y: 0[0m
+[0;32mI (7998) app_main: Color: 2[0m
+[0;32mI (7998) app_main: OE-Pin: 0[0m
+[0;32mI (7998) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7998) set_pixel: Top[0m
+[0;32mI (7998) app_main: x: 29, y: 0[0m
+[0;32mI (8198) app_main: Color: 0[0m
+[0;32mI (8198) app_main: OE-Pin: 0[0m
+[0;32mI (8198) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8198) set_pixel: Top[0m
+[0;32mI (8198) app_main: x: 30, y: 0[0m
+[0;32mI (8398) app_main: Color: 1[0m
+[0;32mI (8398) app_main: OE-Pin: 0[0m
+[0;32mI (8398) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8398) set_pixel: Top[0m
+[0;32mI (8398) app_main: x: 31, y: 0[0m
+[0;32mI (8598) app_main: Color: 2[0m
+[0;32mI (8598) app_main: OE-Pin: 0[0m
+[0;32mI (8598) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8598) set_pixel: Top[0m
+[0;32mI (8598) app_main: x: 32, y: 0[0m
+[0;32mI (8798) app_main: Color: 0[0m
+[0;32mI (8798) app_main: OE-Pin: 0[0m
+[0;32mI (8798) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8798) set_pixel: Top[0m
+[0;32mI (8798) app_main: x: 33, y: 0[0m
+[0;32mI (8998) app_main: Color: 1[0m
+[0;32mI (8998) app_main: OE-Pin: 0[0m
+[0;32mI (8998) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8998) set_pixel: Top[0m
+[0;32mI (8998) app_main: x: 34, y: 0[0m
+[0;32mI (9198) app_main: Color: 2[0m
+[0;32mI (9198) app_main: OE-Pin: 0[0m
+[0;32mI (9198) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9198) set_pixel: Top[0m
+[0;32mI (9198) app_main: x: 35, y: 0[0m
+[0;32mI (9398) app_main: Color: 0[0m
+[0;32mI (9398) app_main: OE-Pin: 0[0m
+[0;32mI (9398) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9398) set_pixel: Top[0m
+[0;32mI (9398) app_main: x: 36, y: 0[0m
+[0;32mI (9598) app_main: Color: 1[0m
+[0;32mI (9598) app_main: OE-Pin: 0[0m
+[0;32mI (9598) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9598) set_pixel: Top[0m
+[0;32mI (9598) app_main: x: 37, y: 0[0m
+[0;32mI (9798) app_main: Color: 2[0m
+[0;32mI (9798) app_main: OE-Pin: 0[0m
+[0;32mI (9798) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9798) set_pixel: Top[0m
+[0;32mI (9798) app_main: x: 38, y: 0[0m
+[0;32mI (9998) app_main: Color: 0[0m
+[0;32mI (9998) app_main: OE-Pin: 0[0m
+[0;32mI (9998) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9998) set_pixel: Top[0m
+[0;32mI (9998) app_main: x: 39, y: 0[0m
+[0;32mI (10198) app_main: Color: 1[0m
+[0;32mI (10198) app_main: OE-Pin: 0[0m
+[0;32mI (10198) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10198) set_pixel: Top[0m
+[0;32mI (10198) app_main: x: 40, y: 0[0m
+[0;32mI (10398) app_main: Color: 2[0m
+[0;32mI (10398) app_main: OE-Pin: 0[0m
+[0;32mI (10398) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10398) set_pixel: Top[0m
+[0;32mI (10398) app_main: x: 41, y: 0[0m
+[0;32mI (10598) app_main: Color: 0[0m
+[0;32mI (10598) app_main: OE-Pin: 0[0m
+[0;32mI (10598) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10598) set_pixel: Top[0m
+[0;32mI (10598) app_main: x: 42, y: 0[0m
+[0;32mI (10798) app_main: Color: 1[0m
+[0;32mI (10798) app_main: OE-Pin: 0[0m
+[0;32mI (10798) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10798) set_pixel: Top[0m
+[0;32mI (10798) app_main: x: 43, y: 0[0m
+[0;32mI (10998) app_main: Color: 2[0m
+[0;32mI (10998) app_main: OE-Pin: 0[0m
+[0;32mI (10998) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10998) set_pixel: Top[0m
+[0;32mI (10998) app_main: x: 44, y: 0[0m
+[0;32mI (11198) app_main: Color: 0[0m
+[0;32mI (11198) app_main: OE-Pin: 0[0m
+[0;32mI (11198) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11198) set_pixel: Top[0m
+[0;32mI (11198) app_main: x: 45, y: 0[0m
+[0;32mI (11398) app_main: Color: 1[0m
+[0;32mI (11398) app_main: OE-Pin: 0[0m
+[0;32mI (11398) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11398) set_pixel: Top[0m
+[0;32mI (11398) app_main: x: 46, y: 0[0m
+[0;32mI (11598) app_main: Color: 2[0m
+[0;32mI (11598) app_main: OE-Pin: 0[0m
+[0;32mI (11598) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11598) set_pixel: Top[0m
+[0;32mI (11598) app_main: x: 47, y: 0[0m
+[0;32mI (11798) app_main: Color: 0[0m
+[0;32mI (11798) app_main: OE-Pin: 0[0m
+[0;32mI (11798) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11798) set_pixel: Top[0m
+[0;32mI (11798) app_main: x: 48, y: 0[0m
+[0;32mI (11998) app_main: Color: 1[0m
+[0;32mI (11998) app_main: OE-Pin: 0[0m
+[0;32mI (11998) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11998) set_pixel: Top[0m
+[0;32mI (11998) app_main: x: 49, y: 0[0m
+[0;32mI (12198) app_main: Color: 2[0m
+[0;32mI (12198) app_main: OE-Pin: 0[0m
+[0;32mI (12198) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12198) set_pixel: Top[0m
+[0;32mI (12198) app_main: x: 50, y: 0[0m
+[0;32mI (12398) app_main: Color: 0[0m
+[0;32mI (12398) app_main: OE-Pin: 0[0m
+[0;32mI (12398) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12398) set_pixel: Top[0m
+[0;32mI (12398) app_main: x: 51, y: 0[0m
+[0;32mI (12598) app_main: Color: 1[0m
+[0;32mI (12598) app_main: OE-Pin: 0[0m
+[0;32mI (12598) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12598) set_pixel: Top[0m
+[0;32mI (12598) app_main: x: 52, y: 0[0m
+[0;32mI (12798) app_main: Color: 2[0m
+[0;32mI (12798) app_main: OE-Pin: 0[0m
+[0;32mI (12798) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12798) set_pixel: Top[0m
+[0;32mI (12798) app_main: x: 53, y: 0[0m
+[0;32mI (12998) app_main: Color: 0[0m
+[0;32mI (12998) app_main: OE-Pin: 0[0m
+[0;32mI (12998) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12998) set_pixel: Top[0m
+[0;32mI (12998) app_main: x: 54, y: 0[0m
+[0;32mI (13198) app_main: Color: 1[0m
+[0;32mI (13198) app_main: OE-Pin: 0[0m
+[0;32mI (13198) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13198) set_pixel: Top[0m
+[0;32mI (13198) app_main: x: 55, y: 0[0m
+[0;32mI (13398) app_main: Color: 2[0m
+[0;32mI (13398) app_main: OE-Pin: 0[0m
+[0;32mI (13398) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13398) set_pixel: Top[0m
+[0;32mI (13398) app_main: x: 56, y: 0[0m
+[0;32mI (13598) app_main: Color: 0[0m
+[0;32mI (13598) app_main: OE-Pin: 0[0m
+[0;32mI (13598) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13598) set_pixel: Top[0m
+[0;32mI (13598) app_main: x: 57, y: 0[0m
+[0;32mI (13798) app_main: Color: 1[0m
+[0;32mI (13798) app_main: OE-Pin: 0[0m
+[0;32mI (13798) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13798) set_pixel: Top[0m
+[0;32mI (13798) app_main: x: 58, y: 0[0m
+[0;32mI (13998) app_main: Color: 2[0m
+[0;32mI (13998) app_main: OE-Pin: 0[0m
+[0;32mI (13998) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13998) set_pixel: Top[0m
+[0;32mI (13998) app_main: x: 59, y: 0[0m
+[0;32mI (14198) app_main: Color: 0[0m
+[0;32mI (14198) app_main: OE-Pin: 0[0m
+[0;32mI (14198) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14198) set_pixel: Top[0m
+[0;32mI (14198) app_main: x: 60, y: 0[0m
+[0;32mI (14398) app_main: Color: 1[0m
+[0;32mI (14398) app_main: OE-Pin: 0[0m
+[0;32mI (14398) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14398) set_pixel: Top[0m
+[0;32mI (14398) app_main: x: 61, y: 0[0m
+[0;32mI (14598) app_main: Color: 2[0m
+[0;32mI (14598) app_main: OE-Pin: 0[0m
+[0;32mI (14598) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14598) set_pixel: Top[0m
+[0;32mI (14598) app_main: x: 62, y: 0[0m
+[0;32mI (14798) app_main: Color: 0[0m
+[0;32mI (14798) app_main: OE-Pin: 0[0m
+[0;32mI (14798) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14798) set_pixel: Top[0m
+[0;32mI (14798) app_main: x: 63, y: 0[0m
+[0;32mI (14998) app_main: Color: 1[0m
+[0;32mI (14998) app_main: OE-Pin: 0[0m
+[0;32mI (14998) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14998) set_pixel: Top[0m
+[0;32mI (14998) app_main: x: 64, y: 0[0m
+[0;32mI (15198) app_main: Color: 2[0m
+[0;32mI (15198) app_main: OE-Pin: 0[0m
+[0;32mI (15198) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15198) set_pixel: Top[0m
+[0;32mI (15198) app_main: x: 65, y: 0[0m
+[0;32mI (15398) app_main: Color: 0[0m
+[0;32mI (15398) app_main: OE-Pin: 0[0m
+[0;32mI (15398) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15398) set_pixel: Top[0m
+[0;32mI (15398) app_main: x: 66, y: 0[0m
+[0;32mI (15598) app_main: Color: 1[0m
+[0;32mI (15598) app_main: OE-Pin: 0[0m
+[0;32mI (15598) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15598) set_pixel: Top[0m
+[0;32mI (15598) app_main: x: 67, y: 0[0m
+[0;32mI (15798) app_main: Color: 2[0m
+[0;32mI (15798) app_main: OE-Pin: 0[0m
+[0;32mI (15798) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15798) set_pixel: Top[0m
+[0;32mI (15798) app_main: x: 68, y: 0[0m
+[0;32mI (15998) app_main: Color: 0[0m
+[0;32mI (15998) app_main: OE-Pin: 0[0m
+[0;32mI (15998) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15998) set_pixel: Top[0m
+[0;32mI (15998) app_main: x: 69, y: 0[0m
+[0;32mI (16198) app_main: Color: 1[0m
+[0;32mI (16198) app_main: OE-Pin: 0[0m
+[0;32mI (16198) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16198) set_pixel: Top[0m
+[0;32mI (16198) app_main: x: 70, y: 0[0m
+[0;32mI (16398) app_main: Color: 2[0m
+[0;32mI (16398) app_main: OE-Pin: 0[0m
+[0;32mI (16398) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16398) set_pixel: Top[0m
+[0;32mI (16398) app_main: x: 71, y: 0[0m
+[0;32mI (16598) app_main: Color: 0[0m
+[0;32mI (16598) app_main: OE-Pin: 0[0m
+[0;32mI (16598) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16598) set_pixel: Top[0m
+[0;32mI (16598) app_main: x: 72, y: 0[0m
+[0;32mI (16798) app_main: Color: 1[0m
+[0;32mI (16798) app_main: OE-Pin: 0[0m
+[0;32mI (16798) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16798) set_pixel: Top[0m
+[0;32mI (16798) app_main: x: 73, y: 0[0m
+[0;32mI (16998) app_main: Color: 2[0m
+[0;32mI (16998) app_main: OE-Pin: 0[0m
+[0;32mI (16998) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16998) set_pixel: Top[0m
+[0;32mI (16998) app_main: x: 74, y: 0[0m
+[0;32mI (17198) app_main: Color: 0[0m
+[0;32mI (17198) app_main: OE-Pin: 0[0m
+[0;32mI (17198) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17198) set_pixel: Top[0m
+[0;32mI (17198) app_main: x: 75, y: 0[0m
+[0;32mI (17398) app_main: Color: 1[0m
+[0;32mI (17398) app_main: OE-Pin: 0[0m
+[0;32mI (17398) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17398) set_pixel: Top[0m
+[0;32mI (17398) app_main: x: 76, y: 0[0m
+[0;32mI (17598) app_main: Color: 2[0m
+[0;32mI (17598) app_main: OE-Pin: 0[0m
+[0;32mI (17598) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17598) set_pixel: Top[0m
+[0;32mI (17598) app_main: x: 77, y: 0[0m
+[0;32mI (17798) app_main: Color: 0[0m
+[0;32mI (17798) app_main: OE-Pin: 0[0m
+[0;32mI (17798) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17798) set_pixel: Top[0m
+[0;32mI (17798) app_main: x: 78, y: 0[0m
+[0;32mI (17998) app_main: Color: 1[0m
+[0;32mI (17998) app_main: OE-Pin: 0[0m
+[0;32mI (17998) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17998) set_pixel: Top[0m
+[0;32mI (17998) app_main: x: 79, y: 0[0m
+[0;32mI (18198) app_main: Color: 2[0m
+[0;32mI (18198) app_main: OE-Pin: 0[0m
+[0;32mI (18198) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18198) set_pixel: Top[0m
+[0;32mI (18198) app_main: x: 80, y: 0[0m
+[0;32mI (18398) app_main: Color: 0[0m
+[0;32mI (18398) app_main: OE-Pin: 0[0m
+[0;32mI (18398) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18398) set_pixel: Top[0m
+[0;32mI (18398) app_main: x: 81, y: 0[0m
+[0;32mI (18598) app_main: Color: 1[0m
+[0;32mI (18598) app_main: OE-Pin: 0[0m
+[0;32mI (18598) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18598) set_pixel: Top[0m
+[0;32mI (18598) app_main: x: 82, y: 0[0m
+[0;32mI (18798) app_main: Color: 2[0m
+[0;32mI (18798) app_main: OE-Pin: 0[0m
+[0;32mI (18798) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18798) set_pixel: Top[0m
+[0;32mI (18798) app_main: x: 83, y: 0[0m
+[0;32mI (18998) app_main: Color: 0[0m
+[0;32mI (18998) app_main: OE-Pin: 0[0m
+[0;32mI (18998) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18998) set_pixel: Top[0m
+[0;32mI (18998) app_main: x: 84, y: 0[0m
+[0;32mI (19198) app_main: Color: 1[0m
+[0;32mI (19198) app_main: OE-Pin: 0[0m
+[0;32mI (19198) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19198) set_pixel: Top[0m
+[0;32mI (19198) app_main: x: 85, y: 0[0m
+[0;32mI (19398) app_main: Color: 2[0m
+[0;32mI (19398) app_main: OE-Pin: 0[0m
+[0;32mI (19398) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19398) set_pixel: Top[0m
+[0;32mI (19398) app_main: x: 86, y: 0[0m
+[0;32mI (19598) app_main: Color: 0[0m
+[0;32mI (19598) app_main: OE-Pin: 0[0m
+[0;32mI (19598) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19598) set_pixel: Top[0m
+[0;32mI (19598) app_main: x: 87, y: 0[0m
+[0;32mI (19798) app_main: Color: 1[0m
+[0;32mI (19798) app_main: OE-Pin: 0[0m
+[0;32mI (19798) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19798) set_pixel: Top[0m
+[0;32mI (19798) app_main: x: 88, y: 0[0m
+[0;32mI (19998) app_main: Color: 2[0m
+[0;32mI (19998) app_main: OE-Pin: 0[0m
+[0;32mI (19998) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19998) set_pixel: Top[0m
+[0;32mI (19998) app_main: x: 89, y: 0[0m
+[0;32mI (20198) app_main: Color: 0[0m
+[0;32mI (20198) app_main: OE-Pin: 0[0m
+[0;32mI (20198) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20198) set_pixel: Top[0m
+[0;32mI (20198) app_main: x: 90, y: 0[0m
+[0;32mI (20398) app_main: Color: 1[0m
+[0;32mI (20398) app_main: OE-Pin: 0[0m
+[0;32mI (20398) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20398) set_pixel: Top[0m
+[0;32mI (20398) app_main: x: 91, y: 0[0m
+[0;32mI (20598) app_main: Color: 2[0m
+[0;32mI (20598) app_main: OE-Pin: 0[0m
+[0;32mI (20598) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20598) set_pixel: Top[0m
+[0;32mI (20598) app_main: x: 92, y: 0[0m
+[0;32mI (20798) app_main: Color: 0[0m
+[0;32mI (20798) app_main: OE-Pin: 0[0m
+[0;32mI (20798) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20798) set_pixel: Top[0m
+[0;32mI (20798) app_main: x: 93, y: 0[0m
+[0;32mI (20998) app_main: Color: 1[0m
+[0;32mI (20998) app_main: OE-Pin: 0[0m
+[0;32mI (20998) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20998) set_pixel: Top[0m
+[0;32mI (20998) app_main: x: 94, y: 0[0m
+[0;32mI (21198) app_main: Color: 2[0m
+[0;32mI (21198) app_main: OE-Pin: 0[0m
+[0;32mI (21198) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21198) set_pixel: Top[0m
+[0;32mI (21198) app_main: x: 95, y: 0[0m
+[0;32mI (21398) app_main: Color: 0[0m
+[0;32mI (21398) app_main: OE-Pin: 0[0m
+[0;32mI (21398) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21398) set_pixel: Top[0m
+[0;32mI (21398) app_main: x: 0, y: 0[0m
+[0;32mI (21598) app_main: Color: 1[0m
+[0;32mI (21598) app_main: OE-Pin: 0[0m
+[0;32mI (21598) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21598) set_pixel: Top[0m
+[0;32mI (21598) app_main: x: 1, y: 0[0m
+[0;32mI (21798) app_main: Color: 2[0m
+[0;32mI (21798) app_main: OE-Pin: 0[0m
+[0;32mI (21798) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21798) set_pixel: Top[0m
+[0;32mI (21798) app_main: x: 2, y: 0[0m
+[0;32mI (21998) app_main: Color: 0[0m
+[0;32mI (21998) app_main: OE-Pin: 0[0m
+[0;32mI (21998) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21998) set_pixel: Top[0m
+[0;32mI (21998) app_main: x: 3, y: 0[0m
+[0;32mI (22198) app_main: Color: 1[0m
+[0;32mI (22198) app_main: OE-Pin: 0[0m
+[0;32mI (22198) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22198) set_pixel: Top[0m
+[0;32mI (22198) app_main: x: 4, y: 0[0m
+[0;32mI (22398) app_main: Color: 2[0m
+[0;32mI (22398) app_main: OE-Pin: 0[0m
+[0;32mI (22398) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22398) set_pixel: Top[0m
+[0;32mI (22398) app_main: x: 5, y: 0[0m
+[0;32mI (22598) app_main: Color: 0[0m
+[0;32mI (22598) app_main: OE-Pin: 0[0m
+[0;32mI (22598) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22598) set_pixel: Top[0m
+[0;32mI (22598) app_main: x: 6, y: 0[0m
+[0;32mI (22798) app_main: Color: 1[0m
+[0;32mI (22798) app_main: OE-Pin: 0[0m
+[0;32mI (22798) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22798) set_pixel: Top[0m
+[0;32mI (22798) app_main: x: 7, y: 0[0m
+[0;32mI (22998) app_main: Color: 2[0m
+[0;32mI (22998) app_main: OE-Pin: 0[0m
+[0;32mI (22998) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22998) set_pixel: Top[0m
+[0;32mI (22998) app_main: x: 8, y: 0[0m
+[0;32mI (23198) app_main: Color: 0[0m
+[0;32mI (23198) app_main: OE-Pin: 0[0m
+[0;32mI (23198) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23198) set_pixel: Top[0m
+[0;32mI (23198) app_main: x: 9, y: 0[0m
+[0;32mI (23398) app_main: Color: 1[0m
+[0;32mI (23398) app_main: OE-Pin: 0[0m
+[0;32mI (23398) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23398) set_pixel: Top[0m
+[0;32mI (23398) app_main: x: 10, y: 0[0m
+[0;32mI (23598) app_main: Color: 2[0m
+[0;32mI (23598) app_main: OE-Pin: 0[0m
+[0;32mI (23598) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23598) set_pixel: Top[0m
+[0;32mI (23598) app_main: x: 11, y: 0[0m
+[0;32mI (23798) app_main: Color: 0[0m
+[0;32mI (23798) app_main: OE-Pin: 0[0m
+[0;32mI (23798) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23798) set_pixel: Top[0m
+[0;32mI (23798) app_main: x: 12, y: 0[0m
+[0;32mI (23998) app_main: Color: 1[0m
+[0;32mI (23998) app_main: OE-Pin: 0[0m
+[0;32mI (23998) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23998) set_pixel: Top[0m
+[0;32mI (23998) app_main: x: 13, y: 0[0m
+[0;32mI (24198) app_main: Color: 2[0m
+[0;32mI (24198) app_main: OE-Pin: 0[0m
+[0;32mI (24198) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24198) set_pixel: Top[0m
+[0;32mI (24198) app_main: x: 14, y: 0[0m
+[0;32mI (24398) app_main: Color: 0[0m
+[0;32mI (24398) app_main: OE-Pin: 0[0m
+[0;32mI (24398) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24398) set_pixel: Top[0m
+[0;32mI (24398) app_main: x: 15, y: 0[0m
+[0;32mI (24598) app_main: Color: 1[0m
+[0;32mI (24598) app_main: OE-Pin: 0[0m
+[0;32mI (24598) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24598) set_pixel: Top[0m
+[0;32mI (24598) app_main: x: 16, y: 0[0m
+[0;32mI (24798) app_main: Color: 2[0m
+[0;32mI (24798) app_main: OE-Pin: 0[0m
+[0;32mI (24798) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24798) set_pixel: Top[0m
+[0;32mI (24798) app_main: x: 17, y: 0[0m
+[0;32mI (24998) app_main: Color: 0[0m
+[0;32mI (24998) app_main: OE-Pin: 0[0m
+[0;32mI (24998) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24998) set_pixel: Top[0m
+[0;32mI (24998) app_main: x: 18, y: 0[0m
+[0;32mI (25198) app_main: Color: 1[0m
+[0;32mI (25198) app_main: OE-Pin: 0[0m
+[0;32mI (25198) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25198) set_pixel: Top[0m
+[0;32mI (25198) app_main: x: 19, y: 0[0m
+[0;32mI (25398) app_main: Color: 2[0m
+[0;32mI (25398) app_main: OE-Pin: 0[0m
+[0;32mI (25398) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25398) set_pixel: Top[0m
+[0;32mI (25398) app_main: x: 20, y: 0[0m
+[0;32mI (25598) app_main: Color: 0[0m
+[0;32mI (25598) app_main: OE-Pin: 0[0m
+[0;32mI (25598) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25598) set_pixel: Top[0m
+[0;32mI (25598) app_main: x: 21, y: 0[0m
+[0;32mI (25798) app_main: Color: 1[0m
+[0;32mI (25798) app_main: OE-Pin: 0[0m
+[0;32mI (25798) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25798) set_pixel: Top[0m
+[0;32mI (25798) app_main: x: 22, y: 0[0m
+[0;32mI (25998) app_main: Color: 2[0m
+[0;32mI (25998) app_main: OE-Pin: 0[0m
+[0;32mI (25998) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25998) set_pixel: Top[0m
+[0;32mI (25998) app_main: x: 23, y: 0[0m
+[0;32mI (26198) app_main: Color: 0[0m
+[0;32mI (26198) app_main: OE-Pin: 0[0m
+[0;32mI (26198) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26198) set_pixel: Top[0m
+[0;32mI (26198) app_main: x: 24, y: 0[0m
+[0;32mI (26398) app_main: Color: 1[0m
+[0;32mI (26398) app_main: OE-Pin: 0[0m
+[0;32mI (26398) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26398) set_pixel: Top[0m
+[0;32mI (26398) app_main: x: 25, y: 0[0m
+[0;32mI (26598) app_main: Color: 2[0m
+[0;32mI (26598) app_main: OE-Pin: 0[0m
+[0;32mI (26598) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26598) set_pixel: Top[0m
+[0;32mI (26598) app_main: x: 26, y: 0[0m
+[0;32mI (26798) app_main: Color: 0[0m
+[0;32mI (26798) app_main: OE-Pin: 0[0m
+[0;32mI (26798) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26798) set_pixel: Top[0m
+[0;32mI (26798) app_main: x: 27, y: 0[0m
+[0;32mI (26998) app_main: Color: 1[0m
+[0;32mI (26998) app_main: OE-Pin: 0[0m
+[0;32mI (26998) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26998) set_pixel: Top[0m
+[0;32mI (26998) app_main: x: 28, y: 0[0m
+[0;32mI (27198) app_main: Color: 2[0m
+[0;32mI (27198) app_main: OE-Pin: 0[0m
+[0;32mI (27198) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27198) set_pixel: Top[0m
+[0;32mI (27198) app_main: x: 29, y: 0[0m
+[0;32mI (27398) app_main: Color: 0[0m
+[0;32mI (27398) app_main: OE-Pin: 0[0m
+[0;32mI (27398) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27398) set_pixel: Top[0m
+[0;32mI (27398) app_main: x: 30, y: 0[0m
+[0;32mI (27598) app_main: Color: 1[0m
+[0;32mI (27598) app_main: OE-Pin: 0[0m
+[0;32mI (27598) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27598) set_pixel: Top[0m
+[0;32mI (27598) app_main: x: 31, y: 0[0m
+[0;32mI (27798) app_main: Color: 2[0m
+[0;32mI (27798) app_main: OE-Pin: 0[0m
+[0;32mI (27798) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27798) set_pixel: Top[0m
+[0;32mI (27798) app_main: x: 32, y: 0[0m
+[0;32mI (27998) app_main: Color: 0[0m
+[0;32mI (27998) app_main: OE-Pin: 0[0m
+[0;32mI (27998) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27998) set_pixel: Top[0m
+[0;32mI (27998) app_main: x: 33, y: 0[0m
+[0;32mI (28198) app_main: Color: 1[0m
+[0;32mI (28198) app_main: OE-Pin: 0[0m
+[0;32mI (28198) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28198) set_pixel: Top[0m
+[0;32mI (28198) app_main: x: 34, y: 0[0m
+[0;32mI (28398) app_main: Color: 2[0m
+[0;32mI (28398) app_main: OE-Pin: 0[0m
+[0;32mI (28398) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28398) set_pixel: Top[0m
+[0;32mI (28398) app_main: x: 35, y: 0[0m
+[0;32mI (28598) app_main: Color: 0[0m
+[0;32mI (28598) app_main: OE-Pin: 0[0m
+[0;32mI (28598) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28598) set_pixel: Top[0m
+[0;32mI (28598) app_main: x: 36, y: 0[0m
+[0;32mI (28798) app_main: Color: 1[0m
+[0;32mI (28798) app_main: OE-Pin: 0[0m
+[0;32mI (28798) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28798) set_pixel: Top[0m
+[0;32mI (28798) app_main: x: 37, y: 0[0m
+[0;32mI (28998) app_main: Color: 2[0m
+[0;32mI (28998) app_main: OE-Pin: 0[0m
+[0;32mI (28998) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28998) set_pixel: Top[0m
+[0;32mI (28998) app_main: x: 38, y: 0[0m
+[0;32mI (29198) app_main: Color: 0[0m
+[0;32mI (29198) app_main: OE-Pin: 0[0m
+[0;32mI (29198) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29198) set_pixel: Top[0m
+[0;32mI (29198) app_main: x: 39, y: 0[0m
+[0;32mI (29398) app_main: Color: 1[0m
+[0;32mI (29398) app_main: OE-Pin: 0[0m
+[0;32mI (29398) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29398) set_pixel: Top[0m
+[0;32mI (29398) app_main: x: 40, y: 0[0m
+[0;32mI (29598) app_main: Color: 2[0m
+[0;32mI (29598) app_main: OE-Pin: 0[0m
+[0;32mI (29598) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29598) set_pixel: Top[0m
+[0;32mI (29598) app_main: x: 41, y: 0[0m
+[0;32mI (29798) app_main: Color: 0[0m
+[0;32mI (29798) app_main: OE-Pin: 0[0m
+[0;32mI (29798) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29798) set_pixel: Top[0m
+[0;32mI (29798) app_main: x: 42, y: 0[0m
+[0;32mI (29998) app_main: Color: 1[0m
+[0;32mI (29998) app_main: OE-Pin: 0[0m
+[0;32mI (29998) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29998) set_pixel: Top[0m
+[0;32mI (29998) app_main: x: 43, y: 0[0m
+[0;32mI (30198) app_main: Color: 2[0m
+[0;32mI (30198) app_main: OE-Pin: 0[0m
+[0;32mI (30198) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30198) set_pixel: Top[0m
+[0;32mI (30198) app_main: x: 44, y: 0[0m
+[0;32mI (30398) app_main: Color: 0[0m
+[0;32mI (30398) app_main: OE-Pin: 0[0m
+[0;32mI (30398) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30398) set_pixel: Top[0m
+[0;32mI (30398) app_main: x: 45, y: 0[0m
+[0;32mI (30598) app_main: Color: 1[0m
+[0;32mI (30598) app_main: OE-Pin: 0[0m
+[0;32mI (30598) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30598) set_pixel: Top[0m
+[0;32mI (30598) app_main: x: 46, y: 0[0m
+[0;32mI (30798) app_main: Color: 2[0m
+[0;32mI (30798) app_main: OE-Pin: 0[0m
+[0;32mI (30798) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30798) set_pixel: Top[0m
+[0;32mI (30798) app_main: x: 47, y: 0[0m
+[0;32mI (30998) app_main: Color: 0[0m
+[0;32mI (30998) app_main: OE-Pin: 0[0m
+[0;32mI (30998) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30998) set_pixel: Top[0m
+[0;32mI (30998) app_main: x: 48, y: 0[0m
+[0;32mI (31198) app_main: Color: 1[0m
+[0;32mI (31198) app_main: OE-Pin: 0[0m
+[0;32mI (31198) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31198) set_pixel: Top[0m
+[0;32mI (31198) app_main: x: 49, y: 0[0m
+[0;32mI (31398) app_main: Color: 2[0m
+[0;32mI (31398) app_main: OE-Pin: 0[0m
+[0;32mI (31398) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31398) set_pixel: Top[0m
+[0;32mI (31398) app_main: x: 50, y: 0[0m
+[0;32mI (31598) app_main: Color: 0[0m
+[0;32mI (31598) app_main: OE-Pin: 0[0m
+[0;32mI (31598) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31598) set_pixel: Top[0m
+[0;32mI (31598) app_main: x: 51, y: 0[0m
+[0;32mI (31798) app_main: Color: 1[0m
+[0;32mI (31798) app_main: OE-Pin: 0[0m
+[0;32mI (31798) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31798) set_pixel: Top[0m
+[0;32mI (31798) app_main: x: 52, y: 0[0m
+[0;32mI (31998) app_main: Color: 2[0m
+[0;32mI (31998) app_main: OE-Pin: 0[0m
+[0;32mI (31998) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31998) set_pixel: Top[0m
+[0;32mI (31998) app_main: x: 53, y: 0[0m
+[0;32mI (32198) app_main: Color: 0[0m
+[0;32mI (32198) app_main: OE-Pin: 0[0m
+[0;32mI (32198) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32198) set_pixel: Top[0m
+[0;32mI (32198) app_main: x: 54, y: 0[0m
+[0;32mI (32398) app_main: Color: 1[0m
+[0;32mI (32398) app_main: OE-Pin: 0[0m
+[0;32mI (32398) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32398) set_pixel: Top[0m
+[0;32mI (32398) app_main: x: 55, y: 0[0m
+[0;32mI (32598) app_main: Color: 2[0m
+[0;32mI (32598) app_main: OE-Pin: 0[0m
+[0;32mI (32598) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32598) set_pixel: Top[0m
+[0;32mI (32598) app_main: x: 56, y: 0[0m
+[0;32mI (32798) app_main: Color: 0[0m
+[0;32mI (32798) app_main: OE-Pin: 0[0m
+[0;32mI (32798) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32798) set_pixel: Top[0m
+[0;32mI (32798) app_main: x: 57, y: 0[0m
+[0;32mI (32998) app_main: Color: 1[0m
+[0;32mI (32998) app_main: OE-Pin: 0[0m
+[0;32mI (32998) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32998) set_pixel: Top[0m
+[0;32mI (32998) app_main: x: 58, y: 0[0m
+[0;32mI (33198) app_main: Color: 2[0m
+[0;32mI (33198) app_main: OE-Pin: 0[0m
+[0;32mI (33198) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33198) set_pixel: Top[0m
+[0;32mI (33198) app_main: x: 59, y: 0[0m
+[0;32mI (33398) app_main: Color: 0[0m
+[0;32mI (33398) app_main: OE-Pin: 0[0m
+[0;32mI (33398) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33398) set_pixel: Top[0m
+[0;32mI (33398) app_main: x: 60, y: 0[0m
+[0;32mI (33598) app_main: Color: 1[0m
+[0;32mI (33598) app_main: OE-Pin: 0[0m
+[0;32mI (33598) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33598) set_pixel: Top[0m
+[0;32mI (33598) app_main: x: 61, y: 0[0m
+[0;32mI (33798) app_main: Color: 2[0m
+[0;32mI (33798) app_main: OE-Pin: 0[0m
+[0;32mI (33798) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33798) set_pixel: Top[0m
+[0;32mI (33798) app_main: x: 62, y: 0[0m
+[0;32mI (33998) app_main: Color: 0[0m
+[0;32mI (33998) app_main: OE-Pin: 0[0m
+[0;32mI (33998) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33998) set_pixel: Top[0m
+[0;32mI (33998) app_main: x: 63, y: 0[0m
+[0;32mI (34198) app_main: Color: 1[0m
+[0;32mI (34198) app_main: OE-Pin: 0[0m
+[0;32mI (34198) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34198) set_pixel: Top[0m
+[0;32mI (34198) app_main: x: 64, y: 0[0m
+[0;32mI (34398) app_main: Color: 2[0m
+[0;32mI (34398) app_main: OE-Pin: 0[0m
+[0;32mI (34398) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34398) set_pixel: Top[0m
+[0;32mI (34398) app_main: x: 65, y: 0[0m
+[0;32mI (34598) app_main: Color: 0[0m
+[0;32mI (34598) app_main: OE-Pin: 0[0m
+[0;32mI (34598) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34598) set_pixel: Top[0m
+[0;32mI (34598) app_main: x: 66, y: 0[0m
+[0;32mI (34798) app_main: Color: 1[0m
+[0;32mI (34798) app_main: OE-Pin: 0[0m
+[0;32mI (34798) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34798) set_pixel: Top[0m
+[0;32mI (34798) app_main: x: 67, y: 0[0m
+[0;32mI (34998) app_main: Color: 2[0m
+[0;32mI (34998) app_main: OE-Pin: 0[0m
+[0;32mI (34998) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34998) set_pixel: Top[0m
+[0;32mI (34998) app_main: x: 68, y: 0[0m
+[0;32mI (35198) app_main: Color: 0[0m
+[0;32mI (35198) app_main: OE-Pin: 0[0m
+[0;32mI (35198) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35198) set_pixel: Top[0m
+[0;32mI (35198) app_main: x: 69, y: 0[0m
+[0;32mI (35398) app_main: Color: 1[0m
+[0;32mI (35398) app_main: OE-Pin: 0[0m
+[0;32mI (35398) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35398) set_pixel: Top[0m
+[0;32mI (35398) app_main: x: 70, y: 0[0m
+[0;32mI (35598) app_main: Color: 2[0m
+[0;32mI (35598) app_main: OE-Pin: 0[0m
+[0;32mI (35598) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35598) set_pixel: Top[0m
+[0;32mI (35598) app_main: x: 71, y: 0[0m
+[0;32mI (35798) app_main: Color: 0[0m
+[0;32mI (35798) app_main: OE-Pin: 0[0m
+[0;32mI (35798) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35798) set_pixel: Top[0m
+[0;32mI (35798) app_main: x: 72, y: 0[0m
+[0;32mI (35998) app_main: Color: 1[0m
+[0;32mI (35998) app_main: OE-Pin: 0[0m
+[0;32mI (35998) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35998) set_pixel: Top[0m
+[0;32mI (35998) app_main: x: 73, y: 0[0m
+[0;32mI (36198) app_main: Color: 2[0m
+[0;32mI (36198) app_main: OE-Pin: 0[0m
+[0;32mI (36198) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36198) set_pixel: Top[0m
+[0;32mI (36198) app_main: x: 74, y: 0[0m
+[0;32mI (36398) app_main: Color: 0[0m
+[0;32mI (36398) app_main: OE-Pin: 0[0m
+[0;32mI (36398) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36398) set_pixel: Top[0m
+[0;32mI (36398) app_main: x: 75, y: 0[0m
+[0;32mI (36598) app_main: Color: 1[0m
+[0;32mI (36598) app_main: OE-Pin: 0[0m
+[0;32mI (36598) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36598) set_pixel: Top[0m
+[0;32mI (36598) app_main: x: 76, y: 0[0m
+[0;32mI (36798) app_main: Color: 2[0m
+[0;32mI (36798) app_main: OE-Pin: 0[0m
+[0;32mI (36798) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36798) set_pixel: Top[0m
+[0;32mI (36798) app_main: x: 77, y: 0[0m
+[0;32mI (36998) app_main: Color: 0[0m
+[0;32mI (36998) app_main: OE-Pin: 0[0m
+[0;32mI (36998) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36998) set_pixel: Top[0m
+[0;32mI (36998) app_main: x: 78, y: 0[0m
+[0;32mI (37198) app_main: Color: 1[0m
+[0;32mI (37198) app_main: OE-Pin: 0[0m
+[0;32mI (37198) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37198) set_pixel: Top[0m
+[0;32mI (37198) app_main: x: 79, y: 0[0m
+[0;32mI (37398) app_main: Color: 2[0m
+[0;32mI (37398) app_main: OE-Pin: 0[0m
+[0;32mI (37398) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37398) set_pixel: Top[0m
+[0;32mI (37398) app_main: x: 80, y: 0[0m
+[0;32mI (37598) app_main: Color: 0[0m
+[0;32mI (37598) app_main: OE-Pin: 0[0m
+[0;32mI (37598) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37598) set_pixel: Top[0m
+[0;32mI (37598) app_main: x: 81, y: 0[0m
+[0;32mI (37798) app_main: Color: 1[0m
+[0;32mI (37798) app_main: OE-Pin: 0[0m
+[0;32mI (37798) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37798) set_pixel: Top[0m
+[0;32mI (37798) app_main: x: 82, y: 0[0m
+[0;32mI (37998) app_main: Color: 2[0m
+[0;32mI (37998) app_main: OE-Pin: 0[0m
+[0;32mI (37998) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37998) set_pixel: Top[0m
+[0;32mI (37998) app_main: x: 83, y: 0[0m
+[0;32mI (38198) app_main: Color: 0[0m
+[0;32mI (38198) app_main: OE-Pin: 0[0m
+[0;32mI (38198) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38198) set_pixel: Top[0m
+[0;32mI (38198) app_main: x: 84, y: 0[0m
+[0;32mI (38398) app_main: Color: 1[0m
+[0;32mI (38398) app_main: OE-Pin: 0[0m
+[0;32mI (38398) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38398) set_pixel: Top[0m
+[0;32mI (38398) app_main: x: 85, y: 0[0m
+[0;32mI (38598) app_main: Color: 2[0m
+[0;32mI (38598) app_main: OE-Pin: 0[0m
+[0;32mI (38598) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38598) set_pixel: Top[0m
+[0;32mI (38598) app_main: x: 86, y: 0[0m
+[0;32mI (38798) app_main: Color: 0[0m
+[0;32mI (38798) app_main: OE-Pin: 0[0m
+[0;32mI (38798) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38798) set_pixel: Top[0m
+[0;32mI (38798) app_main: x: 87, y: 0[0m
+[0;32mI (38998) app_main: Color: 1[0m
+[0;32mI (38998) app_main: OE-Pin: 0[0m
+[0;32mI (38998) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38998) set_pixel: Top[0m
+[0;32mI (38998) app_main: x: 88, y: 0[0m
+[0;32mI (39198) app_main: Color: 2[0m
+[0;32mI (39198) app_main: OE-Pin: 0[0m
+[0;32mI (39198) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39198) set_pixel: Top[0m
+[0;32mI (39198) app_main: x: 89, y: 0[0m
+[0;32mI (39398) app_main: Color: 0[0m
+[0;32mI (39398) app_main: OE-Pin: 0[0m
+[0;32mI (39398) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39398) set_pixel: Top[0m
+[0;32mI (39398) app_main: x: 90, y: 0[0m
+[0;32mI (39598) app_main: Color: 1[0m
+[0;32mI (39598) app_main: OE-Pin: 0[0m
+[0;32mI (39598) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39598) set_pixel: Top[0m
+[0;32mI (39598) app_main: x: 91, y: 0[0m
+[0;32mI (39798) app_main: Color: 2[0m
+[0;32mI (39798) app_main: OE-Pin: 0[0m
+[0;32mI (39798) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39798) set_pixel: Top[0m
+[0;32mI (39798) app_main: x: 92, y: 0[0m
+[0;32mI (39998) app_main: Color: 0[0m
+[0;32mI (39998) app_main: OE-Pin: 0[0m
+[0;32mI (39998) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39998) set_pixel: Top[0m
+[0;32mI (39998) app_main: x: 93, y: 0[0m
+[0;32mI (40198) app_main: Color: 1[0m
+[0;32mI (40198) app_main: OE-Pin: 0[0m
+[0;32mI (40198) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40198) set_pixel: Top[0m
+[0;32mI (40198) app_main: x: 94, y: 0[0m
+[0;32mI (40398) app_main: Color: 2[0m
+[0;32mI (40398) app_main: OE-Pin: 0[0m
+[0;32mI (40398) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40398) set_pixel: Top[0m
+[0;32mI (40398) app_main: x: 95, y: 0[0m
+[0;32mI (40598) app_main: Color: 0[0m
+[0;32mI (40598) app_main: OE-Pin: 0[0m
+[0;32mI (40598) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40598) set_pixel: Top[0m
+[0;32mI (40598) app_main: x: 0, y: 0[0m
+[0;32mI (40798) app_main: Color: 1[0m
+[0;32mI (40798) app_main: OE-Pin: 0[0m
+[0;32mI (40798) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40798) set_pixel: Top[0m
+[0;32mI (40798) app_main: x: 1, y: 0[0m
+[0;32mI (40998) app_main: Color: 2[0m
+[0;32mI (40998) app_main: OE-Pin: 0[0m
+[0;32mI (40998) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40998) set_pixel: Top[0m
+[0;32mI (40998) app_main: x: 2, y: 0[0m
+[0;32mI (41198) app_main: Color: 0[0m
+[0;32mI (41198) app_main: OE-Pin: 0[0m
+[0;32mI (41198) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41198) set_pixel: Top[0m
+[0;32mI (41198) app_main: x: 3, y: 0[0m
+[0;32mI (41398) app_main: Color: 1[0m
+[0;32mI (41398) app_main: OE-Pin: 0[0m
+[0;32mI (41398) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41398) set_pixel: Top[0m
+[0;32mI (41398) app_main: x: 4, y: 0[0m
+[0;32mI (41598) app_main: Color: 2[0m
+[0;32mI (41598) app_main: OE-Pin: 0[0m
+[0;32mI (41598) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41598) set_pixel: Top[0m
+[0;32mI (41598) app_main: x: 5, y: 0[0m
+[0;32mI (41798) app_main: Color: 0[0m
+[0;32mI (41798) app_main: OE-Pin: 0[0m
+[0;32mI (41798) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41798) set_pixel: Top[0m
+[0;32mI (41798) app_main: x: 6, y: 0[0m
+[0;32mI (41998) app_main: Color: 1[0m
+[0;32mI (41998) app_main: OE-Pin: 0[0m
+[0;32mI (41998) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41998) set_pixel: Top[0m
+[0;32mI (41998) app_main: x: 7, y: 0[0m
+[0;32mI (42198) app_main: Color: 2[0m
+[0;32mI (42198) app_main: OE-Pin: 0[0m
+[0;32mI (42198) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42198) set_pixel: Top[0m
+[0;32mI (42198) app_main: x: 8, y: 0[0m
+[0;32mI (42398) app_main: Color: 0[0m
+[0;32mI (42398) app_main: OE-Pin: 0[0m
+[0;32mI (42398) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42398) set_pixel: Top[0m
+[0;32mI (42398) app_main: x: 9, y: 0[0m
+[0;32mI (42598) app_main: Color: 1[0m
+[0;32mI (42598) app_main: OE-Pin: 0[0m
+[0;32mI (42598) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42598) set_pixel: Top[0m
+[0;32mI (42598) app_main: x: 10, y: 0[0m
+[0;32mI (42798) app_main: Color: 2[0m
+[0;32mI (42798) app_main: OE-Pin: 0[0m
+[0;32mI (42798) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42798) set_pixel: Top[0m
+[0;32mI (42798) app_main: x: 11, y: 0[0m
+[0;32mI (42998) app_main: Color: 0[0m
+[0;32mI (42998) app_main: OE-Pin: 0[0m
+[0;32mI (42998) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42998) set_pixel: Top[0m
+[0;32mI (42998) app_main: x: 12, y: 0[0m
+[0;32mI (43198) app_main: Color: 1[0m
+[0;32mI (43198) app_main: OE-Pin: 0[0m
+[0;32mI (43198) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43198) set_pixel: Top[0m
+[0;32mI (43198) app_main: x: 13, y: 0[0m
+[0;32mI (43398) app_main: Color: 2[0m
+[0;32mI (43398) app_main: OE-Pin: 0[0m
+[0;32mI (43398) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43398) set_pixel: Top[0m
+[0;32mI (43398) app_main: x: 14, y: 0[0m
+[0;32mI (43598) app_main: Color: 0[0m
+[0;32mI (43598) app_main: OE-Pin: 0[0m
+[0;32mI (43598) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43598) set_pixel: Top[0m
+[0;32mI (43598) app_main: x: 15, y: 0[0m
+[0;32mI (43798) app_main: Color: 1[0m
+[0;32mI (43798) app_main: OE-Pin: 0[0m
+[0;32mI (43798) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43798) set_pixel: Top[0m
+[0;32mI (43798) app_main: x: 16, y: 0[0m
+[0;32mI (43998) app_main: Color: 2[0m
+[0;32mI (43998) app_main: OE-Pin: 0[0m
+[0;32mI (43998) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43998) set_pixel: Top[0m
+[0;32mI (43998) app_main: x: 17, y: 0[0m
+[0;32mI (44198) app_main: Color: 0[0m
+[0;32mI (44198) app_main: OE-Pin: 0[0m
+[0;32mI (44198) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44198) set_pixel: Top[0m
+[0;32mI (44198) app_main: x: 18, y: 0[0m
+[0;32mI (44398) app_main: Color: 1[0m
+[0;32mI (44398) app_main: OE-Pin: 0[0m
+[0;32mI (44398) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44398) set_pixel: Top[0m
+[0;32mI (44398) app_main: x: 19, y: 0[0m
+[0;32mI (44598) app_main: Color: 2[0m
+[0;32mI (44598) app_main: OE-Pin: 0[0m
+[0;32mI (44598) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44598) set_pixel: Top[0m
+[0;32mI (44598) app_main: x: 20, y: 0[0m
+[0;32mI (44798) app_main: Color: 0[0m
+[0;32mI (44798) app_main: OE-Pin: 0[0m
+[0;32mI (44798) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44798) set_pixel: Top[0m
+[0;32mI (44798) app_main: x: 21, y: 0[0m
+[0;32mI (44998) app_main: Color: 1[0m
+[0;32mI (44998) app_main: OE-Pin: 0[0m
+[0;32mI (44998) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44998) set_pixel: Top[0m
+[0;32mI (44998) app_main: x: 22, y: 0[0m
+[0;32mI (45198) app_main: Color: 2[0m
+[0;32mI (45198) app_main: OE-Pin: 0[0m
+[0;32mI (45198) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45198) set_pixel: Top[0m
+[0;32mI (45198) app_main: x: 23, y: 0[0m
+[0;32mI (45398) app_main: Color: 0[0m
+[0;32mI (45398) app_main: OE-Pin: 0[0m
+[0;32mI (45398) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45398) set_pixel: Top[0m
+[0;32mI (45398) app_main: x: 24, y: 0[0m
+[0;32mI (45598) app_main: Color: 1[0m
+[0;32mI (45598) app_main: OE-Pin: 0[0m
+[0;32mI (45598) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45598) set_pixel: Top[0m
+[0;32mI (45598) app_main: x: 25, y: 0[0m
+[0;32mI (45798) app_main: Color: 2[0m
+[0;32mI (45798) app_main: OE-Pin: 0[0m
+[0;32mI (45798) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45798) set_pixel: Top[0m
+[0;32mI (45798) app_main: x: 26, y: 0[0m
+[0;32mI (45998) app_main: Color: 0[0m
+[0;32mI (45998) app_main: OE-Pin: 0[0m
+[0;32mI (45998) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45998) set_pixel: Top[0m
+[0;32mI (45998) app_main: x: 27, y: 0[0m
+[0;32mI (46198) app_main: Color: 1[0m
+[0;32mI (46198) app_main: OE-Pin: 0[0m
+[0;32mI (46198) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46198) set_pixel: Top[0m
+[0;32mI (46198) app_main: x: 28, y: 0[0m
+[0;32mI (46398) app_main: Color: 2[0m
+[0;32mI (46398) app_main: OE-Pin: 0[0m
+[0;32mI (46398) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46398) set_pixel: Top[0m
+[0;32mI (46398) app_main: x: 29, y: 0[0m
+[0;32mI (46598) app_main: Color: 0[0m
+[0;32mI (46598) app_main: OE-Pin: 0[0m
+[0;32mI (46598) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46598) set_pixel: Top[0m
+[0;32mI (46598) app_main: x: 30, y: 0[0m
+[0;32mI (46798) app_main: Color: 1[0m
+[0;32mI (46798) app_main: OE-Pin: 0[0m
+[0;32mI (46798) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46798) set_pixel: Top[0m
+[0;32mI (46798) app_main: x: 31, y: 0[0m
+[0;32mI (46998) app_main: Color: 2[0m
+[0;32mI (46998) app_main: OE-Pin: 0[0m
+[0;32mI (46998) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46998) set_pixel: Top[0m
+[0;32mI (46998) app_main: x: 32, y: 0[0m
+[0;32mI (47198) app_main: Color: 0[0m
+[0;32mI (47198) app_main: OE-Pin: 0[0m
+[0;32mI (47198) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47198) set_pixel: Top[0m
+[0;32mI (47198) app_main: x: 33, y: 0[0m
+[0;32mI (47398) app_main: Color: 1[0m
+[0;32mI (47398) app_main: OE-Pin: 0[0m
+[0;32mI (47398) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47398) set_pixel: Top[0m
+[0;32mI (47398) app_main: x: 34, y: 0[0m
+[0;32mI (47598) app_main: Color: 2[0m
+[0;32mI (47598) app_main: OE-Pin: 0[0m
+[0;32mI (47598) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47598) set_pixel: Top[0m
+[0;32mI (47598) app_main: x: 35, y: 0[0m
+[0;32mI (47798) app_main: Color: 0[0m
+[0;32mI (47798) app_main: OE-Pin: 0[0m
+[0;32mI (47798) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47798) set_pixel: Top[0m
+[0;32mI (47798) app_main: x: 36, y: 0[0m
+[0;32mI (47998) app_main: Color: 1[0m
+[0;32mI (47998) app_main: OE-Pin: 0[0m
+[0;32mI (47998) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47998) set_pixel: Top[0m
+[0;32mI (47998) app_main: x: 37, y: 0[0m
+[0;32mI (48198) app_main: Color: 2[0m
+[0;32mI (48198) app_main: OE-Pin: 0[0m
+[0;32mI (48198) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48198) set_pixel: Top[0m
+[0;32mI (48198) app_main: x: 38, y: 0[0m
+[0;32mI (48398) app_main: Color: 0[0m
+[0;32mI (48398) app_main: OE-Pin: 0[0m
+[0;32mI (48398) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48398) set_pixel: Top[0m
+[0;32mI (48398) app_main: x: 39, y: 0[0m
+[0;32mI (48598) app_main: Color: 1[0m
+[0;32mI (48598) app_main: OE-Pin: 0[0m
+[0;32mI (48598) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48598) set_pixel: Top[0m
+[0;32mI (48598) app_main: x: 40, y: 0[0m
+[0;32mI (48798) app_main: Color: 2[0m
+[0;32mI (48798) app_main: OE-Pin: 0[0m
+[0;32mI (48798) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48798) set_pixel: Top[0m
+[0;32mI (48798) app_main: x: 41, y: 0[0m
+[0;32mI (48998) app_main: Color: 0[0m
+[0;32mI (48998) app_main: OE-Pin: 0[0m
+[0;32mI (48998) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48998) set_pixel: Top[0m
+[0;32mI (48998) app_main: x: 42, y: 0[0m
+[0;32mI (49198) app_main: Color: 1[0m
+[0;32mI (49198) app_main: OE-Pin: 0[0m
+[0;32mI (49198) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49198) set_pixel: Top[0m
+[0;32mI (49198) app_main: x: 43, y: 0[0m
+[0;32mI (49398) app_main: Color: 2[0m
+[0;32mI (49398) app_main: OE-Pin: 0[0m
+[0;32mI (49398) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49398) set_pixel: Top[0m
+[0;32mI (49398) app_main: x: 44, y: 0[0m
+[0;32mI (49598) app_main: Color: 0[0m
+[0;32mI (49598) app_main: OE-Pin: 0[0m
+[0;32mI (49598) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49598) set_pixel: Top[0m
+[0;32mI (49598) app_main: x: 45, y: 0[0m
+[0;32mI (49798) app_main: Color: 1[0m
+[0;32mI (49798) app_main: OE-Pin: 0[0m
+[0;32mI (49798) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49798) set_pixel: Top[0m
+[0;32mI (49798) app_main: x: 46, y: 0[0m
+[0;32mI (49998) app_main: Color: 2[0m
+[0;32mI (49998) app_main: OE-Pin: 0[0m
+[0;32mI (49998) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49998) set_pixel: Top[0m
+[0;32mI (49998) app_main: x: 47, y: 0[0m
+[0;32mI (50198) app_main: Color: 0[0m
+[0;32mI (50198) app_main: OE-Pin: 0[0m
+[0;32mI (50198) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50198) set_pixel: Top[0m
+[0;32mI (50198) app_main: x: 48, y: 0[0m
+[0;32mI (50398) app_main: Color: 1[0m
+[0;32mI (50398) app_main: OE-Pin: 0[0m
+[0;32mI (50398) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50398) set_pixel: Top[0m
+[0;32mI (50398) app_main: x: 49, y: 0[0m
+[0;32mI (50598) app_main: Color: 2[0m
+[0;32mI (50598) app_main: OE-Pin: 0[0m
+[0;32mI (50598) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50598) set_pixel: Top[0m
+[0;32mI (50598) app_main: x: 50, y: 0[0m
+[0;32mI (50798) app_main: Color: 0[0m
+[0;32mI (50798) app_main: OE-Pin: 0[0m
+[0;32mI (50798) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50798) set_pixel: Top[0m
+[0;32mI (50798) app_main: x: 51, y: 0[0m
+[0;32mI (50998) app_main: Color: 1[0m
+[0;32mI (50998) app_main: OE-Pin: 0[0m
+[0;32mI (50998) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50998) set_pixel: Top[0m
+[0;32mI (50998) app_main: x: 52, y: 0[0m
+[0;32mI (51198) app_main: Color: 2[0m
+[0;32mI (51198) app_main: OE-Pin: 0[0m
+[0;32mI (51198) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51198) set_pixel: Top[0m
+[0;32mI (51198) app_main: x: 53, y: 0[0m
+[0;32mI (51398) app_main: Color: 0[0m
+[0;32mI (51398) app_main: OE-Pin: 0[0m
+[0;32mI (51398) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51398) set_pixel: Top[0m
+[0;32mI (51398) app_main: x: 54, y: 0[0m
+[0;32mI (51598) app_main: Color: 1[0m
+[0;32mI (51598) app_main: OE-Pin: 0[0m
+[0;32mI (51598) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51598) set_pixel: Top[0m
+[0;32mI (51598) app_main: x: 55, y: 0[0m
+[0;32mI (51798) app_main: Color: 2[0m
+[0;32mI (51798) app_main: OE-Pin: 0[0m
+[0;32mI (51798) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51798) set_pixel: Top[0m
+[0;32mI (51798) app_main: x: 56, y: 0[0m
+[0;32mI (51998) app_main: Color: 0[0m
+[0;32mI (51998) app_main: OE-Pin: 0[0m
+[0;32mI (51998) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51998) set_pixel: Top[0m
+[0;32mI (51998) app_main: x: 57, y: 0[0m
+[0;32mI (52198) app_main: Color: 1[0m
+[0;32mI (52198) app_main: OE-Pin: 0[0m
+[0;32mI (52198) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52198) set_pixel: Top[0m
+[0;32mI (52198) app_main: x: 58, y: 0[0m
+[0;32mI (52398) app_main: Color: 2[0m
+[0;32mI (52398) app_main: OE-Pin: 0[0m
+[0;32mI (52398) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52398) set_pixel: Top[0m
+[0;32mI (52398) app_main: x: 59, y: 0[0m
+[0;32mI (52598) app_main: Color: 0[0m
+[0;32mI (52598) app_main: OE-Pin: 0[0m
+[0;32mI (52598) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52598) set_pixel: Top[0m
+[0;32mI (52598) app_main: x: 60, y: 0[0m
+[0;32mI (52798) app_main: Color: 1[0m
+[0;32mI (52798) app_main: OE-Pin: 0[0m
+[0;32mI (52798) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52798) set_pixel: Top[0m
+[0;32mI (52798) app_main: x: 61, y: 0[0m
+[0;32mI (52998) app_main: Color: 2[0m
+[0;32mI (52998) app_main: OE-Pin: 0[0m
+[0;32mI (52998) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52998) set_pixel: Top[0m
+[0;32mI (52998) app_main: x: 62, y: 0[0m
+[0;32mI (53198) app_main: Color: 0[0m
+[0;32mI (53198) app_main: OE-Pin: 0[0m
+[0;32mI (53198) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53198) set_pixel: Top[0m
+[0;32mI (53198) app_main: x: 63, y: 0[0m
+[0;32mI (53398) app_main: Color: 1[0m
+[0;32mI (53398) app_main: OE-Pin: 0[0m
+[0;32mI (53398) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53398) set_pixel: Top[0m
+[0;32mI (53398) app_main: x: 64, y: 0[0m
+[0;32mI (53598) app_main: Color: 2[0m
+[0;32mI (53598) app_main: OE-Pin: 0[0m
+[0;32mI (53598) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53598) set_pixel: Top[0m
+[0;32mI (53598) app_main: x: 65, y: 0[0m
+[0;32mI (53798) app_main: Color: 0[0m
+[0;32mI (53798) app_main: OE-Pin: 0[0m
+[0;32mI (53798) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53798) set_pixel: Top[0m
+[0;32mI (53798) app_main: x: 66, y: 0[0m
+[0;32mI (53998) app_main: Color: 1[0m
+[0;32mI (53998) app_main: OE-Pin: 0[0m
+[0;32mI (53998) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53998) set_pixel: Top[0m
+[0;32mI (53998) app_main: x: 67, y: 0[0m
+[0;32mI (54198) app_main: Color: 2[0m
+[0;32mI (54198) app_main: OE-Pin: 0[0m
+[0;32mI (54198) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54198) set_pixel: Top[0m
+[0;32mI (54198) app_main: x: 68, y: 0[0m
+[0;32mI (54398) app_main: Color: 0[0m
+[0;32mI (54398) app_main: OE-Pin: 0[0m
+[0;32mI (54398) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54398) set_pixel: Top[0m
+[0;32mI (54398) app_main: x: 69, y: 0[0m
+[0;32mI (54598) app_main: Color: 1[0m
+[0;32mI (54598) app_main: OE-Pin: 0[0m
+[0;32mI (54598) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54598) set_pixel: Top[0m
+[0;32mI (54598) app_main: x: 70, y: 0[0m
+[0;32mI (54798) app_main: Color: 2[0m
+[0;32mI (54798) app_main: OE-Pin: 0[0m
+[0;32mI (54798) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54798) set_pixel: Top[0m
+[0;32mI (54798) app_main: x: 71, y: 0[0m
+[0;32mI (54998) app_main: Color: 0[0m
+[0;32mI (54998) app_main: OE-Pin: 0[0m
+[0;32mI (54998) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54998) set_pixel: Top[0m
+[0;32mI (54998) app_main: x: 72, y: 0[0m
+[0;32mI (55198) app_main: Color: 1[0m
+[0;32mI (55198) app_main: OE-Pin: 0[0m
+[0;32mI (55198) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55198) set_pixel: Top[0m
+[0;32mI (55198) app_main: x: 73, y: 0[0m
+[0;32mI (55398) app_main: Color: 2[0m
+[0;32mI (55398) app_main: OE-Pin: 0[0m
+[0;32mI (55398) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55398) set_pixel: Top[0m
+[0;32mI (55398) app_main: x: 74, y: 0[0m
+[0;32mI (55598) app_main: Color: 0[0m
+[0;32mI (55598) app_main: OE-Pin: 0[0m
+[0;32mI (55598) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55598) set_pixel: Top[0m
+[0;32mI (55598) app_main: x: 75, y: 0[0m
+[0;32mI (55798) app_main: Color: 1[0m
+[0;32mI (55798) app_main: OE-Pin: 0[0m
+[0;32mI (55798) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55798) set_pixel: Top[0m
+[0;32mI (55798) app_main: x: 76, y: 0[0m
+[0;32mI (55998) app_main: Color: 2[0m
+[0;32mI (55998) app_main: OE-Pin: 0[0m
+[0;32mI (55998) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55998) set_pixel: Top[0m
+[0;32mI (55998) app_main: x: 77, y: 0[0m
+[0;32mI (56198) app_main: Color: 0[0m
+[0;32mI (56198) app_main: OE-Pin: 0[0m
+[0;32mI (56198) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56198) set_pixel: Top[0m
+[0;32mI (56198) app_main: x: 78, y: 0[0m
+[0;32mI (56398) app_main: Color: 1[0m
+[0;32mI (56398) app_main: OE-Pin: 0[0m
+[0;32mI (56398) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56398) set_pixel: Top[0m
+[0;32mI (56398) app_main: x: 79, y: 0[0m
+[0;32mI (56598) app_main: Color: 2[0m
+[0;32mI (56598) app_main: OE-Pin: 0[0m
+[0;32mI (56598) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56598) set_pixel: Top[0m
+[0;32mI (56598) app_main: x: 80, y: 0[0m
+[0;32mI (56798) app_main: Color: 0[0m
+[0;32mI (56798) app_main: OE-Pin: 0[0m
+[0;32mI (56798) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56798) set_pixel: Top[0m
+[0;32mI (56798) app_main: x: 81, y: 0[0m
+[0;32mI (56998) app_main: Color: 1[0m
+[0;32mI (56998) app_main: OE-Pin: 0[0m
+[0;32mI (56998) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56998) set_pixel: Top[0m
+[0;32mI (56998) app_main: x: 82, y: 0[0m
+[0;32mI (57198) app_main: Color: 2[0m
+[0;32mI (57198) app_main: OE-Pin: 0[0m
+[0;32mI (57198) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57198) set_pixel: Top[0m
+[0;32mI (57198) app_main: x: 83, y: 0[0m
+[0;32mI (57398) app_main: Color: 0[0m
+[0;32mI (57398) app_main: OE-Pin: 0[0m
+[0;32mI (57398) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57398) set_pixel: Top[0m
+[0;32mI (57398) app_main: x: 84, y: 0[0m
+[0;32mI (57598) app_main: Color: 1[0m
+[0;32mI (57598) app_main: OE-Pin: 0[0m
+[0;32mI (57598) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57598) set_pixel: Top[0m
+[0;32mI (57598) app_main: x: 85, y: 0[0m
+[0;32mI (57798) app_main: Color: 2[0m
+[0;32mI (57798) app_main: OE-Pin: 0[0m
+[0;32mI (57798) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57798) set_pixel: Top[0m
+[0;32mI (57798) app_main: x: 86, y: 0[0m
+[0;32mI (57998) app_main: Color: 0[0m
+[0;32mI (57998) app_main: OE-Pin: 0[0m
+[0;32mI (57998) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57998) set_pixel: Top[0m
+[0;32mI (57998) app_main: x: 87, y: 0[0m
+[0;32mI (58198) app_main: Color: 1[0m
+[0;32mI (58198) app_main: OE-Pin: 0[0m
+[0;32mI (58198) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58198) set_pixel: Top[0m
+[0;32mI (58198) app_main: x: 88, y: 0[0m
+[0;32mI (58398) app_main: Color: 2[0m
+[0;32mI (58398) app_main: OE-Pin: 0[0m
+[0;32mI (58398) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58398) set_pixel: Top[0m
+[0;32mI (58398) app_main: x: 89, y: 0[0m
+[0;32mI (58598) app_main: Color: 0[0m
+[0;32mI (58598) app_main: OE-Pin: 0[0m
+[0;32mI (58598) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58598) set_pixel: Top[0m
+[0;32mI (58598) app_main: x: 90, y: 0[0m
+[0;32mI (58798) app_main: Color: 1[0m
+[0;32mI (58798) app_main: OE-Pin: 0[0m
+[0;32mI (58798) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58798) set_pixel: Top[0m
+[0;32mI (58798) app_main: x: 91, y: 0[0m
+[0;32mI (58998) app_main: Color: 2[0m
+[0;32mI (58998) app_main: OE-Pin: 0[0m
+[0;32mI (58998) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58998) set_pixel: Top[0m
+[0;32mI (58998) app_main: x: 92, y: 0[0m
+[0;32mI (59198) app_main: Color: 0[0m
+[0;32mI (59198) app_main: OE-Pin: 0[0m
+[0;32mI (59198) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59198) set_pixel: Top[0m
+[0;32mI (59198) app_main: x: 93, y: 0[0m
+[0;32mI (59398) app_main: Color: 1[0m
+[0;32mI (59398) app_main: OE-Pin: 0[0m
+[0;32mI (59398) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59398) set_pixel: Top[0m
+[0;32mI (59398) app_main: x: 94, y: 0[0m
+[0;32mI (59598) app_main: Color: 2[0m
+[0;32mI (59598) app_main: OE-Pin: 0[0m
+[0;32mI (59598) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59598) set_pixel: Top[0m
+[0;32mI (59598) app_main: x: 95, y: 0[0m
+[0;32mI (59798) app_main: Color: 0[0m
+[0;32mI (59798) app_main: OE-Pin: 0[0m
+[0;32mI (59798) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59798) set_pixel: Top[0m
+[0;32mI (59798) app_main: x: 0, y: 0[0m
+[0;32mI (59998) app_main: Color: 1[0m
+[0;32mI (59998) app_main: OE-Pin: 0[0m
+[0;32mI (59998) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59998) set_pixel: Top[0m
+[0;32mI (59998) app_main: x: 1, y: 0[0m
+[0;32mI (60198) app_main: Color: 2[0m
+[0;32mI (60198) app_main: OE-Pin: 0[0m
+[0;32mI (60198) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60198) set_pixel: Top[0m
+[0;32mI (60198) app_main: x: 2, y: 0[0m
+[0;32mI (60398) app_main: Color: 0[0m
+[0;32mI (60398) app_main: OE-Pin: 0[0m
+[0;32mI (60398) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60398) set_pixel: Top[0m
+[0;32mI (60398) app_main: x: 3, y: 0[0m
+[0;32mI (60598) app_main: Color: 1[0m
+[0;32mI (60598) app_main: OE-Pin: 0[0m
+[0;32mI (60598) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60598) set_pixel: Top[0m
+[0;32mI (60598) app_main: x: 4, y: 0[0m
+[0;32mI (60798) app_main: Color: 2[0m
+[0;32mI (60798) app_main: OE-Pin: 0[0m
+[0;32mI (60798) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60798) set_pixel: Top[0m
+[0;32mI (60798) app_main: x: 5, y: 0[0m
+[0;32mI (60998) app_main: Color: 0[0m
+[0;32mI (60998) app_main: OE-Pin: 0[0m
+[0;32mI (60998) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60998) set_pixel: Top[0m
+[0;32mI (60998) app_main: x: 6, y: 0[0m
+[0;32mI (61198) app_main: Color: 1[0m
+[0;32mI (61198) app_main: OE-Pin: 0[0m
+[0;32mI (61198) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (61198) set_pixel: Top[0m
+[0;32mI (61198) app_main: x: 7, y: 0[0m
+[0;32mI (61398) app_main: Color: 2[0m
+[0;32mI (61398) app_main: OE-Pin: 0[0m
+[0;32mI (61398) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (61398) set_pixel: Top[0m
+[0;32mI (61398) app_main: x: 8, y: 0[0m
+[0;32mI (61598) app_main: Color: 0[0m
+[0;32mI (61598) app_main: OE-Pin: 0[0m
+[0;32mI (61598) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (61598) set_pixel: Top[0m
+[0;32mI (61598) app_main: x: 9, y: 0[0m
+[0;32mI (61798) app_main: Color: 1[0m
+[0;32mI (61798) app_main: OE-Pin: 0[0m
+[0;32mI (61798) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (61798) set_pixel: Top[0m
+[0;32mI (61798) app_main: x: 10, y: 0[0m
+[0;32mI (61998) app_main: Color: 2[0m
+[0;32mI (61998) app_main: OE-Pin: 0[0m
+[0;32mI (61998) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (61998) set_pixel: Top[0m
+[0;32mI (61998) app_main: x: 11, y: 0[0m
+[0;32mI (62198) app_main: Color: 0[0m
+[0;32mI (62198) app_main: OE-Pin: 0[0m
+[0;32mI (62198) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (62198) set_pixel: Top[0m
+[0;32mI (62198) app_main: x: 12, y: 0[0m
+[0;32mI (62398) app_main: Color: 1[0m
+[0;32mI (62398) app_main: OE-Pin: 0[0m
+[0;32mI (62398) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (62398) set_pixel: Top[0m
+[0;32mI (62398) app_main: x: 13, y: 0[0m
+[0;32mI (62598) app_main: Color: 2[0m
+[0;32mI (62598) app_main: OE-Pin: 0[0m
+[0;32mI (62598) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (62598) set_pixel: Top[0m
+[0;32mI (62598) app_main: x: 14, y: 0[0m
+[0;32mI (62798) app_main: Color: 0[0m
+[0;32mI (62798) app_main: OE-Pin: 0[0m
+[0;32mI (62798) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (62798) set_pixel: Top[0m
+[0;32mI (62798) app_main: x: 15, y: 0[0m
+[0;32mI (62998) app_main: Color: 1[0m
+[0;32mI (62998) app_main: OE-Pin: 0[0m
+[0;32mI (62998) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (62998) set_pixel: Top[0m
+[0;32mI (62998) app_main: x: 16, y: 0[0m
+[0;32mI (63198) app_main: Color: 2[0m
+[0;32mI (63198) app_main: OE-Pin: 0[0m
+[0;32mI (63198) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (63198) set_pixel: Top[0m
+[0;32mI (63198) app_main: x: 17, y: 0[0m
+[0;32mI (63398) app_main: Color: 0[0m
+[0;32mI (63398) app_main: OE-Pin: 0[0m
+[0;32mI (63398) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (63398) set_pixel: Top[0m
+[0;32mI (63398) app_main: x: 18, y: 0[0m
+[0;32mI (63598) app_main: Color: 1[0m
+[0;32mI (63598) app_main: OE-Pin: 0[0m
+[0;32mI (63598) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (63598) set_pixel: Top[0m
+[0;32mI (63598) app_main: x: 19, y: 0[0m
+[0;32mI (63798) app_main: Color: 2[0m
+[0;32mI (63798) app_main: OE-Pin: 0[0m
+[0;32mI (63798) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (63798) set_pixel: Top[0m
+[0;32mI (63798) app_main: x: 20, y: 0[0m
+[0;32mI (63998) app_main: Color: 0[0m
+[0;32mI (63998) app_main: OE-Pin: 0[0m
+[0;32mI (63998) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (63998) set_pixel: Top[0m
+[0;32mI (63998) app_main: x: 21, y: 0[0m
+[0;32mI (64198) app_main: Color: 1[0m
+[0;32mI (64198) app_main: OE-Pin: 0[0m
+[0;32mI (64198) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (64198) set_pixel: Top[0m
+[0;32mI (64198) app_main: x: 22, y: 0[0m
+[0;32mI (64398) app_main: Color: 2[0m
+[0;32mI (64398) app_main: OE-Pin: 0[0m
+[0;32mI (64398) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (64398) set_pixel: Top[0m
+[0;32mI (64398) app_main: x: 23, y: 0[0m
+[0;32mI (64598) app_main: Color: 0[0m
+[0;32mI (64598) app_main: OE-Pin: 0[0m
+[0;32mI (64598) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (64598) set_pixel: Top[0m
+[0;32mI (64598) app_main: x: 24, y: 0[0m
+[0;32mI (64798) app_main: Color: 1[0m
+[0;32mI (64798) app_main: OE-Pin: 0[0m
+[0;32mI (64798) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (64798) set_pixel: Top[0m
+[0;32mI (64798) app_main: x: 25, y: 0[0m
+[0;32mI (64998) app_main: Color: 2[0m
+[0;32mI (64998) app_main: OE-Pin: 0[0m
+[0;32mI (64998) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (64998) set_pixel: Top[0m
+[0;32mI (64998) app_main: x: 26, y: 0[0m
+[0;32mI (65198) app_main: Color: 0[0m
+[0;32mI (65198) app_main: OE-Pin: 0[0m
+[0;32mI (65198) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (65198) set_pixel: Top[0m
+[0;32mI (65198) app_main: x: 27, y: 0[0m
+[0;32mI (65398) app_main: Color: 1[0m
+[0;32mI (65398) app_main: OE-Pin: 0[0m
+[0;32mI (65398) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (65398) set_pixel: Top[0m
+[0;32mI (65398) app_main: x: 28, y: 0[0m
+[0;32mI (65598) app_main: Color: 2[0m
+[0;32mI (65598) app_main: OE-Pin: 0[0m
+[0;32mI (65598) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (65598) set_pixel: Top[0m
+[0;32mI (65598) app_main: x: 29, y: 0[0m
+[0;32mI (65798) app_main: Color: 0[0m
+[0;32mI (65798) app_main: OE-Pin: 0[0m
+[0;32mI (65798) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (65798) set_pixel: Top[0m
+[0;32mI (65798) app_main: x: 30, y: 0[0m
+[0;32mI (65998) app_main: Color: 1[0m
+[0;32mI (65998) app_main: OE-Pin: 0[0m
+[0;32mI (65998) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (65998) set_pixel: Top[0m
+[0;32mI (65998) app_main: x: 31, y: 0[0m
+[0;32mI (66198) app_main: Color: 2[0m
+[0;32mI (66198) app_main: OE-Pin: 0[0m
+[0;32mI (66198) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (66198) set_pixel: Top[0m
+[0;32mI (66198) app_main: x: 32, y: 0[0m
+[0;32mI (66398) app_main: Color: 0[0m
+[0;32mI (66398) app_main: OE-Pin: 0[0m
+[0;32mI (66398) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (66398) set_pixel: Top[0m
+[0;32mI (66398) app_main: x: 33, y: 0[0m
+[0;32mI (66598) app_main: Color: 1[0m
+[0;32mI (66598) app_main: OE-Pin: 0[0m
+[0;32mI (66598) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (66598) set_pixel: Top[0m
+[0;32mI (66598) app_main: x: 34, y: 0[0m
+[0;32mI (66798) app_main: Color: 2[0m
+[0;32mI (66798) app_main: OE-Pin: 0[0m
+[0;32mI (66798) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (66798) set_pixel: Top[0m
+[0;32mI (66798) app_main: x: 35, y: 0[0m
+[0;32mI (66998) app_main: Color: 0[0m
+[0;32mI (66998) app_main: OE-Pin: 0[0m
+[0;32mI (66998) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (66998) set_pixel: Top[0m
+[0;32mI (66998) app_main: x: 36, y: 0[0m
+[0;32mI (67198) app_main: Color: 1[0m
+[0;32mI (67198) app_main: OE-Pin: 0[0m
+[0;32mI (67198) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (67198) set_pixel: Top[0m
+[0;32mI (67198) app_main: x: 37, y: 0[0m
+[0;32mI (67398) app_main: Color: 2[0m
+[0;32mI (67398) app_main: OE-Pin: 0[0m
+[0;32mI (67398) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (67398) set_pixel: Top[0m
+[0;32mI (67398) app_main: x: 38, y: 0[0m
+[0;32mI (67598) app_main: Color: 0[0m
+[0;32mI (67598) app_main: OE-Pin: 0[0m
+[0;32mI (67598) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (67598) set_pixel: Top[0m
+[0;32mI (67598) app_main: x: 39, y: 0[0m
+[0;32mI (67798) app_main: Color: 1[0m
+[0;32mI (67798) app_main: OE-Pin: 0[0m
+[0;32mI (67798) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (67798) set_pixel: Top[0m
+[0;32mI (67798) app_main: x: 40, y: 0[0m
+[0;32mI (67998) app_main: Color: 2[0m
+[0;32mI (67998) app_main: OE-Pin: 0[0m
+[0;32mI (67998) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (67998) set_pixel: Top[0m
+[0;32mI (67998) app_main: x: 41, y: 0[0m
+[0;32mI (68198) app_main: Color: 0[0m
+[0;32mI (68198) app_main: OE-Pin: 0[0m
+[0;32mI (68198) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (68198) set_pixel: Top[0m
+[0;32mI (68198) app_main: x: 42, y: 0[0m
+[0;32mI (68398) app_main: Color: 1[0m
+[0;32mI (68398) app_main: OE-Pin: 0[0m
+[0;32mI (68398) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (68398) set_pixel: Top[0m
+[0;32mI (68398) app_main: x: 43, y: 0[0m
+[0;32mI (68598) app_main: Color: 2[0m
+[0;32mI (68598) app_main: OE-Pin: 0[0m
+[0;32mI (68598) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (68598) set_pixel: Top[0m
+[0;32mI (68598) app_main: x: 44, y: 0[0m
+[0;32mI (68798) app_main: Color: 0[0m
+[0;32mI (68798) app_main: OE-Pin: 0[0m
+[0;32mI (68798) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (68798) set_pixel: Top[0m
+[0;32mI (68798) app_main: x: 45, y: 0[0m
+[0;32mI (68998) app_main: Color: 1[0m
+[0;32mI (68998) app_main: OE-Pin: 0[0m
+[0;32mI (68998) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (68998) set_pixel: Top[0m
+[0;32mI (68998) app_main: x: 46, y: 0[0m
+[0;32mI (69198) app_main: Color: 2[0m
+[0;32mI (69198) app_main: OE-Pin: 0[0m
+[0;32mI (69198) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (69198) set_pixel: Top[0m
+[0;32mI (69198) app_main: x: 47, y: 0[0m
+[0;32mI (69398) app_main: Color: 0[0m
+[0;32mI (69398) app_main: OE-Pin: 0[0m
+[0;32mI (69398) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (69398) set_pixel: Top[0m
+[0;32mI (69398) app_main: x: 48, y: 0[0m
+[0;32mI (69598) app_main: Color: 1[0m
+[0;32mI (69598) app_main: OE-Pin: 0[0m
+[0;32mI (69598) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (69598) set_pixel: Top[0m
+[0;32mI (69598) app_main: x: 49, y: 0[0m
+[0;32mI (69798) app_main: Color: 2[0m
+[0;32mI (69798) app_main: OE-Pin: 0[0m
+[0;32mI (69798) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (69798) set_pixel: Top[0m
+[0;32mI (69798) app_main: x: 50, y: 0[0m
+[0;32mI (69998) app_main: Color: 0[0m
+[0;32mI (69998) app_main: OE-Pin: 0[0m
+[0;32mI (69998) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (69998) set_pixel: Top[0m
+[0;32mI (69998) app_main: x: 51, y: 0[0m
+[0;32mI (70198) app_main: Color: 1[0m
+[0;32mI (70198) app_main: OE-Pin: 0[0m
+[0;32mI (70198) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (70198) set_pixel: Top[0m
+[0;32mI (70198) app_main: x: 52, y: 0[0m
+[0;32mI (70398) app_main: Color: 2[0m
+[0;32mI (70398) app_main: OE-Pin: 0[0m
+[0;32mI (70398) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (70398) set_pixel: Top[0m
+[0;32mI (70398) app_main: x: 53, y: 0[0m
+[0;32mI (70598) app_main: Color: 0[0m
+[0;32mI (70598) app_main: OE-Pin: 0[0m
+[0;32mI (70598) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (70598) set_pixel: Top[0m
+[0;32mI (70598) app_main: x: 54, y: 0[0m
+[0;32mI (70798) app_main: Color: 1[0m
+[0;32mI (70798) app_main: OE-Pin: 0[0m
+[0;32mI (70798) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (70798) set_pixel: Top[0m
+[0;32mI (70798) app_main: x: 55, y: 0[0m
+[0;32mI (70998) app_main: Color: 2[0m
+[0;32mI (70998) app_main: OE-Pin: 0[0m
+[0;32mI (70998) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (70998) set_pixel: Top[0m
+[0;32mI (70998) app_main: x: 56, y: 0[0m
+[0;32mI (71198) app_main: Color: 0[0m
+[0;32mI (71198) app_main: OE-Pin: 0[0m
+[0;32mI (71198) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (71198) set_pixel: Top[0m
+[0;32mI (71198) app_main: x: 57, y: 0[0m
+[0;32mI (71398) app_main: Color: 1[0m
+[0;32mI (71398) app_main: OE-Pin: 0[0m
+[0;32mI (71398) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (71398) set_pixel: Top[0m
+[0;32mI (71398) app_main: x: 58, y: 0[0m
+[0;32mI (71598) app_main: Color: 2[0m
+[0;32mI (71598) app_main: OE-Pin: 0[0m
+[0;32mI (71598) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (71598) set_pixel: Top[0m
+[0;32mI (71598) app_main: x: 59, y: 0[0m
+[0;32mI (71798) app_main: Color: 0[0m
+[0;32mI (71798) app_main: OE-Pin: 0[0m
+[0;32mI (71798) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (71798) set_pixel: Top[0m
+[0;32mI (71798) app_main: x: 60, y: 0[0m
+[0;32mI (71998) app_main: Color: 1[0m
+[0;32mI (71998) app_main: OE-Pin: 0[0m
+[0;32mI (71998) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (71998) set_pixel: Top[0m
+[0;32mI (71998) app_main: x: 61, y: 0[0m
+[0;32mI (72198) app_main: Color: 2[0m
+[0;32mI (72198) app_main: OE-Pin: 0[0m
+[0;32mI (72198) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (72198) set_pixel: Top[0m
+[0;32mI (72198) app_main: x: 62, y: 0[0m
+[0;32mI (72398) app_main: Color: 0[0m
+[0;32mI (72398) app_main: OE-Pin: 0[0m
+[0;32mI (72398) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (72398) set_pixel: Top[0m
+[0;32mI (72398) app_main: x: 63, y: 0[0m
+[0;32mI (72598) app_main: Color: 1[0m
+[0;32mI (72598) app_main: OE-Pin: 0[0m
+[0;32mI (72598) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (72598) set_pixel: Top[0m
+[0;32mI (72598) app_main: x: 64, y: 0[0m
+[0;32mI (72798) app_main: Color: 2[0m
+[0;32mI (72798) app_main: OE-Pin: 0[0m
+[0;32mI (72798) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (72798) set_pixel: Top[0m
+[0;32mI (72798) app_main: x: 65, y: 0[0m
+[0;32mI (72998) app_main: Color: 0[0m
+[0;32mI (72998) app_main: OE-Pin: 0[0m
+[0;32mI (72998) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (72998) set_pixel: Top[0m
+[0;32mI (72998) app_main: x: 66, y: 0[0m
+[0;32mI (73198) app_main: Color: 1[0m
+[0;32mI (73198) app_main: OE-Pin: 0[0m
+[0;32mI (73198) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (73198) set_pixel: Top[0m
+[0;32mI (73198) app_main: x: 67, y: 0[0m
+[0;32mI (73398) app_main: Color: 2[0m
+[0;32mI (73398) app_main: OE-Pin: 0[0m
+[0;32mI (73398) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (73398) set_pixel: Top[0m
+[0;32mI (73398) app_main: x: 68, y: 0[0m
+[0;32mI (73598) app_main: Color: 0[0m
+[0;32mI (73598) app_main: OE-Pin: 0[0m
+[0;32mI (73598) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (73598) set_pixel: Top[0m
+[0;32mI (73598) app_main: x: 69, y: 0[0m
+[0;32mI (73798) app_main: Color: 1[0m
+[0;32mI (73798) app_main: OE-Pin: 0[0m
+[0;32mI (73798) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (73798) set_pixel: Top[0m
+[0;32mI (73798) app_main: x: 70, y: 0[0m
+[0;32mI (73998) app_main: Color: 2[0m
+[0;32mI (73998) app_main: OE-Pin: 0[0m
+[0;32mI (73998) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (73998) set_pixel: Top[0m
+[0;32mI (73998) app_main: x: 71, y: 0[0m
+[0;32mI (74198) app_main: Color: 0[0m
+[0;32mI (74198) app_main: OE-Pin: 0[0m
+[0;32mI (74198) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (74198) set_pixel: Top[0m
+[0;32mI (74198) app_main: x: 72, y: 0[0m
+[0;32mI (74398) app_main: Color: 1[0m
+[0;32mI (74398) app_main: OE-Pin: 0[0m
+[0;32mI (74398) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (74398) set_pixel: Top[0m
+[0;32mI (74398) app_main: x: 73, y: 0[0m
+[0;32mI (74598) app_main: Color: 2[0m
+[0;32mI (74598) app_main: OE-Pin: 0[0m
+[0;32mI (74598) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (74598) set_pixel: Top[0m
+[0;32mI (74598) app_main: x: 74, y: 0[0m
+[0;32mI (74798) app_main: Color: 0[0m
+[0;32mI (74798) app_main: OE-Pin: 0[0m
+[0;32mI (74798) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (74798) set_pixel: Top[0m
+[0;32mI (74798) app_main: x: 75, y: 0[0m
+[0;32mI (74998) app_main: Color: 1[0m
+[0;32mI (74998) app_main: OE-Pin: 0[0m
+[0;32mI (74998) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (74998) set_pixel: Top[0m
+[0;32mI (74998) app_main: x: 76, y: 0[0m
+[0;32mI (75198) app_main: Color: 2[0m
+[0;32mI (75198) app_main: OE-Pin: 0[0m
+[0;32mI (75198) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (75198) set_pixel: Top[0m
+[0;32mI (75198) app_main: x: 77, y: 0[0m
+[0;32mI (75398) app_main: Color: 0[0m
+[0;32mI (75398) app_main: OE-Pin: 0[0m
+[0;32mI (75398) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (75398) set_pixel: Top[0m
+[0;32mI (75398) app_main: x: 78, y: 0[0m
+[0;32mI (75598) app_main: Color: 1[0m
+[0;32mI (75598) app_main: OE-Pin: 0[0m
+[0;32mI (75598) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (75598) set_pixel: Top[0m
+[0;32mI (75598) app_main: x: 79, y: 0[0m
+[0;32mI (75798) app_main: Color: 2[0m
+[0;32mI (75798) app_main: OE-Pin: 0[0m
+[0;32mI (75798) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (75798) set_pixel: Top[0m
+[0;32mI (75798) app_main: x: 80, y: 0[0m
+[0;32mI (75998) app_main: Color: 0[0m
+[0;32mI (75998) app_main: OE-Pin: 0[0m
+[0;32mI (75998) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (75998) set_pixel: Top[0m
+[0;32mI (75998) app_main: x: 81, y: 0[0m
+[0;32mI (76198) app_main: Color: 1[0m
+[0;32mI (76198) app_main: OE-Pin: 0[0m
+[0;32mI (76198) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (76198) set_pixel: Top[0m
+[0;32mI (76198) app_main: x: 82, y: 0[0m
+[0;32mI (76398) app_main: Color: 2[0m
+[0;32mI (76398) app_main: OE-Pin: 0[0m
+[0;32mI (76398) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (76398) set_pixel: Top[0m
+[0;32mI (76398) app_main: x: 83, y: 0[0m
+[0;32mI (76598) app_main: Color: 0[0m
+[0;32mI (76598) app_main: OE-Pin: 0[0m
+[0;32mI (76598) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (76598) set_pixel: Top[0m
+[0;32mI (76598) app_main: x: 84, y: 0[0m
+[0;32mI (76798) app_main: Color: 1[0m
+[0;32mI (76798) app_main: OE-Pin: 0[0m
+[0;32mI (76798) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (76798) set_pixel: Top[0m
+[0;32mI (76798) app_main: x: 85, y: 0[0m
+[0;32mI (76998) app_main: Color: 2[0m
+[0;32mI (76998) app_main: OE-Pin: 0[0m
+[0;32mI (76998) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (76998) set_pixel: Top[0m
+[0;32mI (76998) app_main: x: 86, y: 0[0m
+[0;32mI (77198) app_main: Color: 0[0m
+[0;32mI (77198) app_main: OE-Pin: 0[0m
+[0;32mI (77198) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (77198) set_pixel: Top[0m
+[0;32mI (77198) app_main: x: 87, y: 0[0m
+[0;32mI (77398) app_main: Color: 1[0m
+[0;32mI (77398) app_main: OE-Pin: 0[0m
+[0;32mI (77398) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (77398) set_pixel: Top[0m
+[0;32mI (77398) app_main: x: 88, y: 0[0m
+[0;32mI (77598) app_main: Color: 2[0m
+[0;32mI (77598) app_main: OE-Pin: 0[0m
+[0;32mI (77598) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (77598) set_pixel: Top[0m
+[0;32mI (77598) app_main: x: 89, y: 0[0m
+[0;32mI (77798) app_main: Color: 0[0m
+[0;32mI (77798) app_main: OE-Pin: 0[0m
+[0;32mI (77798) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (77798) set_pixel: Top[0m
+[0;32mI (77798) app_main: x: 90, y: 0[0m
+[0;32mI (77998) app_main: Color: 1[0m
+[0;32mI (77998) app_main: OE-Pin: 0[0m
+[0;32mI (77998) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (77998) set_pixel: Top[0m
+[0;32mI (77998) app_main: x: 91, y: 0[0m
+[0;32mI (78198) app_main: Color: 2[0m
+[0;32mI (78198) app_main: OE-Pin: 0[0m
+[0;32mI (78198) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (78198) set_pixel: Top[0m
+[0;32mI (78198) app_main: x: 92, y: 0[0m
+[0;32mI (78398) app_main: Color: 0[0m
+[0;32mI (78398) app_main: OE-Pin: 0[0m
+[0;32mI (78398) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (78398) set_pixel: Top[0m
+[0;32mI (78398) app_main: x: 93, y: 0[0m
+[0;32mI (78598) app_main: Color: 1[0m
+[0;32mI (78598) app_main: OE-Pin: 0[0m
+[0;32mI (78598) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (78598) set_pixel: Top[0m
+[0;32mI (78598) app_main: x: 94, y: 0[0m
+[0;32mI (78798) app_main: Color: 2[0m
+[0;32mI (78798) app_main: OE-Pin: 0[0m
+[0;32mI (78798) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (78798) set_pixel: Top[0m
+[0;32mI (78798) app_main: x: 95, y: 0[0m
+[0;32mI (78998) app_main: Color: 0[0m
+[0;32mI (78998) app_main: OE-Pin: 0[0m
+[0;32mI (78998) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (78998) set_pixel: Top[0m
+[0;32mI (78998) app_main: x: 0, y: 0[0m
+[0;32mI (79198) app_main: Color: 1[0m
+[0;32mI (79198) app_main: OE-Pin: 0[0m
+[0;32mI (79198) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (79198) set_pixel: Top[0m
+[0;32mI (79198) app_main: x: 1, y: 0[0m
+[0;32mI (79398) app_main: Color: 2[0m
+[0;32mI (79398) app_main: OE-Pin: 0[0m
+[0;32mI (79398) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (79398) set_pixel: Top[0m
+[0;32mI (79398) app_main: x: 2, y: 0[0m
+[0;32mI (79598) app_main: Color: 0[0m
+[0;32mI (79598) app_main: OE-Pin: 0[0m
+[0;32mI (79598) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (79598) set_pixel: Top[0m
+[0;32mI (79598) app_main: x: 3, y: 0[0m
+[0;32mI (79798) app_main: Color: 1[0m
+[0;32mI (79798) app_main: OE-Pin: 0[0m
+[0;32mI (79798) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (79798) set_pixel: Top[0m
+[0;32mI (79798) app_main: x: 4, y: 0[0m
+[0;32mI (79998) app_main: Color: 2[0m
+[0;32mI (79998) app_main: OE-Pin: 0[0m
+[0;32mI (79998) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (79998) set_pixel: Top[0m
+[0;32mI (79998) app_main: x: 5, y: 0[0m
+[0;32mI (80198) app_main: Color: 0[0m
+[0;32mI (80198) app_main: OE-Pin: 0[0m
+[0;32mI (80198) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (80198) set_pixel: Top[0m
+[0;32mI (80198) app_main: x: 6, y: 0[0m
+[0;32mI (80398) app_main: Color: 1[0m
+[0;32mI (80398) app_main: OE-Pin: 0[0m
+[0;32mI (80398) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (80398) set_pixel: Top[0m
+[0;32mI (80398) app_main: x: 7, y: 0[0m
+[0;32mI (80598) app_main: Color: 2[0m
+[0;32mI (80598) app_main: OE-Pin: 0[0m
+[0;32mI (80598) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (80598) set_pixel: Top[0m
+[0;32mI (80598) app_main: x: 8, y: 0[0m
+[0;32mI (80798) app_main: Color: 0[0m
+[0;32mI (80798) app_main: OE-Pin: 0[0m
+[0;32mI (80798) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (80798) set_pixel: Top[0m
+[0;32mI (80798) app_main: x: 9, y: 0[0m
+[0;32mI (80998) app_main: Color: 1[0m
+[0;32mI (80998) app_main: OE-Pin: 0[0m
+[0;32mI (80998) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (80998) set_pixel: Top[0m
+[0;32mI (80998) app_main: x: 10, y: 0[0m
+[0;32mI (81198) app_main: Color: 2[0m
+[0;32mI (81198) app_main: OE-Pin: 0[0m
+[0;32mI (81198) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (81198) set_pixel: Top[0m
+[0;32mI (81198) app_main: x: 11, y: 0[0m
+[0;32mI (81398) app_main: Color: 0[0m
+[0;32mI (81398) app_main: OE-Pin: 0[0m
+[0;32mI (81398) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (81398) set_pixel: Top[0m
+[0;32mI (81398) app_main: x: 12, y: 0[0m
+[0;32mI (81598) app_main: Color: 1[0m
+[0;32mI (81598) app_main: OE-Pin: 0[0m
+[0;32mI (81598) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (81598) set_pixel: Top[0m
+[0;32mI (81598) app_main: x: 13, y: 0[0m
+[0;32mI (81798) app_main: Color: 2[0m
+[0;32mI (81798) app_main: OE-Pin: 0[0m
+[0;32mI (81798) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (81798) set_pixel: Top[0m
+[0;32mI (81798) app_main: x: 14, y: 0[0m
+[0;32mI (81998) app_main: Color: 0[0m
+[0;32mI (81998) app_main: OE-Pin: 0[0m
+[0;32mI (81998) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (81998) set_pixel: Top[0m
+[0;32mI (81998) app_main: x: 15, y: 0[0m
+[0;32mI (82198) app_main: Color: 1[0m
+[0;32mI (82198) app_main: OE-Pin: 0[0m
+[0;32mI (82198) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (82198) set_pixel: Top[0m
+[0;32mI (82198) app_main: x: 16, y: 0[0m
+[0;32mI (82398) app_main: Color: 2[0m
+[0;32mI (82398) app_main: OE-Pin: 0[0m
+[0;32mI (82398) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (82398) set_pixel: Top[0m
+[0;32mI (82398) app_main: x: 17, y: 0[0m
+[0;32mI (82598) app_main: Color: 0[0m
+[0;32mI (82598) app_main: OE-Pin: 0[0m
+[0;32mI (82598) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (82598) set_pixel: Top[0m
+[0;32mI (82598) app_main: x: 18, y: 0[0m
+[0;32mI (82798) app_main: Color: 1[0m
+[0;32mI (82798) app_main: OE-Pin: 0[0m
+[0;32mI (82798) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (82798) set_pixel: Top[0m
+[0;32mI (82798) app_main: x: 19, y: 0[0m
+[0;32mI (82998) app_main: Color: 2[0m
+[0;32mI (82998) app_main: OE-Pin: 0[0m
+[0;32mI (82998) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (82998) set_pixel: Top[0m
+[0;32mI (82998) app_main: x: 20, y: 0[0m
+[0;32mI (83198) app_main: Color: 0[0m
+[0;32mI (83198) app_main: OE-Pin: 0[0m
+[0;32mI (83198) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (83198) set_pixel: Top[0m
+[0;32mI (83198) app_main: x: 21, y: 0[0m
+[0;32mI (83398) app_main: Color: 1[0m
+[0;32mI (83398) app_main: OE-Pin: 0[0m
+[0;32mI (83398) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (83398) set_pixel: Top[0m
+[0;32mI (83398) app_main: x: 22, y: 0[0m
+[0;32mI (83598) app_main: Color: 2[0m
+[0;32mI (83598) app_main: OE-Pin: 0[0m
+[0;32mI (83598) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (83598) set_pixel: Top[0m
+[0;32mI (83598) app_main: x: 23, y: 0[0m
+[0;32mI (83798) app_main: Color: 0[0m
+[0;32mI (83798) app_main: OE-Pin: 0[0m
+[0;32mI (83798) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (83798) set_pixel: Top[0m
+[0;32mI (83798) app_main: x: 24, y: 0[0m
+[0;32mI (83998) app_main: Color: 1[0m
+[0;32mI (83998) app_main: OE-Pin: 0[0m
+[0;32mI (83998) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (83998) set_pixel: Top[0m
+[0;32mI (83998) app_main: x: 25, y: 0[0m
+[0;32mI (84198) app_main: Color: 2[0m
+[0;32mI (84198) app_main: OE-Pin: 0[0m
+[0;32mI (84198) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (84198) set_pixel: Top[0m
+[0;32mI (84198) app_main: x: 26, y: 0[0m
+[0;32mI (84398) app_main: Color: 0[0m
+[0;32mI (84398) app_main: OE-Pin: 0[0m
+[0;32mI (84398) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (84398) set_pixel: Top[0m
+[0;32mI (84398) app_main: x: 27, y: 0[0m
+[0;32mI (84598) app_main: Color: 1[0m
+[0;32mI (84598) app_main: OE-Pin: 0[0m
+[0;32mI (84598) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (84598) set_pixel: Top[0m
+[0;32mI (84598) app_main: x: 28, y: 0[0m
+[0;32mI (84798) app_main: Color: 2[0m
+[0;32mI (84798) app_main: OE-Pin: 0[0m
+[0;32mI (84798) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (84798) set_pixel: Top[0m
+[0;32mI (84798) app_main: x: 29, y: 0[0m
+[0;32mI (84998) app_main: Color: 0[0m
+[0;32mI (84998) app_main: OE-Pin: 0[0m
+[0;32mI (84998) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (84998) set_pixel: Top[0m
+[0;32mI (84998) app_main: x: 30, y: 0[0m
+[0;32mI (85198) app_main: Color: 1[0m
+[0;32mI (85198) app_main: OE-Pin: 0[0m
+[0;32mI (85198) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (85198) set_pixel: Top[0m
+[0;32mI (85198) app_main: x: 31, y: 0[0m
+[0;32mI (85398) app_main: Color: 2[0m
+[0;32mI (85398) app_main: OE-Pin: 0[0m
+[0;32mI (85398) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (85398) set_pixel: Top[0m
+[0;32mI (85398) app_main: x: 32, y: 0[0m
+[0;32mI (85598) app_main: Color: 0[0m
+[0;32mI (85598) app_main: OE-Pin: 0[0m
+[0;32mI (85598) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (85598) set_pixel: Top[0m
+[0;32mI (85598) app_main: x: 33, y: 0[0m
+[0;32mI (85798) app_main: Color: 1[0m
+[0;32mI (85798) app_main: OE-Pin: 0[0m
+[0;32mI (85798) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (85798) set_pixel: Top[0m
+[0;32mI (85798) app_main: x: 34, y: 0[0m
+[0;32mI (85998) app_main: Color: 2[0m
+[0;32mI (85998) app_main: OE-Pin: 0[0m
+[0;32mI (85998) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (85998) set_pixel: Top[0m
+[0;32mI (85998) app_main: x: 35, y: 0[0m
+[0;32mI (86198) app_main: Color: 0[0m
+[0;32mI (86198) app_main: OE-Pin: 0[0m
+[0;32mI (86198) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (86198) set_pixel: Top[0m
+[0;32mI (86198) app_main: x: 36, y: 0[0m
+[0;32mI (86398) app_main: Color: 1[0m
+[0;32mI (86398) app_main: OE-Pin: 0[0m
+[0;32mI (86398) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (86398) set_pixel: Top[0m
+[0;32mI (86398) app_main: x: 37, y: 0[0m
+[0;32mI (86598) app_main: Color: 2[0m
+[0;32mI (86598) app_main: OE-Pin: 0[0m
+[0;32mI (86598) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (86598) set_pixel: Top[0m
+[0;32mI (86598) app_main: x: 38, y: 0[0m
+[0;32mI (86798) app_main: Color: 0[0m
+[0;32mI (86798) app_main: OE-Pin: 0[0m
+[0;32mI (86798) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (86798) set_pixel: Top[0m
+[0;32mI (86798) app_main: x: 39, y: 0[0m
+[0;32mI (86998) app_main: Color: 1[0m
+[0;32mI (86998) app_main: OE-Pin: 0[0m
+[0;32mI (86998) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (86998) set_pixel: Top[0m
+[0;32mI (86998) app_main: x: 40, y: 0[0m
+[0;32mI (87198) app_main: Color: 2[0m
+[0;32mI (87198) app_main: OE-Pin: 0[0m
+[0;32mI (87198) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (87198) set_pixel: Top[0m
+[0;32mI (87198) app_main: x: 41, y: 0[0m
+[0;32mI (87398) app_main: Color: 0[0m
+[0;32mI (87398) app_main: OE-Pin: 0[0m
+[0;32mI (87398) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (87398) set_pixel: Top[0m
+[0;32mI (87398) app_main: x: 42, y: 0[0m
+[0;32mI (87598) app_main: Color: 1[0m
+[0;32mI (87598) app_main: OE-Pin: 0[0m
+[0;32mI (87598) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (87598) set_pixel: Top[0m
+[0;32mI (87598) app_main: x: 43, y: 0[0m
+[0;32mI (87798) app_main: Color: 2[0m
+[0;32mI (87798) app_main: OE-Pin: 0[0m
+[0;32mI (87798) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (87798) set_pixel: Top[0m
+[0;32mI (87798) app_main: x: 44, y: 0[0m
+[0;32mI (87998) app_main: Color: 0[0m
+[0;32mI (87998) app_main: OE-Pin: 0[0m
+[0;32mI (87998) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (87998) set_pixel: Top[0m
+[0;32mI (87998) app_main: x: 45, y: 0[0m
+[0;32mI (88198) app_main: Color: 1[0m
+[0;32mI (88198) app_main: OE-Pin: 0[0m
+[0;32mI (88198) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (88198) set_pixel: Top[0m
+[0;32mI (88198) app_main: x: 46, y: 0[0m
+[0;32mI (88398) app_main: Color: 2[0m
+[0;32mI (88398) app_main: OE-Pin: 0[0m
+[0;32mI (88398) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (88398) set_pixel: Top[0m
+[0;32mI (88398) app_main: x: 47, y: 0[0m
+[0;32mI (88598) app_main: Color: 0[0m
+[0;32mI (88598) app_main: OE-Pin: 0[0m
+[0;32mI (88598) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (88598) set_pixel: Top[0m
+[0;32mI (88598) app_main: x: 48, y: 0[0m
+[0;32mI (88798) app_main: Color: 1[0m
+[0;32mI (88798) app_main: OE-Pin: 0[0m
+[0;32mI (88798) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (88798) set_pixel: Top[0m
+[0;32mI (88798) app_main: x: 49, y: 0[0m
+[0;32mI (88998) app_main: Color: 2[0m
+[0;32mI (88998) app_main: OE-Pin: 0[0m
+[0;32mI (88998) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (88998) set_pixel: Top[0m
+[0;32mI (88998) app_main: x: 50, y: 0[0m
+[0;32mI (89198) app_main: Color: 0[0m
+[0;32mI (89198) app_main: OE-Pin: 0[0m
+[0;32mI (89198) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (89198) set_pixel: Top[0m
+[0;32mI (89198) app_main: x: 51, y: 0[0m
+[0;32mI (89398) app_main: Color: 1[0m
+[0;32mI (89398) app_main: OE-Pin: 0[0m
+[0;32mI (89398) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (89398) set_pixel: Top[0m
+[0;32mI (89398) app_main: x: 52, y: 0[0m
+[0;32mI (89598) app_main: Color: 2[0m
+[0;32mI (89598) app_main: OE-Pin: 0[0m
+[0;32mI (89598) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (89598) set_pixel: Top[0m
+[0;32mI (89598) app_main: x: 53, y: 0[0m
+[0;32mI (89798) app_main: Color: 0[0m
+[0;32mI (89798) app_main: OE-Pin: 0[0m
+[0;32mI (89798) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (89798) set_pixel: Top[0m
+[0;32mI (89798) app_main: x: 54, y: 0[0m
+[0;32mI (89998) app_main: Color: 1[0m
+[0;32mI (89998) app_main: OE-Pin: 0[0m
+[0;32mI (89998) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (89998) set_pixel: Top[0m
+[0;32mI (89998) app_main: x: 55, y: 0[0m
+[0;32mI (90198) app_main: Color: 2[0m
+[0;32mI (90198) app_main: OE-Pin: 0[0m
+[0;32mI (90198) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (90198) set_pixel: Top[0m
+[0;32mI (90198) app_main: x: 56, y: 0[0m
+[0;32mI (90398) app_main: Color: 0[0m
+[0;32mI (90398) app_main: OE-Pin: 0[0m
+[0;32mI (90398) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (90398) set_pixel: Top[0m
+[0;32mI (90398) app_main: x: 57, y: 0[0m
+[0;32mI (90598) app_main: Color: 1[0m
+[0;32mI (90598) app_main: OE-Pin: 0[0m
+[0;32mI (90598) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (90598) set_pixel: Top[0m
+[0;32mI (90598) app_main: x: 58, y: 0[0m
+[0;32mI (90798) app_main: Color: 2[0m
+[0;32mI (90798) app_main: OE-Pin: 0[0m
+[0;32mI (90798) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (90798) set_pixel: Top[0m
+[0;32mI (90798) app_main: x: 59, y: 0[0m
+[0;32mI (90998) app_main: Color: 0[0m
+[0;32mI (90998) app_main: OE-Pin: 0[0m
+[0;32mI (90998) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (90998) set_pixel: Top[0m
+[0;32mI (90998) app_main: x: 60, y: 0[0m
+[0;32mI (91198) app_main: Color: 1[0m
+[0;32mI (91198) app_main: OE-Pin: 0[0m
+[0;32mI (91198) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (91198) set_pixel: Top[0m
+[0;32mI (91198) app_main: x: 61, y: 0[0m
+[0;32mI (91398) app_main: Color: 2[0m
+[0;32mI (91398) app_main: OE-Pin: 0[0m
+[0;32mI (91398) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (91398) set_pixel: Top[0m
+[0;32mI (91398) app_main: x: 62, y: 0[0m
+[0;32mI (91598) app_main: Color: 0[0m
+[0;32mI (91598) app_main: OE-Pin: 0[0m
+[0;32mI (91598) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (91598) set_pixel: Top[0m
+[0;32mI (91598) app_main: x: 63, y: 0[0m
+[0;32mI (91798) app_main: Color: 1[0m
+[0;32mI (91798) app_main: OE-Pin: 0[0m
+[0;32mI (91798) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (91798) set_pixel: Top[0m
+[0;32mI (91798) app_main: x: 64, y: 0[0m
+[0;32mI (91998) app_main: Color: 2[0m
+[0;32mI (91998) app_main: OE-Pin: 0[0m
+[0;32mI (91998) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (91998) set_pixel: Top[0m
+[0;32mI (91998) app_main: x: 65, y: 0[0m
+[0;32mI (92198) app_main: Color: 0[0m
+[0;32mI (92198) app_main: OE-Pin: 0[0m
+[0;32mI (92198) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (92198) set_pixel: Top[0m
+[0;32mI (92198) app_main: x: 66, y: 0[0m
+[0;32mI (92398) app_main: Color: 1[0m
+[0;32mI (92398) app_main: OE-Pin: 0[0m
+[0;32mI (92398) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (92398) set_pixel: Top[0m
+[0;32mI (92398) app_main: x: 67, y: 0[0m
+[0;32mI (92598) app_main: Color: 2[0m
+[0;32mI (92598) app_main: OE-Pin: 0[0m
+[0;32mI (92598) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (92598) set_pixel: Top[0m
+[0;32mI (92598) app_main: x: 68, y: 0[0m
+[0;32mI (92798) app_main: Color: 0[0m
+[0;32mI (92798) app_main: OE-Pin: 0[0m
+[0;32mI (92798) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (92798) set_pixel: Top[0m
+[0;32mI (92798) app_main: x: 69, y: 0[0m
+[0;32mI (92998) app_main: Color: 1[0m
+[0;32mI (92998) app_main: OE-Pin: 0[0m
+[0;32mI (92998) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (92998) set_pixel: Top[0m
+[0;32mI (92998) app_main: x: 70, y: 0[0m
+[0;32mI (93198) app_main: Color: 2[0m
+[0;32mI (93198) app_main: OE-Pin: 0[0m
+[0;32mI (93198) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (93198) set_pixel: Top[0m
+[0;32mI (93198) app_main: x: 71, y: 0[0m
+[0;32mI (93398) app_main: Color: 0[0m
+[0;32mI (93398) app_main: OE-Pin: 0[0m
+[0;32mI (93398) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (93398) set_pixel: Top[0m
+[0;32mI (93398) app_main: x: 72, y: 0[0m
+[0;32mI (93598) app_main: Color: 1[0m
+[0;32mI (93598) app_main: OE-Pin: 0[0m
+[0;32mI (93598) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (93598) set_pixel: Top[0m
+[0;32mI (93598) app_main: x: 73, y: 0[0m
+[0;32mI (93798) app_main: Color: 2[0m
+[0;32mI (93798) app_main: OE-Pin: 0[0m
+[0;32mI (93798) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (93798) set_pixel: Top[0m
+[0;32mI (93798) app_main: x: 74, y: 0[0m
+[0;32mI (93998) app_main: Color: 0[0m
+[0;32mI (93998) app_main: OE-Pin: 0[0m
+[0;32mI (93998) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (93998) set_pixel: Top[0m
+[0;32mI (93998) app_main: x: 75, y: 0[0m
+[0;32mI (94198) app_main: Color: 1[0m
+[0;32mI (94198) app_main: OE-Pin: 0[0m
+[0;32mI (94198) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (94198) set_pixel: Top[0m
+[0;32mI (94198) app_main: x: 76, y: 0[0m
+[0;32mI (94398) app_main: Color: 2[0m
+[0;32mI (94398) app_main: OE-Pin: 0[0m
+[0;32mI (94398) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (94398) set_pixel: Top[0m
+[0;32mI (94398) app_main: x: 77, y: 0[0m
+[0;32mI (94598) app_main: Color: 0[0m
+[0;32mI (94598) app_main: OE-Pin: 0[0m
+[0;32mI (94598) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (94598) set_pixel: Top[0m
+[0;32mI (94598) app_main: x: 78, y: 0[0m
+[0;32mI (94798) app_main: Color: 1[0m
+[0;32mI (94798) app_main: OE-Pin: 0[0m
+[0;32mI (94798) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (94798) set_pixel: Top[0m
+[0;32mI (94798) app_main: x: 79, y: 0[0m
+[0;32mI (94998) app_main: Color: 2[0m
+[0;32mI (94998) app_main: OE-Pin: 0[0m
+[0;32mI (94998) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (94998) set_pixel: Top[0m
+[0;32mI (94998) app_main: x: 80, y: 0[0m
+[0;32mI (95198) app_main: Color: 0[0m
+[0;32mI (95198) app_main: OE-Pin: 0[0m
+[0;32mI (95198) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (95198) set_pixel: Top[0m
+[0;32mI (95198) app_main: x: 81, y: 0[0m
+[0;32mI (95398) app_main: Color: 1[0m
+[0;32mI (95398) app_main: OE-Pin: 0[0m
+[0;32mI (95398) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (95398) set_pixel: Top[0m
+[0;32mI (95398) app_main: x: 82, y: 0[0m
+[0;32mI (95598) app_main: Color: 2[0m
+[0;32mI (95598) app_main: OE-Pin: 0[0m
+[0;32mI (95598) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (95598) set_pixel: Top[0m
+[0;32mI (95598) app_main: x: 83, y: 0[0m
+[0;32mI (95798) app_main: Color: 0[0m
+[0;32mI (95798) app_main: OE-Pin: 0[0m
+[0;32mI (95798) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (95798) set_pixel: Top[0m
+[0;32mI (95798) app_main: x: 84, y: 0[0m
+[0;32mI (95998) app_main: Color: 1[0m
+[0;32mI (95998) app_main: OE-Pin: 0[0m
+[0;32mI (95998) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (95998) set_pixel: Top[0m
+[0;32mI (95998) app_main: x: 85, y: 0[0m
+[0;32mI (96198) app_main: Color: 2[0m
+[0;32mI (96198) app_main: OE-Pin: 0[0m
+[0;32mI (96198) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (96198) set_pixel: Top[0m
+[0;32mI (96198) app_main: x: 86, y: 0[0m
+[0;32mI (96398) app_main: Color: 0[0m
+[0;32mI (96398) app_main: OE-Pin: 0[0m
+[0;32mI (96398) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (96398) set_pixel: Top[0m
+[0;32mI (96398) app_main: x: 87, y: 0[0m
+[0;32mI (96598) app_main: Color: 1[0m
+[0;32mI (96598) app_main: OE-Pin: 0[0m
+[0;32mI (96598) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (96598) set_pixel: Top[0m
+[0;32mI (96598) app_main: x: 88, y: 0[0m
+[0;32mI (96798) app_main: Color: 2[0m
+[0;32mI (96798) app_main: OE-Pin: 0[0m
+[0;32mI (96798) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (96798) set_pixel: Top[0m
+[0;32mI (96798) app_main: x: 89, y: 0[0m
+[0;32mI (96998) app_main: Color: 0[0m
+[0;32mI (96998) app_main: OE-Pin: 0[0m
+[0;32mI (96998) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (96998) set_pixel: Top[0m
+[0;32mI (96998) app_main: x: 90, y: 0[0m
+[0;32mI (97198) app_main: Color: 1[0m
+[0;32mI (97198) app_main: OE-Pin: 0[0m
+[0;32mI (97198) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (97198) set_pixel: Top[0m
+[0;32mI (97198) app_main: x: 91, y: 0[0m
+[0;32mI (97398) app_main: Color: 2[0m
+[0;32mI (97398) app_main: OE-Pin: 0[0m
+[0;32mI (97398) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (97398) set_pixel: Top[0m
+[0;32mI (97398) app_main: x: 92, y: 0[0m
+[0;32mI (97598) app_main: Color: 0[0m
+[0;32mI (97598) app_main: OE-Pin: 0[0m
+[0;32mI (97598) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (97598) set_pixel: Top[0m
+[0;32mI (97598) app_main: x: 93, y: 0[0m
+[0;32mI (97798) app_main: Color: 1[0m
+[0;32mI (97798) app_main: OE-Pin: 0[0m
+[0;32mI (97798) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (97798) set_pixel: Top[0m
+[0;32mI (97798) app_main: x: 94, y: 0[0m
+[0;32mI (97998) app_main: Color: 2[0m
+[0;32mI (97998) app_main: OE-Pin: 0[0m
+[0;32mI (97998) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (97998) set_pixel: Top[0m
+[0;32mI (97998) app_main: x: 95, y: 0[0m
+[0;32mI (98198) app_main: Color: 0[0m
+[0;32mI (98198) app_main: OE-Pin: 0[0m
+[0;32mI (98198) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (98198) set_pixel: Top[0m
+[0;32mI (98198) app_main: x: 0, y: 0[0m
+[0;32mI (98398) app_main: Color: 1[0m
+[0;32mI (98398) app_main: OE-Pin: 0[0m
+[0;32mI (98398) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (98398) set_pixel: Top[0m
+[0;32mI (98398) app_main: x: 1, y: 0[0m
+[0;32mI (98598) app_main: Color: 2[0m
+[0;32mI (98598) app_main: OE-Pin: 0[0m
+[0;32mI (98598) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (98598) set_pixel: Top[0m
+[0;32mI (98598) app_main: x: 2, y: 0[0m
+[0;32mI (98798) app_main: Color: 0[0m
+[0;32mI (98798) app_main: OE-Pin: 0[0m
+[0;32mI (98798) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (98798) set_pixel: Top[0m
+[0;32mI (98798) app_main: x: 3, y: 0[0m
+[0;32mI (98998) app_main: Color: 1[0m
+[0;32mI (98998) app_main: OE-Pin: 0[0m
+[0;32mI (98998) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (98998) set_pixel: Top[0m
+[0;32mI (98998) app_main: x: 4, y: 0[0m
+[0;32mI (99198) app_main: Color: 2[0m
+[0;32mI (99198) app_main: OE-Pin: 0[0m
+[0;32mI (99198) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (99198) set_pixel: Top[0m
+[0;32mI (99198) app_main: x: 5, y: 0[0m
+[0;32mI (99398) app_main: Color: 0[0m
+[0;32mI (99398) app_main: OE-Pin: 0[0m
+[0;32mI (99398) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (99398) set_pixel: Top[0m
+[0;32mI (99398) app_main: x: 6, y: 0[0m
+[0;32mI (99598) app_main: Color: 1[0m
+[0;32mI (99598) app_main: OE-Pin: 0[0m
+[0;32mI (99598) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (99598) set_pixel: Top[0m
+[0;32mI (99598) app_main: x: 7, y: 0[0m
+[0;32mI (99798) app_main: Color: 2[0m
+[0;32mI (99798) app_main: OE-Pin: 0[0m
+[0;32mI (99798) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (99798) set_pixel: Top[0m
+[0;32mI (99798) app_main: x: 8, y: 0[0m
+[0;32mI (99998) app_main: Color: 0[0m
+[0;32mI (99998) app_main: OE-Pin: 0[0m
+[0;32mI (99998) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (99998) set_pixel: Top[0m
+[0;32mI (99998) app_main: x: 9, y: 0[0m
+[0;32mI (100198) app_main: Color: 1[0m
+[0;32mI (100198) app_main: OE-Pin: 0[0m
+[0;32mI (100198) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (100198) set_pixel: Top[0m
+[0;32mI (100198) app_main: x: 10, y: 0[0m
+[0;32mI (100398) app_main: Color: 2[0m
+[0;32mI (100398) app_main: OE-Pin: 0[0m
+[0;32mI (100398) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (100398) set_pixel: Top[0m
+[0;32mI (100398) app_main: x: 11, y: 0[0m
+[0;32mI (100598) app_main: Color: 0[0m
+[0;32mI (100598) app_main: OE-Pin: 0[0m
+[0;32mI (100598) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (100598) set_pixel: Top[0m
+[0;32mI (100598) app_main: x: 12, y: 0[0m
+[0;32mI (100798) app_main: Color: 1[0m
+[0;32mI (100798) app_main: OE-Pin: 0[0m
+[0;32mI (100798) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (100798) set_pixel: Top[0m
+[0;32mI (100798) app_main: x: 13, y: 0[0m
+[0;32mI (100998) app_main: Color: 2[0m
+[0;32mI (100998) app_main: OE-Pin: 0[0m
+[0;32mI (100998) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (100998) set_pixel: Top[0m
+[0;32mI (100998) app_main: x: 14, y: 0[0m
+[0;32mI (101198) app_main: Color: 0[0m
+[0;32mI (101198) app_main: OE-Pin: 0[0m
+[0;32mI (101198) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (101198) set_pixel: Top[0m
+[0;32mI (101198) app_main: x: 15, y: 0[0m
+[0;32mI (101398) app_main: Color: 1[0m
+[0;32mI (101398) app_main: OE-Pin: 0[0m
+[0;32mI (101398) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (101398) set_pixel: Top[0m
+[0;32mI (101398) app_main: x: 16, y: 0[0m
+[0;32mI (101598) app_main: Color: 2[0m
+[0;32mI (101598) app_main: OE-Pin: 0[0m
+[0;32mI (101598) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (101598) set_pixel: Top[0m
+[0;32mI (101598) app_main: x: 17, y: 0[0m
+[0;32mI (101798) app_main: Color: 0[0m
+[0;32mI (101798) app_main: OE-Pin: 0[0m
+[0;32mI (101798) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (101798) set_pixel: Top[0m
+[0;32mI (101798) app_main: x: 18, y: 0[0m
+[0;32mI (101998) app_main: Color: 1[0m
+[0;32mI (101998) app_main: OE-Pin: 0[0m
+[0;32mI (101998) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (101998) set_pixel: Top[0m
+[0;32mI (101998) app_main: x: 19, y: 0[0m
+[0;32mI (102198) app_main: Color: 2[0m
+[0;32mI (102198) app_main: OE-Pin: 0[0m
+[0;32mI (102198) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (102198) set_pixel: Top[0m
+[0;32mI (102198) app_main: x: 20, y: 0[0m
+[0;32mI (102398) app_main: Color: 0[0m
+[0;32mI (102398) app_main: OE-Pin: 0[0m
+[0;32mI (102398) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (102398) set_pixel: Top[0m
+[0;32mI (102398) app_main: x: 21, y: 0[0m
+[0;32mI (102598) app_main: Color: 1[0m
+[0;32mI (102598) app_main: OE-Pin: 0[0m
+[0;32mI (102598) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (102598) set_pixel: Top[0m
+[0;32mI (102598) app_main: x: 22, y: 0[0m
+[0;32mI (102798) app_main: Color: 2[0m
+[0;32mI (102798) app_main: OE-Pin: 0[0m
+[0;32mI (102798) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (102798) set_pixel: Top[0m
+[0;32mI (102798) app_main: x: 23, y: 0[0m
+[0;32mI (102998) app_main: Color: 0[0m
+[0;32mI (102998) app_main: OE-Pin: 0[0m
+[0;32mI (102998) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (102998) set_pixel: Top[0m
+[0;32mI (102998) app_main: x: 24, y: 0[0m
+[0;32mI (103198) app_main: Color: 1[0m
+[0;32mI (103198) app_main: OE-Pin: 0[0m
+[0;32mI (103198) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (103198) set_pixel: Top[0m
+[0;32mI (103198) app_main: x: 25, y: 0[0m
+[0;32mI (103398) app_main: Color: 2[0m
+[0;32mI (103398) app_main: OE-Pin: 0[0m
+[0;32mI (103398) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (103398) set_pixel: Top[0m
+[0;32mI (103398) app_main: x: 26, y: 0[0m
+[0;32mI (103598) app_main: Color: 0[0m
+[0;32mI (103598) app_main: OE-Pin: 0[0m
+[0;32mI (103598) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (103598) set_pixel: Top[0m
+[0;32mI (103598) app_main: x: 27, y: 0[0m
+[0;32mI (103798) app_main: Color: 1[0m
+[0;32mI (103798) app_main: OE-Pin: 0[0m
+[0;32mI (103798) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (103798) set_pixel: Top[0m
+[0;32mI (103798) app_main: x: 28, y: 0[0m
+[0;32mI (103998) app_main: Color: 2[0m
+[0;32mI (103998) app_main: OE-Pin: 0[0m
+[0;32mI (103998) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (103998) set_pixel: Top[0m
+[0;32mI (103998) app_main: x: 29, y: 0[0m
+[0;32mI (104198) app_main: Color: 0[0m
+[0;32mI (104198) app_main: OE-Pin: 0[0m
+[0;32mI (104198) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (104198) set_pixel: Top[0m
+[0;32mI (104198) app_main: x: 30, y: 0[0m
+[0;32mI (104398) app_main: Color: 1[0m
+[0;32mI (104398) app_main: OE-Pin: 0[0m
+[0;32mI (104398) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (104398) set_pixel: Top[0m
+[0;32mI (104398) app_main: x: 31, y: 0[0m
+[0;32mI (104598) app_main: Color: 2[0m
+[0;32mI (104598) app_main: OE-Pin: 0[0m
+[0;32mI (104598) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (104598) set_pixel: Top[0m
+[0;32mI (104598) app_main: x: 32, y: 0[0m
+[0;32mI (104798) app_main: Color: 0[0m
+[0;32mI (104798) app_main: OE-Pin: 0[0m
+[0;32mI (104798) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (104798) set_pixel: Top[0m
+[0;32mI (104798) app_main: x: 33, y: 0[0m
+[0;32mI (104998) app_main: Color: 1[0m
+[0;32mI (104998) app_main: OE-Pin: 0[0m
+[0;32mI (104998) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (104998) set_pixel: Top[0m
+[0;32mI (104998) app_main: x: 34, y: 0[0m
+[0;32mI (105198) app_main: Color: 2[0m
+[0;32mI (105198) app_main: OE-Pin: 0[0m
+[0;32mI (105198) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (105198) set_pixel: Top[0m
+[0;32mI (105198) app_main: x: 35, y: 0[0m
+[0;32mI (105398) app_main: Color: 0[0m
+[0;32mI (105398) app_main: OE-Pin: 0[0m
+[0;32mI (105398) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (105398) set_pixel: Top[0m
+[0;32mI (105398) app_main: x: 36, y: 0[0m
+[0;32mI (105598) app_main: Color: 1[0m
+[0;32mI (105598) app_main: OE-Pin: 0[0m
+[0;32mI (105598) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (105598) set_pixel: Top[0m
+[0;32mI (105598) app_main: x: 37, y: 0[0m
+[0;32mI (105798) app_main: Color: 2[0m
+[0;32mI (105798) app_main: OE-Pin: 0[0m
+[0;32mI (105798) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (105798) set_pixel: Top[0m
+[0;32mI (105798) app_main: x: 38, y: 0[0m
+[0;32mI (105998) app_main: Color: 0[0m
+[0;32mI (105998) app_main: OE-Pin: 0[0m
+[0;32mI (105998) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (105998) set_pixel: Top[0m
+[0;32mI (105998) app_main: x: 39, y: 0[0m
+[0;32mI (106198) app_main: Color: 1[0m
+[0;32mI (106198) app_main: OE-Pin: 0[0m
+[0;32mI (106198) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (106198) set_pixel: Top[0m
+[0;32mI (106198) app_main: x: 40, y: 0[0m
+[0;32mI (106398) app_main: Color: 2[0m
+[0;32mI (106398) app_main: OE-Pin: 0[0m
+[0;32mI (106398) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (106398) set_pixel: Top[0m
+[0;32mI (106398) app_main: x: 41, y: 0[0m
+[0;32mI (106598) app_main: Color: 0[0m
+[0;32mI (106598) app_main: OE-Pin: 0[0m
+[0;32mI (106598) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (106598) set_pixel: Top[0m
+[0;32mI (106598) app_main: x: 42, y: 0[0m
+[0;32mI (106798) app_main: Color: 1[0m
+[0;32mI (106798) app_main: OE-Pin: 0[0m
+[0;32mI (106798) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (106798) set_pixel: Top[0m
+[0;32mI (106798) app_main: x: 43, y: 0[0m
+[0;32mI (106998) app_main: Color: 2[0m
+[0;32mI (106998) app_main: OE-Pin: 0[0m
+[0;32mI (106998) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (106998) set_pixel: Top[0m
+[0;32mI (106998) app_main: x: 44, y: 0[0m
+[0;32mI (107198) app_main: Color: 0[0m
+[0;32mI (107198) app_main: OE-Pin: 0[0m
+[0;32mI (107198) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (107198) set_pixel: Top[0m
+[0;32mI (107198) app_main: x: 45, y: 0[0m
+[0;32mI (107398) app_main: Color: 1[0m
+[0;32mI (107398) app_main: OE-Pin: 0[0m
+[0;32mI (107398) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (107398) set_pixel: Top[0m
+[0;32mI (107398) app_main: x: 46, y: 0[0m
+[0;32mI (107598) app_main: Color: 2[0m
+[0;32mI (107598) app_main: OE-Pin: 0[0m
+[0;32mI (107598) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (107598) set_pixel: Top[0m
+[0;32mI (107598) app_main: x: 47, y: 0[0m
+[0;32mI (107798) app_main: Color: 0[0m
+[0;32mI (107798) app_main: OE-Pin: 0[0m
+[0;32mI (107798) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (107798) set_pixel: Top[0m
+[0;32mI (107798) app_main: x: 48, y: 0[0m
+[0;32mI (107998) app_main: Color: 1[0m
+[0;32mI (107998) app_main: OE-Pin: 0[0m
+[0;32mI (107998) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (107998) set_pixel: Top[0m
+[0;32mI (107998) app_main: x: 49, y: 0[0m
+[0;32mI (108198) app_main: Color: 2[0m
+[0;32mI (108198) app_main: OE-Pin: 0[0m
+[0;32mI (108198) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (108198) set_pixel: Top[0m
+[0;32mI (108198) app_main: x: 50, y: 0[0m
+[0;32mI (108398) app_main: Color: 0[0m
+[0;32mI (108398) app_main: OE-Pin: 0[0m
+[0;32mI (108398) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (108398) set_pixel: Top[0m
+[0;32mI (108398) app_main: x: 51, y: 0[0m
+[0;32mI (108598) app_main: Color: 1[0m
+[0;32mI (108598) app_main: OE-Pin: 0[0m
+[0;32mI (108598) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (108598) set_pixel: Top[0m
+[0;32mI (108598) app_main: x: 52, y: 0[0m
+[0;32mI (108798) app_main: Color: 2[0m
+[0;32mI (108798) app_main: OE-Pin: 0[0m
+[0;32mI (108798) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (108798) set_pixel: Top[0m
+[0;32mI (108798) app_main: x: 53, y: 0[0m
+[0;32mI (108998) app_main: Color: 0[0m
+[0;32mI (108998) app_main: OE-Pin: 0[0m
+[0;32mI (108998) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (108998) set_pixel: Top[0m
+[0;32mI (108998) app_main: x: 54, y: 0[0m
+[0;32mI (109198) app_main: Color: 1[0m
+[0;32mI (109198) app_main: OE-Pin: 0[0m
+[0;32mI (109198) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (109198) set_pixel: Top[0m
+[0;32mI (109198) app_main: x: 55, y: 0[0m
+[0;32mI (109398) app_main: Color: 2[0m
+[0;32mI (109398) app_main: OE-Pin: 0[0m
+[0;32mI (109398) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (109398) set_pixel: Top[0m
+[0;32mI (109398) app_main: x: 56, y: 0[0m
+[0;32mI (109598) app_main: Color: 0[0m
+[0;32mI (109598) app_main: OE-Pin: 0[0m
+[0;32mI (109598) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (109598) set_pixel: Top[0m
+[0;32mI (109598) app_main: x: 57, y: 0[0m
+[0;32mI (109798) app_main: Color: 1[0m
+[0;32mI (109798) app_main: OE-Pin: 0[0m
+[0;32mI (109798) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (109798) set_pixel: Top[0m
+[0;32mI (109798) app_main: x: 58, y: 0[0m
+[0;32mI (109998) app_main: Color: 2[0m
+[0;32mI (109998) app_main: OE-Pin: 0[0m
+[0;32mI (109998) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (109998) set_pixel: Top[0m
+[0;32mI (109998) app_main: x: 59, y: 0[0m
+[0;32mI (110198) app_main: Color: 0[0m
+[0;32mI (110198) app_main: OE-Pin: 0[0m
+[0;32mI (110198) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (110198) set_pixel: Top[0m
+[0;32mI (110198) app_main: x: 60, y: 0[0m
+[0;32mI (110398) app_main: Color: 1[0m
+[0;32mI (110398) app_main: OE-Pin: 0[0m
+[0;32mI (110398) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (110398) set_pixel: Top[0m
+[0;32mI (110398) app_main: x: 61, y: 0[0m
+[0;32mI (110598) app_main: Color: 2[0m
+[0;32mI (110598) app_main: OE-Pin: 0[0m
+[0;32mI (110598) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (110598) set_pixel: Top[0m
+[0;32mI (110598) app_main: x: 62, y: 0[0m
+[0;32mI (110798) app_main: Color: 0[0m
+[0;32mI (110798) app_main: OE-Pin: 0[0m
+[0;32mI (110798) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (110798) set_pixel: Top[0m
+[0;32mI (110798) app_main: x: 63, y: 0[0m
+[0;32mI (110998) app_main: Color: 1[0m
+[0;32mI (110998) app_main: OE-Pin: 0[0m
+[0;32mI (110998) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (110998) set_pixel: Top[0m
+[0;32mI (110998) app_main: x: 64, y: 0[0m
+[0;32mI (111198) app_main: Color: 2[0m
+[0;32mI (111198) app_main: OE-Pin: 0[0m
+[0;32mI (111198) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (111198) set_pixel: Top[0m
+[0;32mI (111198) app_main: x: 65, y: 0[0m
+[0;32mI (111398) app_main: Color: 0[0m
+[0;32mI (111398) app_main: OE-Pin: 0[0m
+[0;32mI (111398) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (111398) set_pixel: Top[0m
+[0;32mI (111398) app_main: x: 66, y: 0[0m
+[0;32mI (111598) app_main: Color: 1[0m
+[0;32mI (111598) app_main: OE-Pin: 0[0m
+[0;32mI (111598) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (111598) set_pixel: Top[0m
+[0;32mI (111598) app_main: x: 67, y: 0[0m
+[0;32mI (111798) app_main: Color: 2[0m
+[0;32mI (111798) app_main: OE-Pin: 0[0m
+[0;32mI (111798) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (111798) set_pixel: Top[0m
+[0;32mI (111798) app_main: x: 68, y: 0[0m
+[0;32mI (111998) app_main: Color: 0[0m
+[0;32mI (111998) app_main: OE-Pin: 0[0m
+[0;32mI (111998) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (111998) set_pixel: Top[0m
+[0;32mI (111998) app_main: x: 69, y: 0[0m
+[0;32mI (112198) app_main: Color: 1[0m
+[0;32mI (112198) app_main: OE-Pin: 0[0m
+[0;32mI (112198) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (112198) set_pixel: Top[0m
+[0;32mI (112198) app_main: x: 70, y: 0[0m
+[0;32mI (112398) app_main: Color: 2[0m
+[0;32mI (112398) app_main: OE-Pin: 0[0m
+[0;32mI (112398) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (112398) set_pixel: Top[0m
+[0;32mI (112398) app_main: x: 71, y: 0[0m
+[0;32mI (112598) app_main: Color: 0[0m
+[0;32mI (112598) app_main: OE-Pin: 0[0m
+[0;32mI (112598) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (112598) set_pixel: Top[0m
+[0;32mI (112598) app_main: x: 72, y: 0[0m
+[0;32mI (112798) app_main: Color: 1[0m
+[0;32mI (112798) app_main: OE-Pin: 0[0m
+[0;32mI (112798) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (112798) set_pixel: Top[0m
+[0;32mI (112798) app_main: x: 73, y: 0[0m
+[0;32mI (112998) app_main: Color: 2[0m
+[0;32mI (112998) app_main: OE-Pin: 0[0m
+[0;32mI (112998) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (112998) set_pixel: Top[0m
+[0;32mI (112998) app_main: x: 74, y: 0[0m
+[0;32mI (113198) app_main: Color: 0[0m
+[0;32mI (113198) app_main: OE-Pin: 0[0m
+[0;32mI (113198) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (113198) set_pixel: Top[0m
+[0;32mI (113198) app_main: x: 75, y: 0[0m
+[0;32mI (113398) app_main: Color: 1[0m
+[0;32mI (113398) app_main: OE-Pin: 0[0m
+[0;32mI (113398) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (113398) set_pixel: Top[0m
+[0;32mI (113398) app_main: x: 76, y: 0[0m
+[0;32mI (113598) app_main: Color: 2[0m
+[0;32mI (113598) app_main: OE-Pin: 0[0m
+[0;32mI (113598) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (113598) set_pixel: Top[0m
+[0;32mI (113598) app_main: x: 77, y: 0[0m
+[0;32mI (113798) app_main: Color: 0[0m
+[0;32mI (113798) app_main: OE-Pin: 0[0m
+[0;32mI (113798) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (113798) set_pixel: Top[0m
+[0;32mI (113798) app_main: x: 78, y: 0[0m
+[0;32mI (113998) app_main: Color: 1[0m
+[0;32mI (113998) app_main: OE-Pin: 0[0m
+[0;32mI (113998) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (113998) set_pixel: Top[0m
+[0;32mI (113998) app_main: x: 79, y: 0[0m
+[0;32mI (114198) app_main: Color: 2[0m
+[0;32mI (114198) app_main: OE-Pin: 0[0m
+[0;32mI (114198) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (114198) set_pixel: Top[0m
+[0;32mI (114198) app_main: x: 80, y: 0[0m
+[0;32mI (114398) app_main: Color: 0[0m
+[0;32mI (114398) app_main: OE-Pin: 0[0m
+[0;32mI (114398) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (114398) set_pixel: Top[0m
+[0;32mI (114398) app_main: x: 81, y: 0[0m
+[0;32mI (114598) app_main: Color: 1[0m
+[0;32mI (114598) app_main: OE-Pin: 0[0m
+[0;32mI (114598) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (114598) set_pixel: Top[0m
+[0;32mI (114598) app_main: x: 82, y: 0[0m
+[0;32mI (114798) app_main: Color: 2[0m
+[0;32mI (114798) app_main: OE-Pin: 0[0m
+[0;32mI (114798) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (114798) set_pixel: Top[0m
+[0;32mI (114798) app_main: x: 83, y: 0[0m
+[0;32mI (114998) app_main: Color: 0[0m
+[0;32mI (114998) app_main: OE-Pin: 0[0m
+[0;32mI (114998) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (114998) set_pixel: Top[0m
+[0;32mI (114998) app_main: x: 84, y: 0[0m
+[0;32mI (115198) app_main: Color: 1[0m
+[0;32mI (115198) app_main: OE-Pin: 0[0m
+[0;32mI (115198) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (115198) set_pixel: Top[0m
+[0;32mI (115198) app_main: x: 85, y: 0[0m
+[0;32mI (115398) app_main: Color: 2[0m
+[0;32mI (115398) app_main: OE-Pin: 0[0m
+[0;32mI (115398) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (115398) set_pixel: Top[0m
+[0;32mI (115398) app_main: x: 86, y: 0[0m
+[0;32mI (115598) app_main: Color: 0[0m
+[0;32mI (115598) app_main: OE-Pin: 0[0m
+[0;32mI (115598) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (115598) set_pixel: Top[0m
+[0;32mI (115598) app_main: x: 87, y: 0[0m
+[0;32mI (115798) app_main: Color: 1[0m
+[0;32mI (115798) app_main: OE-Pin: 0[0m
+[0;32mI (115798) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (115798) set_pixel: Top[0m
+[0;32mI (115798) app_main: x: 88, y: 0[0m
+[0;32mI (115998) app_main: Color: 2[0m
+[0;32mI (115998) app_main: OE-Pin: 0[0m
+[0;32mI (115998) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (115998) set_pixel: Top[0m
+[0;32mI (115998) app_main: x: 89, y: 0[0m
+[0;32mI (116198) app_main: Color: 0[0m
+[0;32mI (116198) app_main: OE-Pin: 0[0m
+[0;32mI (116198) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (116198) set_pixel: Top[0m
+[0;32mI (116198) app_main: x: 90, y: 0[0m
+[0;32mI (116398) app_main: Color: 1[0m
+[0;32mI (116398) app_main: OE-Pin: 0[0m
+[0;32mI (116398) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (116398) set_pixel: Top[0m
+[0;32mI (116398) app_main: x: 91, y: 0[0m
+[0;32mI (116598) app_main: Color: 2[0m
+[0;32mI (116598) app_main: OE-Pin: 0[0m
+[0;32mI (116598) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (116598) set_pixel: Top[0m
+[0;32mI (116598) app_main: x: 92, y: 0[0m
+[0;32mI (116798) app_main: Color: 0[0m
+[0;32mI (116798) app_main: OE-Pin: 0[0m
+[0;32mI (116798) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (116798) set_pixel: Top[0m
+[0;32mI (116798) app_main: x: 93, y: 0[0m
+[0;32mI (116998) app_main: Color: 1[0m
+[0;32mI (116998) app_main: OE-Pin: 0[0m
+[0;32mI (116998) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (116998) set_pixel: Top[0m
+[0;32mI (116998) app_main: x: 94, y: 0[0m
+[0;32mI (117198) app_main: Color: 2[0m
+[0;32mI (117198) app_main: OE-Pin: 0[0m
+[0;32mI (117198) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (117198) set_pixel: Top[0m
+[0;32mI (117198) app_main: x: 95, y: 0[0m
+[0;32mI (117398) app_main: Color: 0[0m
+[0;32mI (117398) app_main: OE-Pin: 0[0m
+[0;32mI (117398) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (117398) set_pixel: Top[0m
+[0;32mI (117398) app_main: x: 0, y: 0[0m
+[0;32mI (117598) app_main: Color: 1[0m
+[0;32mI (117598) app_main: OE-Pin: 0[0m
+[0;32mI (117598) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (117598) set_pixel: Top[0m
+[0;32mI (117598) app_main: x: 1, y: 0[0m
+[0;32mI (117798) app_main: Color: 2[0m
+[0;32mI (117798) app_main: OE-Pin: 0[0m
+[0;32mI (117798) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (117798) set_pixel: Top[0m
+[0;32mI (117798) app_main: x: 2, y: 0[0m
+[0;32mI (117998) app_main: Color: 0[0m
+[0;32mI (117998) app_main: OE-Pin: 0[0m
+[0;32mI (117998) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (117998) set_pixel: Top[0m
+[0;32mI (117998) app_main: x: 3, y: 0[0m
+[0;32mI (118198) app_main: Color: 1[0m
+[0;32mI (118198) app_main: OE-Pin: 0[0m
+[0;32mI (118198) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (118198) set_pixel: Top[0m
+[0;32mI (118198) app_main: x: 4, y: 0[0m
+[0;32mI (118398) app_main: Color: 2[0m
+[0;32mI (118398) app_main: OE-Pin: 0[0m
+[0;32mI (118398) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (118398) set_pixel: Top[0m
+[0;32mI (118398) app_main: x: 5, y: 0[0m
+[0;32mI (118598) app_main: Color: 0[0m
+[0;32mI (118598) app_main: OE-Pin: 0[0m
+[0;32mI (118598) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (118598) set_pixel: Top[0m
+[0;32mI (118598) app_main: x: 6, y: 0[0m
+[0;32mI (118798) app_main: Color: 1[0m
+[0;32mI (118798) app_main: OE-Pin: 0[0m
+[0;32mI (118798) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (118798) set_pixel: Top[0m
+[0;32mI (118798) app_main: x: 7, y: 0[0m
+[0;32mI (118998) app_main: Color: 2[0m
+[0;32mI (118998) app_main: OE-Pin: 0[0m
+[0;32mI (118998) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (118998) set_pixel: Top[0m
+[0;32mI (118998) app_main: x: 8, y: 0[0m
+[0;32mI (119198) app_main: Color: 0[0m
+[0;32mI (119198) app_main: OE-Pin: 0[0m
+[0;32mI (119198) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (119198) set_pixel: Top[0m
+[0;32mI (119198) app_main: x: 9, y: 0[0m
+[0;32mI (119398) app_main: Color: 1[0m
+[0;32mI (119398) app_main: OE-Pin: 0[0m
+[0;32mI (119398) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (119398) set_pixel: Top[0m
+[0;32mI (119398) app_main: x: 10, y: 0[0m
+[0;32mI (119598) app_main: Color: 2[0m
+[0;32mI (119598) app_main: OE-Pin: 0[0m
+[0;32mI (119598) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (119598) set_pixel: Top[0m
+[0;32mI (119598) app_main: x: 11, y: 0[0m
+[0;32mI (119798) app_main: Color: 0[0m
+[0;32mI (119798) app_main: OE-Pin: 0[0m
+[0;32mI (119798) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (119798) set_pixel: Top[0m
+[0;32mI (119798) app_main: x: 12, y: 0[0m
+[0;32mI (119998) app_main: Color: 1[0m
+[0;32mI (119998) app_main: OE-Pin: 0[0m
+[0;32mI (119998) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (119998) set_pixel: Top[0m
+[0;32mI (119998) app_main: x: 13, y: 0[0m
+[0;32mI (120198) app_main: Color: 2[0m
+[0;32mI (120198) app_main: OE-Pin: 0[0m
+[0;32mI (120198) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (120198) set_pixel: Top[0m
+[0;32mI (120198) app_main: x: 14, y: 0[0m
+[0;32mI (120398) app_main: Color: 0[0m
+[0;32mI (120398) app_main: OE-Pin: 0[0m
+[0;32mI (120398) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (120398) set_pixel: Top[0m
+[0;32mI (120398) app_main: x: 15, y: 0[0m
+[0;32mI (120598) app_main: Color: 1[0m
+[0;32mI (120598) app_main: OE-Pin: 0[0m
+[0;32mI (120598) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (120598) set_pixel: Top[0m
+[0;32mI (120598) app_main: x: 16, y: 0[0m
+[0;32mI (120798) app_main: Color: 2[0m
+[0;32mI (120798) app_main: OE-Pin: 0[0m
+[0;32mI (120798) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (120798) set_pixel: Top[0m
+[0;32mI (120798) app_main: x: 17, y: 0[0m
+[0;32mI (120998) app_main: Color: 0[0m
+[0;32mI (120998) app_main: OE-Pin: 0[0m
+[0;32mI (120998) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (120998) set_pixel: Top[0m
+[0;32mI (120998) app_main: x: 18, y: 0[0m
+[0;32mI (121198) app_main: Color: 1[0m
+[0;32mI (121198) app_main: OE-Pin: 0[0m
+[0;32mI (121198) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (121198) set_pixel: Top[0m
+[0;32mI (121198) app_main: x: 19, y: 0[0m
+[0;32mI (121398) app_main: Color: 2[0m
+[0;32mI (121398) app_main: OE-Pin: 0[0m
+[0;32mI (121398) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (121398) set_pixel: Top[0m
+[0;32mI (121398) app_main: x: 20, y: 0[0m
+[0;32mI (121598) app_main: Color: 0[0m
+[0;32mI (121598) app_main: OE-Pin: 0[0m
+[0;32mI (121598) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (121598) set_pixel: Top[0m
+[0;32mI (121598) app_main: x: 21, y: 0[0m
+[0;32mI (121798) app_main: Color: 1[0m
+[0;32mI (121798) app_main: OE-Pin: 0[0m
+[0;32mI (121798) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (121798) set_pixel: Top[0m
+[0;32mI (121798) app_main: x: 22, y: 0[0m
+[0;32mI (121998) app_main: Color: 2[0m
+[0;32mI (121998) app_main: OE-Pin: 0[0m
+[0;32mI (121998) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (121998) set_pixel: Top[0m
+[0;32mI (121998) app_main: x: 23, y: 0[0m
+[0;32mI (122198) app_main: Color: 0[0m
+[0;32mI (122198) app_main: OE-Pin: 0[0m
+[0;32mI (122198) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (122198) set_pixel: Top[0m
+[0;32mI (122198) app_main: x: 24, y: 0[0m
+[0;32mI (122398) app_main: Color: 1[0m
+[0;32mI (122398) app_main: OE-Pin: 0[0m
+[0;32mI (122398) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (122398) set_pixel: Top[0m
+[0;32mI (122398) app_main: x: 25, y: 0[0m
+[0;32mI (122598) app_main: Color: 2[0m
+[0;32mI (122598) app_main: OE-Pin: 0[0m
+[0;32mI (122598) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (122598) set_pixel: Top[0m
+[0;32mI (122598) app_main: x: 26, y: 0[0m
+[0;32mI (122798) app_main: Color: 0[0m
+[0;32mI (122798) app_main: OE-Pin: 0[0m
+[0;32mI (122798) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (122798) set_pixel: Top[0m
+[0;32mI (122798) app_main: x: 27, y: 0[0m
+[0;32mI (122998) app_main: Color: 1[0m
+[0;32mI (122998) app_main: OE-Pin: 0[0m
+[0;32mI (122998) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (122998) set_pixel: Top[0m
+[0;32mI (122998) app_main: x: 28, y: 0[0m
+[0;32mI (123198) app_main: Color: 2[0m
+[0;32mI (123198) app_main: OE-Pin: 0[0m
+[0;32mI (123198) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (123198) set_pixel: Top[0m
+[0;32mI (123198) app_main: x: 29, y: 0[0m
+[0;32mI (123398) app_main: Color: 0[0m
+[0;32mI (123398) app_main: OE-Pin: 0[0m
+[0;32mI (123398) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (123398) set_pixel: Top[0m
+[0;32mI (123398) app_main: x: 30, y: 0[0m
+[0;32mI (123598) app_main: Color: 1[0m
+[0;32mI (123598) app_main: OE-Pin: 0[0m
+[0;32mI (123598) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (123598) set_pixel: Top[0m
+[0;32mI (123598) app_main: x: 31, y: 0[0m
+[0;32mI (123798) app_main: Color: 2[0m
+[0;32mI (123798) app_main: OE-Pin: 0[0m
+[0;32mI (123798) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (123798) set_pixel: Top[0m
+[0;32mI (123798) app_main: x: 32, y: 0[0m
+[0;32mI (123998) app_main: Color: 0[0m
+[0;32mI (123998) app_main: OE-Pin: 0[0m
+[0;32mI (123998) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (123998) set_pixel: Top[0m
+[0;32mI (123998) app_main: x: 33, y: 0[0m
+[0;32mI (124198) app_main: Color: 1[0m
+[0;32mI (124198) app_main: OE-Pin: 0[0m
+[0;32mI (124198) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (124198) set_pixel: Top[0m
+[0;32mI (124198) app_main: x: 34, y: 0[0m
+[0;32mI (124398) app_main: Color: 2[0m
+[0;32mI (124398) app_main: OE-Pin: 0[0m
+[0;32mI (124398) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (124398) set_pixel: Top[0m
+[0;32mI (124398) app_main: x: 35, y: 0[0m
+[0;32mI (124598) app_main: Color: 0[0m
+[0;32mI (124598) app_main: OE-Pin: 0[0m
+[0;32mI (124598) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (124598) set_pixel: Top[0m
+[0;32mI (124598) app_main: x: 36, y: 0[0m
+[0;32mI (124798) app_main: Color: 1[0m
+[0;32mI (124798) app_main: OE-Pin: 0[0m
+[0;32mI (124798) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (124798) set_pixel: Top[0m
+[0;32mI (124798) app_main: x: 37, y: 0[0m
+[0;32mI (124998) app_main: Color: 2[0m
+[0;32mI (124998) app_main: OE-Pin: 0[0m
+[0;32mI (124998) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (124998) set_pixel: Top[0m
+[0;32mI (124998) app_main: x: 38, y: 0[0m
+[0;32mI (125198) app_main: Color: 0[0m
+[0;32mI (125198) app_main: OE-Pin: 0[0m
+[0;32mI (125198) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (125198) set_pixel: Top[0m
+[0;32mI (125198) app_main: x: 39, y: 0[0m
+[0;32mI (125398) app_main: Color: 1[0m
+[0;32mI (125398) app_main: OE-Pin: 0[0m
+[0;32mI (125398) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (125398) set_pixel: Top[0m
+[0;32mI (125398) app_main: x: 40, y: 0[0m
+[0;32mI (125598) app_main: Color: 2[0m
+[0;32mI (125598) app_main: OE-Pin: 0[0m
+[0;32mI (125598) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (125598) set_pixel: Top[0m
+[0;32mI (125598) app_main: x: 41, y: 0[0m
+[0;32mI (125798) app_main: Color: 0[0m
+[0;32mI (125798) app_main: OE-Pin: 0[0m
+[0;32mI (125798) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (125798) set_pixel: Top[0m
+[0;32mI (125798) app_main: x: 42, y: 0[0m
+[0;32mI (125998) app_main: Color: 1[0m
+[0;32mI (125998) app_main: OE-Pin: 0[0m
+[0;32mI (125998) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (125998) set_pixel: Top[0m
+[0;32mI (125998) app_main: x: 43, y: 0[0m
+[0;32mI (126198) app_main: Color: 2[0m
+[0;32mI (126198) app_main: OE-Pin: 0[0m
+[0;32mI (126198) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (126198) set_pixel: Top[0m
+[0;32mI (126198) app_main: x: 44, y: 0[0m
+[0;32mI (126398) app_main: Color: 0[0m
+[0;32mI (126398) app_main: OE-Pin: 0[0m
+[0;32mI (126398) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (126398) set_pixel: Top[0m
+[0;32mI (126398) app_main: x: 45, y: 0[0m
+[0;32mI (126598) app_main: Color: 1[0m
+[0;32mI (126598) app_main: OE-Pin: 0[0m
+[0;32mI (126598) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (126598) set_pixel: Top[0m
+[0;32mI (126598) app_main: x: 46, y: 0[0m
+[0;32mI (126798) app_main: Color: 2[0m
+[0;32mI (126798) app_main: OE-Pin: 0[0m
+[0;32mI (126798) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (126798) set_pixel: Top[0m
+[0;32mI (126798) app_main: x: 47, y: 0[0m
+[0;32mI (126998) app_main: Color: 0[0m
+[0;32mI (126998) app_main: OE-Pin: 0[0m
+[0;32mI (126998) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (126998) set_pixel: Top[0m
+[0;32mI (126998) app_main: x: 48, y: 0[0m
+[0;32mI (127198) app_main: Color: 1[0m
+[0;32mI (127198) app_main: OE-Pin: 0[0m
+[0;32mI (127198) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (127198) set_pixel: Top[0m
+[0;32mI (127198) app_main: x: 49, y: 0[0m
+[0;32mI (127398) app_main: Color: 2[0m
+[0;32mI (127398) app_main: OE-Pin: 0[0m
+[0;32mI (127398) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (127398) set_pixel: Top[0m
+[0;32mI (127398) app_main: x: 50, y: 0[0m
+[0;32mI (127598) app_main: Color: 0[0m
+[0;32mI (127598) app_main: OE-Pin: 0[0m
+[0;32mI (127598) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (127598) set_pixel: Top[0m
+[0;32mI (127598) app_main: x: 51, y: 0[0m
+[0;32mI (127798) app_main: Color: 1[0m
+[0;32mI (127798) app_main: OE-Pin: 0[0m
+[0;32mI (127798) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (127798) set_pixel: Top[0m
+[0;32mI (127798) app_main: x: 52, y: 0[0m
+[0;32mI (127998) app_main: Color: 2[0m
+[0;32mI (127998) app_main: OE-Pin: 0[0m
+[0;32mI (127998) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (127998) set_pixel: Top[0m
+[0;32mI (127998) app_main: x: 53, y: 0[0m
+[0;32mI (128198) app_main: Color: 0[0m
+[0;32mI (128198) app_main: OE-Pin: 0[0m
+[0;32mI (128198) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (128198) set_pixel: Top[0m
+[0;32mI (128198) app_main: x: 54, y: 0[0m
+[0;32mI (128398) app_main: Color: 1[0m
+[0;32mI (128398) app_main: OE-Pin: 0[0m
+[0;32mI (128398) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (128398) set_pixel: Top[0m
+[0;32mI (128398) app_main: x: 55, y: 0[0m
+[0;32mI (128598) app_main: Color: 2[0m
+[0;32mI (128598) app_main: OE-Pin: 0[0m
+[0;32mI (128598) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (128598) set_pixel: Top[0m
+[0;32mI (128598) app_main: x: 56, y: 0[0m
+[0;32mI (128798) app_main: Color: 0[0m
+[0;32mI (128798) app_main: OE-Pin: 0[0m
+[0;32mI (128798) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (128798) set_pixel: Top[0m
+[0;32mI (128798) app_main: x: 57, y: 0[0m
+[0;32mI (128998) app_main: Color: 1[0m
+[0;32mI (128998) app_main: OE-Pin: 0[0m
+[0;32mI (128998) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (128998) set_pixel: Top[0m
+[0;32mI (128998) app_main: x: 58, y: 0[0m
+[0;32mI (129198) app_main: Color: 2[0m
+[0;32mI (129198) app_main: OE-Pin: 0[0m
+[0;32mI (129198) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (129198) set_pixel: Top[0m
+[0;32mI (129198) app_main: x: 59, y: 0[0m
+[0;32mI (129398) app_main: Color: 0[0m
+[0;32mI (129398) app_main: OE-Pin: 0[0m
+[0;32mI (129398) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (129398) set_pixel: Top[0m
+[0;32mI (129398) app_main: x: 60, y: 0[0m
+[0;32mI (129598) app_main: Color: 1[0m
+[0;32mI (129598) app_main: OE-Pin: 0[0m
+[0;32mI (129598) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (129598) set_pixel: Top[0m
+[0;32mI (129598) app_main: x: 61, y: 0[0m
+[0;32mI (129798) app_main: Color: 2[0m
+[0;32mI (129798) app_main: OE-Pin: 0[0m
+[0;32mI (129798) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (129798) set_pixel: Top[0m
+[0;32mI (129798) app_main: x: 62, y: 0[0m
+[0;32mI (129998) app_main: Color: 0[0m
+[0;32mI (129998) app_main: OE-Pin: 0[0m
+[0;32mI (129998) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (129998) set_pixel: Top[0m
+[0;32mI (129998) app_main: x: 63, y: 0[0m
+[0;32mI (130198) app_main: Color: 1[0m
+[0;32mI (130198) app_main: OE-Pin: 0[0m
+[0;32mI (130198) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (130198) set_pixel: Top[0m
+[0;32mI (130198) app_main: x: 64, y: 0[0m
+[0;32mI (130398) app_main: Color: 2[0m
+[0;32mI (130398) app_main: OE-Pin: 0[0m
+[0;32mI (130398) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (130398) set_pixel: Top[0m
+[0;32mI (130398) app_main: x: 65, y: 0[0m
+[0;32mI (130598) app_main: Color: 0[0m
+[0;32mI (130598) app_main: OE-Pin: 0[0m
+[0;32mI (130598) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (130598) set_pixel: Top[0m
+[0;32mI (130598) app_main: x: 66, y: 0[0m
+[0;32mI (130798) app_main: Color: 1[0m
+[0;32mI (130798) app_main: OE-Pin: 0[0m
+[0;32mI (130798) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (130798) set_pixel: Top[0m
+[0;32mI (130798) app_main: x: 67, y: 0[0m
+[0;32mI (130998) app_main: Color: 2[0m
+[0;32mI (130998) app_main: OE-Pin: 0[0m
+[0;32mI (130998) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (130998) set_pixel: Top[0m
+[0;32mI (130998) app_main: x: 68, y: 0[0m
+[0;32mI (131198) app_main: Color: 0[0m
+[0;32mI (131198) app_main: OE-Pin: 0[0m
+[0;32mI (131198) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (131198) set_pixel: Top[0m
+[0;32mI (131198) app_main: x: 69, y: 0[0m
+[0;32mI (131398) app_main: Color: 1[0m
+[0;32mI (131398) app_main: OE-Pin: 0[0m
+[0;32mI (131398) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (131398) set_pixel: Top[0m
+[0;32mI (131398) app_main: x: 70, y: 0[0m
+[0;32mI (131598) app_main: Color: 2[0m
+[0;32mI (131598) app_main: OE-Pin: 0[0m
+[0;32mI (131598) set_pixel: x = 70 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (131598) set_pixel: Top[0m
+[0;32mI (131598) app_main: x: 71, y: 0[0m
+[0;32mI (131798) app_main: Color: 0[0m
+[0;32mI (131798) app_main: OE-Pin: 0[0m
+[0;32mI (131798) set_pixel: x = 71 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (131798) set_pixel: Top[0m
+[0;32mI (131798) app_main: x: 72, y: 0[0m
+[0;32mI (131998) app_main: Color: 1[0m
+[0;32mI (131998) app_main: OE-Pin: 0[0m
+[0;32mI (131998) set_pixel: x = 72 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (131998) set_pixel: Top[0m
+[0;32mI (131998) app_main: x: 73, y: 0[0m
+[0;32mI (132198) app_main: Color: 2[0m
+[0;32mI (132198) app_main: OE-Pin: 0[0m
+[0;32mI (132198) set_pixel: x = 73 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (132198) set_pixel: Top[0m
+[0;32mI (132198) app_main: x: 74, y: 0[0m
+[0;32mI (132398) app_main: Color: 0[0m
+[0;32mI (132398) app_main: OE-Pin: 0[0m
+[0;32mI (132398) set_pixel: x = 74 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (132398) set_pixel: Top[0m
+[0;32mI (132398) app_main: x: 75, y: 0[0m
+[0;32mI (132598) app_main: Color: 1[0m
+[0;32mI (132598) app_main: OE-Pin: 0[0m
+[0;32mI (132598) set_pixel: x = 75 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (132598) set_pixel: Top[0m
+[0;32mI (132598) app_main: x: 76, y: 0[0m
+[0;32mI (132798) app_main: Color: 2[0m
+[0;32mI (132798) app_main: OE-Pin: 0[0m
+[0;32mI (132798) set_pixel: x = 76 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (132798) set_pixel: Top[0m
+[0;32mI (132798) app_main: x: 77, y: 0[0m
+[0;32mI (132998) app_main: Color: 0[0m
+[0;32mI (132998) app_main: OE-Pin: 0[0m
+[0;32mI (132998) set_pixel: x = 77 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (132998) set_pixel: Top[0m
+[0;32mI (132998) app_main: x: 78, y: 0[0m
+[0;32mI (133198) app_main: Color: 1[0m
+[0;32mI (133198) app_main: OE-Pin: 0[0m
+[0;32mI (133198) set_pixel: x = 78 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (133198) set_pixel: Top[0m
+[0;32mI (133198) app_main: x: 79, y: 0[0m
+[0;32mI (133398) app_main: Color: 2[0m
+[0;32mI (133398) app_main: OE-Pin: 0[0m
+[0;32mI (133398) set_pixel: x = 79 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (133398) set_pixel: Top[0m
+[0;32mI (133398) app_main: x: 80, y: 0[0m
+[0;32mI (133598) app_main: Color: 0[0m
+[0;32mI (133598) app_main: OE-Pin: 0[0m
+[0;32mI (133598) set_pixel: x = 80 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (133598) set_pixel: Top[0m
+[0;32mI (133598) app_main: x: 81, y: 0[0m
+[0;32mI (133798) app_main: Color: 1[0m
+[0;32mI (133798) app_main: OE-Pin: 0[0m
+[0;32mI (133798) set_pixel: x = 81 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (133798) set_pixel: Top[0m
+[0;32mI (133798) app_main: x: 82, y: 0[0m
+[0;32mI (133998) app_main: Color: 2[0m
+[0;32mI (133998) app_main: OE-Pin: 0[0m
+[0;32mI (133998) set_pixel: x = 82 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (133998) set_pixel: Top[0m
+[0;32mI (133998) app_main: x: 83, y: 0[0m
+[0;32mI (134198) app_main: Color: 0[0m
+[0;32mI (134198) app_main: OE-Pin: 0[0m
+[0;32mI (134198) set_pixel: x = 83 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (134198) set_pixel: Top[0m
+[0;32mI (134198) app_main: x: 84, y: 0[0m
+[0;32mI (134398) app_main: Color: 1[0m
+[0;32mI (134398) app_main: OE-Pin: 0[0m
+[0;32mI (134398) set_pixel: x = 84 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (134398) set_pixel: Top[0m
+[0;32mI (134398) app_main: x: 85, y: 0[0m
+[0;32mI (134598) app_main: Color: 2[0m
+[0;32mI (134598) app_main: OE-Pin: 0[0m
+[0;32mI (134598) set_pixel: x = 85 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (134598) set_pixel: Top[0m
+[0;32mI (134598) app_main: x: 86, y: 0[0m
+[0;32mI (134798) app_main: Color: 0[0m
+[0;32mI (134798) app_main: OE-Pin: 0[0m
+[0;32mI (134798) set_pixel: x = 86 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (134798) set_pixel: Top[0m
+[0;32mI (134798) app_main: x: 87, y: 0[0m
+[0;32mI (134998) app_main: Color: 1[0m
+[0;32mI (134998) app_main: OE-Pin: 0[0m
+[0;32mI (134998) set_pixel: x = 87 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (134998) set_pixel: Top[0m
+[0;32mI (134998) app_main: x: 88, y: 0[0m
+[0;32mI (135198) app_main: Color: 2[0m
+[0;32mI (135198) app_main: OE-Pin: 0[0m
+[0;32mI (135198) set_pixel: x = 88 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (135198) set_pixel: Top[0m
+[0;32mI (135198) app_main: x: 89, y: 0[0m
+[0;32mI (135398) app_main: Color: 0[0m
+[0;32mI (135398) app_main: OE-Pin: 0[0m
+[0;32mI (135398) set_pixel: x = 89 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (135398) set_pixel: Top[0m
+[0;32mI (135398) app_main: x: 90, y: 0[0m
+[0;32mI (135598) app_main: Color: 1[0m
+[0;32mI (135598) app_main: OE-Pin: 0[0m
+[0;32mI (135598) set_pixel: x = 90 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (135598) set_pixel: Top[0m
+[0;32mI (135598) app_main: x: 91, y: 0[0m
+[0;32mI (135798) app_main: Color: 2[0m
+[0;32mI (135798) app_main: OE-Pin: 0[0m
+[0;32mI (135798) set_pixel: x = 91 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (135798) set_pixel: Top[0m
+[0;32mI (135798) app_main: x: 92, y: 0[0m
+[0;32mI (135998) app_main: Color: 0[0m
+[0;32mI (135998) app_main: OE-Pin: 0[0m
+[0;32mI (135998) set_pixel: x = 92 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (135998) set_pixel: Top[0m
+[0;32mI (135998) app_main: x: 93, y: 0[0m
+[0;32mI (136198) app_main: Color: 1[0m
+[0;32mI (136198) app_main: OE-Pin: 0[0m
+[0;32mI (136198) set_pixel: x = 93 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (136198) set_pixel: Top[0m
+[0;32mI (136198) app_main: x: 94, y: 0[0m
+[0;32mI (136398) app_main: Color: 2[0m
+[0;32mI (136398) app_main: OE-Pin: 0[0m
+[0;32mI (136398) set_pixel: x = 94 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (136398) set_pixel: Top[0m
+[0;32mI (136398) app_main: x: 95, y: 0[0m
+[0;32mI (136598) app_main: Color: 0[0m
+[0;32mI (136598) app_main: OE-Pin: 0[0m
+[0;32mI (136598) set_pixel: x = 95 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (136598) set_pixel: Top[0m
+[0;32mI (136598) app_main: x: 0, y: 0[0m
+[0;32mI (136798) app_main: Color: 1[0m
+[0;32mI (136798) app_main: OE-Pin: 0[0m
+[0;32mI (136798) set_pixel: x = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (136798) set_pixel: Top[0m
+[0;32mI (136798) app_main: x: 1, y: 0[0m
+[0;32mI (136998) app_main: Color: 2[0m
+[0;32mI (136998) app_main: OE-Pin: 0[0m
+[0;32mI (136998) set_pixel: x = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (136998) set_pixel: Top[0m
+[0;32mI (136998) app_main: x: 2, y: 0[0m
+[0;32mI (137198) app_main: Color: 0[0m
+[0;32mI (137198) app_main: OE-Pin: 0[0m
+[0;32mI (137198) set_pixel: x = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (137198) set_pixel: Top[0m
+[0;32mI (137198) app_main: x: 3, y: 0[0m
+[0;32mI (137398) app_main: Color: 1[0m
+[0;32mI (137398) app_main: OE-Pin: 0[0m
+[0;32mI (137398) set_pixel: x = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (137398) set_pixel: Top[0m
+[0;32mI (137398) app_main: x: 4, y: 0[0m
+[0;32mI (137598) app_main: Color: 2[0m
+[0;32mI (137598) app_main: OE-Pin: 0[0m
+[0;32mI (137598) set_pixel: x = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (137598) set_pixel: Top[0m
+[0;32mI (137598) app_main: x: 5, y: 0[0m
+[0;32mI (137798) app_main: Color: 0[0m
+[0;32mI (137798) app_main: OE-Pin: 0[0m
+[0;32mI (137798) set_pixel: x = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (137798) set_pixel: Top[0m
+[0;32mI (137798) app_main: x: 6, y: 0[0m
+[0;32mI (137998) app_main: Color: 1[0m
+[0;32mI (137998) app_main: OE-Pin: 0[0m
+[0;32mI (137998) set_pixel: x = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (137998) set_pixel: Top[0m
+[0;32mI (137998) app_main: x: 7, y: 0[0m
+[0;32mI (138198) app_main: Color: 2[0m
+[0;32mI (138198) app_main: OE-Pin: 0[0m
+[0;32mI (138198) set_pixel: x = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (138198) set_pixel: Top[0m
+[0;32mI (138198) app_main: x: 8, y: 0[0m
+[0;32mI (138398) app_main: Color: 0[0m
+[0;32mI (138398) app_main: OE-Pin: 0[0m
+[0;32mI (138398) set_pixel: x = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (138398) set_pixel: Top[0m
+[0;32mI (138398) app_main: x: 9, y: 0[0m
+[0;32mI (138598) app_main: Color: 1[0m
+[0;32mI (138598) app_main: OE-Pin: 0[0m
+[0;32mI (138598) set_pixel: x = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (138598) set_pixel: Top[0m
+[0;32mI (138598) app_main: x: 10, y: 0[0m
+[0;32mI (138798) app_main: Color: 2[0m
+[0;32mI (138798) app_main: OE-Pin: 0[0m
+[0;32mI (138798) set_pixel: x = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (138798) set_pixel: Top[0m
+[0;32mI (138798) app_main: x: 11, y: 0[0m
+[0;32mI (138998) app_main: Color: 0[0m
+[0;32mI (138998) app_main: OE-Pin: 0[0m
+[0;32mI (138998) set_pixel: x = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (138998) set_pixel: Top[0m
+[0;32mI (138998) app_main: x: 12, y: 0[0m
+[0;32mI (139198) app_main: Color: 1[0m
+[0;32mI (139198) app_main: OE-Pin: 0[0m
+[0;32mI (139198) set_pixel: x = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (139198) set_pixel: Top[0m
+[0;32mI (139198) app_main: x: 13, y: 0[0m
+[0;32mI (139398) app_main: Color: 2[0m
+[0;32mI (139398) app_main: OE-Pin: 0[0m
+[0;32mI (139398) set_pixel: x = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (139398) set_pixel: Top[0m
+[0;32mI (139398) app_main: x: 14, y: 0[0m
+[0;32mI (139598) app_main: Color: 0[0m
+[0;32mI (139598) app_main: OE-Pin: 0[0m
+[0;32mI (139598) set_pixel: x = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (139598) set_pixel: Top[0m
+[0;32mI (139598) app_main: x: 15, y: 0[0m
+[0;32mI (139798) app_main: Color: 1[0m
+[0;32mI (139798) app_main: OE-Pin: 0[0m
+[0;32mI (139798) set_pixel: x = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (139798) set_pixel: Top[0m
+[0;32mI (139798) app_main: x: 16, y: 0[0m
+[0;32mI (139998) app_main: Color: 2[0m
+[0;32mI (139998) app_main: OE-Pin: 0[0m
+[0;32mI (139998) set_pixel: x = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (139998) set_pixel: Top[0m
+[0;32mI (139998) app_main: x: 17, y: 0[0m
+[0;32mI (140198) app_main: Color: 0[0m
+[0;32mI (140198) app_main: OE-Pin: 0[0m
+[0;32mI (140198) set_pixel: x = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (140198) set_pixel: Top[0m
+[0;32mI (140198) app_main: x: 18, y: 0[0m
+[0;32mI (140398) app_main: Color: 1[0m
+[0;32mI (140398) app_main: OE-Pin: 0[0m
+[0;32mI (140398) set_pixel: x = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (140398) set_pixel: Top[0m
+[0;32mI (140398) app_main: x: 19, y: 0[0m
+[0;32mI (140598) app_main: Color: 2[0m
+[0;32mI (140598) app_main: OE-Pin: 0[0m
+[0;32mI (140598) set_pixel: x = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (140598) set_pixel: Top[0m
+[0;32mI (140598) app_main: x: 20, y: 0[0m
+[0;32mI (140798) app_main: Color: 0[0m
+[0;32mI (140798) app_main: OE-Pin: 0[0m
+[0;32mI (140798) set_pixel: x = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (140798) set_pixel: Top[0m
+[0;32mI (140798) app_main: x: 21, y: 0[0m
+[0;32mI (140998) app_main: Color: 1[0m
+[0;32mI (140998) app_main: OE-Pin: 0[0m
+[0;32mI (140998) set_pixel: x = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (140998) set_pixel: Top[0m
+[0;32mI (140998) app_main: x: 22, y: 0[0m
+[0;32mI (141198) app_main: Color: 2[0m
+[0;32mI (141198) app_main: OE-Pin: 0[0m
+[0;32mI (141198) set_pixel: x = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (141198) set_pixel: Top[0m
+[0;32mI (141198) app_main: x: 23, y: 0[0m
+[0;32mI (141398) app_main: Color: 0[0m
+[0;32mI (141398) app_main: OE-Pin: 0[0m
+[0;32mI (141398) set_pixel: x = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (141398) set_pixel: Top[0m
+[0;32mI (141398) app_main: x: 24, y: 0[0m
+[0;32mI (141598) app_main: Color: 1[0m
+[0;32mI (141598) app_main: OE-Pin: 0[0m
+[0;32mI (141598) set_pixel: x = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (141598) set_pixel: Top[0m
+[0;32mI (141598) app_main: x: 25, y: 0[0m
+[0;32mI (141798) app_main: Color: 2[0m
+[0;32mI (141798) app_main: OE-Pin: 0[0m
+[0;32mI (141798) set_pixel: x = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (141798) set_pixel: Top[0m
+[0;32mI (141798) app_main: x: 26, y: 0[0m
+[0;32mI (141998) app_main: Color: 0[0m
+[0;32mI (141998) app_main: OE-Pin: 0[0m
+[0;32mI (141998) set_pixel: x = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (141998) set_pixel: Top[0m
+[0;32mI (141998) app_main: x: 27, y: 0[0m
+[0;32mI (142198) app_main: Color: 1[0m
+[0;32mI (142198) app_main: OE-Pin: 0[0m
+[0;32mI (142198) set_pixel: x = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (142198) set_pixel: Top[0m
+[0;32mI (142198) app_main: x: 28, y: 0[0m
+[0;32mI (142398) app_main: Color: 2[0m
+[0;32mI (142398) app_main: OE-Pin: 0[0m
+[0;32mI (142398) set_pixel: x = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (142398) set_pixel: Top[0m
+[0;32mI (142398) app_main: x: 29, y: 0[0m
+[0;32mI (142598) app_main: Color: 0[0m
+[0;32mI (142598) app_main: OE-Pin: 0[0m
+[0;32mI (142598) set_pixel: x = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (142598) set_pixel: Top[0m
+[0;32mI (142598) app_main: x: 30, y: 0[0m
+[0;32mI (142798) app_main: Color: 1[0m
+[0;32mI (142798) app_main: OE-Pin: 0[0m
+[0;32mI (142798) set_pixel: x = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (142798) set_pixel: Top[0m
+[0;32mI (142798) app_main: x: 31, y: 0[0m
+[0;32mI (142998) app_main: Color: 2[0m
+[0;32mI (142998) app_main: OE-Pin: 0[0m
+[0;32mI (142998) set_pixel: x = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (142998) set_pixel: Top[0m
+[0;32mI (142998) app_main: x: 32, y: 0[0m
+[0;32mI (143198) app_main: Color: 0[0m
+[0;32mI (143198) app_main: OE-Pin: 0[0m
+[0;32mI (143198) set_pixel: x = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (143198) set_pixel: Top[0m
+[0;32mI (143198) app_main: x: 33, y: 0[0m
+[0;32mI (143398) app_main: Color: 1[0m
+[0;32mI (143398) app_main: OE-Pin: 0[0m
+[0;32mI (143398) set_pixel: x = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (143398) set_pixel: Top[0m
+[0;32mI (143398) app_main: x: 34, y: 0[0m
+[0;32mI (143598) app_main: Color: 2[0m
+[0;32mI (143598) app_main: OE-Pin: 0[0m
+[0;32mI (143598) set_pixel: x = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (143598) set_pixel: Top[0m
+[0;32mI (143598) app_main: x: 35, y: 0[0m
+[0;32mI (143798) app_main: Color: 0[0m
+[0;32mI (143798) app_main: OE-Pin: 0[0m
+[0;32mI (143798) set_pixel: x = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (143798) set_pixel: Top[0m
+[0;32mI (143798) app_main: x: 36, y: 0[0m
+[0;32mI (143998) app_main: Color: 1[0m
+[0;32mI (143998) app_main: OE-Pin: 0[0m
+[0;32mI (143998) set_pixel: x = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (143998) set_pixel: Top[0m
+[0;32mI (143998) app_main: x: 37, y: 0[0m
+[0;32mI (144198) app_main: Color: 2[0m
+[0;32mI (144198) app_main: OE-Pin: 0[0m
+[0;32mI (144198) set_pixel: x = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (144198) set_pixel: Top[0m
+[0;32mI (144198) app_main: x: 38, y: 0[0m
+[0;32mI (144398) app_main: Color: 0[0m
+[0;32mI (144398) app_main: OE-Pin: 0[0m
+[0;32mI (144398) set_pixel: x = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (144398) set_pixel: Top[0m
+[0;32mI (144398) app_main: x: 39, y: 0[0m
+[0;32mI (144598) app_main: Color: 1[0m
+[0;32mI (144598) app_main: OE-Pin: 0[0m
+[0;32mI (144598) set_pixel: x = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (144598) set_pixel: Top[0m
+[0;32mI (144598) app_main: x: 40, y: 0[0m
+[0;32mI (144798) app_main: Color: 2[0m
+[0;32mI (144798) app_main: OE-Pin: 0[0m
+[0;32mI (144798) set_pixel: x = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (144798) set_pixel: Top[0m
+[0;32mI (144798) app_main: x: 41, y: 0[0m
+[0;32mI (144998) app_main: Color: 0[0m
+[0;32mI (144998) app_main: OE-Pin: 0[0m
+[0;32mI (144998) set_pixel: x = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (144998) set_pixel: Top[0m
+[0;32mI (144998) app_main: x: 42, y: 0[0m
+[0;32mI (145198) app_main: Color: 1[0m
+[0;32mI (145198) app_main: OE-Pin: 0[0m
+[0;32mI (145198) set_pixel: x = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (145198) set_pixel: Top[0m
+[0;32mI (145198) app_main: x: 43, y: 0[0m
+[0;32mI (145398) app_main: Color: 2[0m
+[0;32mI (145398) app_main: OE-Pin: 0[0m
+[0;32mI (145398) set_pixel: x = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (145398) set_pixel: Top[0m
+[0;32mI (145398) app_main: x: 44, y: 0[0m
+[0;32mI (145598) app_main: Color: 0[0m
+[0;32mI (145598) app_main: OE-Pin: 0[0m
+[0;32mI (145598) set_pixel: x = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (145598) set_pixel: Top[0m
+[0;32mI (145598) app_main: x: 45, y: 0[0m
+[0;32mI (145798) app_main: Color: 1[0m
+[0;32mI (145798) app_main: OE-Pin: 0[0m
+[0;32mI (145798) set_pixel: x = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (145798) set_pixel: Top[0m
+[0;32mI (145798) app_main: x: 46, y: 0[0m
+[0;32mI (145998) app_main: Color: 2[0m
+[0;32mI (145998) app_main: OE-Pin: 0[0m
+[0;32mI (145998) set_pixel: x = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (145998) set_pixel: Top[0m
+[0;32mI (145998) app_main: x: 47, y: 0[0m
+[0;32mI (146198) app_main: Color: 0[0m
+[0;32mI (146198) app_main: OE-Pin: 0[0m
+[0;32mI (146198) set_pixel: x = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (146198) set_pixel: Top[0m
+[0;32mI (146198) app_main: x: 48, y: 0[0m
+[0;32mI (146398) app_main: Color: 1[0m
+[0;32mI (146398) app_main: OE-Pin: 0[0m
+[0;32mI (146398) set_pixel: x = 48 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (146398) set_pixel: Top[0m
+[0;32mI (146398) app_main: x: 49, y: 0[0m
+[0;32mI (146598) app_main: Color: 2[0m
+[0;32mI (146598) app_main: OE-Pin: 0[0m
+[0;32mI (146598) set_pixel: x = 49 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (146598) set_pixel: Top[0m
+[0;32mI (146598) app_main: x: 50, y: 0[0m
+[0;32mI (146798) app_main: Color: 0[0m
+[0;32mI (146798) app_main: OE-Pin: 0[0m
+[0;32mI (146798) set_pixel: x = 50 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (146798) set_pixel: Top[0m
+[0;32mI (146798) app_main: x: 51, y: 0[0m
+[0;32mI (146998) app_main: Color: 1[0m
+[0;32mI (146998) app_main: OE-Pin: 0[0m
+[0;32mI (146998) set_pixel: x = 51 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (146998) set_pixel: Top[0m
+[0;32mI (146998) app_main: x: 52, y: 0[0m
+[0;32mI (147198) app_main: Color: 2[0m
+[0;32mI (147198) app_main: OE-Pin: 0[0m
+[0;32mI (147198) set_pixel: x = 52 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (147198) set_pixel: Top[0m
+[0;32mI (147198) app_main: x: 53, y: 0[0m
+[0;32mI (147398) app_main: Color: 0[0m
+[0;32mI (147398) app_main: OE-Pin: 0[0m
+[0;32mI (147398) set_pixel: x = 53 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (147398) set_pixel: Top[0m
+[0;32mI (147398) app_main: x: 54, y: 0[0m
+[0;32mI (147598) app_main: Color: 1[0m
+[0;32mI (147598) app_main: OE-Pin: 0[0m
+[0;32mI (147598) set_pixel: x = 54 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (147598) set_pixel: Top[0m
+[0;32mI (147598) app_main: x: 55, y: 0[0m
+[0;32mI (147798) app_main: Color: 2[0m
+[0;32mI (147798) app_main: OE-Pin: 0[0m
+[0;32mI (147798) set_pixel: x = 55 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (147798) set_pixel: Top[0m
+[0;32mI (147798) app_main: x: 56, y: 0[0m
+[0;32mI (147998) app_main: Color: 0[0m
+[0;32mI (147998) app_main: OE-Pin: 0[0m
+[0;32mI (147998) set_pixel: x = 56 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (147998) set_pixel: Top[0m
+[0;32mI (147998) app_main: x: 57, y: 0[0m
+[0;32mI (148198) app_main: Color: 1[0m
+[0;32mI (148198) app_main: OE-Pin: 0[0m
+[0;32mI (148198) set_pixel: x = 57 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (148198) set_pixel: Top[0m
+[0;32mI (148198) app_main: x: 58, y: 0[0m
+[0;32mI (148398) app_main: Color: 2[0m
+[0;32mI (148398) app_main: OE-Pin: 0[0m
+[0;32mI (148398) set_pixel: x = 58 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (148398) set_pixel: Top[0m
+[0;32mI (148398) app_main: x: 59, y: 0[0m
+[0;32mI (148598) app_main: Color: 0[0m
+[0;32mI (148598) app_main: OE-Pin: 0[0m
+[0;32mI (148598) set_pixel: x = 59 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (148598) set_pixel: Top[0m
+[0;32mI (148598) app_main: x: 60, y: 0[0m
+[0;32mI (148798) app_main: Color: 1[0m
+[0;32mI (148798) app_main: OE-Pin: 0[0m
+[0;32mI (148798) set_pixel: x = 60 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (148798) set_pixel: Top[0m
+[0;32mI (148798) app_main: x: 61, y: 0[0m
+[0;32mI (148998) app_main: Color: 2[0m
+[0;32mI (148998) app_main: OE-Pin: 0[0m
+[0;32mI (148998) set_pixel: x = 61 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (148998) set_pixel: Top[0m
+[0;32mI (148998) app_main: x: 62, y: 0[0m
+[0;32mI (149198) app_main: Color: 0[0m
+[0;32mI (149198) app_main: OE-Pin: 0[0m
+[0;32mI (149198) set_pixel: x = 62 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (149198) set_pixel: Top[0m
+[0;32mI (149198) app_main: x: 63, y: 0[0m
+[0;32mI (149398) app_main: Color: 1[0m
+[0;32mI (149398) app_main: OE-Pin: 0[0m
+[0;32mI (149398) set_pixel: x = 63 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (149398) set_pixel: Top[0m
+[0;32mI (149398) app_main: x: 64, y: 0[0m
+[0;32mI (149598) app_main: Color: 2[0m
+[0;32mI (149598) app_main: OE-Pin: 0[0m
+[0;32mI (149598) set_pixel: x = 64 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (149598) set_pixel: Top[0m
+[0;32mI (149598) app_main: x: 65, y: 0[0m
+[0;32mI (149798) app_main: Color: 0[0m
+[0;32mI (149798) app_main: OE-Pin: 0[0m
+[0;32mI (149798) set_pixel: x = 65 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (149798) set_pixel: Top[0m
+[0;32mI (149798) app_main: x: 66, y: 0[0m
+[0;32mI (149998) app_main: Color: 1[0m
+[0;32mI (149998) app_main: OE-Pin: 0[0m
+[0;32mI (149998) set_pixel: x = 66 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (149998) set_pixel: Top[0m
+[0;32mI (149998) app_main: x: 67, y: 0[0m
+[0;32mI (150198) app_main: Color: 2[0m
+[0;32mI (150198) app_main: OE-Pin: 0[0m
+[0;32mI (150198) set_pixel: x = 67 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (150198) set_pixel: Top[0m
+[0;32mI (150198) app_main: x: 68, y: 0[0m
+[0;32mI (150398) app_main: Color: 0[0m
+[0;32mI (150398) app_main: OE-Pin: 0[0m
+[0;32mI (150398) set_pixel: x = 68 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (150398) set_pixel: Top[0m
+[0;32mI (150398) app_main: x: 69, y: 0[0m
+[0;32mI (150598) app_main: Color: 1[0m
+[0;32mI (150598) app_main: OE-Pin: 0[0m
+[0;32mI (150598) set_pixel: x = 69 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (150598) set_pixel: Top[0m
+[0;32mI (150598) app_main: x: 70, y: 0[0m

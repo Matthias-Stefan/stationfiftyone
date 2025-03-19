@@ -1,0 +1,2393 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/stationfiftyone/build/stationfiftyone.elf /home/ms/Documents/stationfiftyone/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2025 19:09:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a124h ( 41252) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a14c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=0001a170 vaddr=3ffb0000 size=0236ch (  9068) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001c4e4 vaddr=40080000 size=03b34h ( 15156) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14960h ( 84320) map[0m
+[0;32mI (150) esp_image: segment 5: paddr=00034988 vaddr=40083b34 size=09264h ( 37476) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     stationfiftyone[0m
+[0;32mI (194) app_init: App version:      6047e59-dirty[0m
+[0;32mI (199) app_init: Compile time:     Mar 19 2025 18:43:49[0m
+[0;32mI (204) app_init: ELF file SHA256:  8994f6709...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (214) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (218) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (237) heap_init: At 3FFB2C30 len 0002D3D0 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008CD98 len 00013268 (76 KiB): IRAM[0m
+[0;32mI (260) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (278) main_task: Started on CPU0[0m
+[0;32mI (288) main_task: Calling app_main()[0m
+[0;32mI (288) gpio: GPIO[23]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (288) gpio: GPIO[22]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (298) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (308) gpio: GPIO[17]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (308) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (318) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (328) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (338) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (348) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (368) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (378) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (388) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) DEBUG: Start LED Test[0m
+[0;32mI (398) DEBUG: Setze A, B, C, D, E auf 1[0m
+[0;32mI (1398) DEBUG: Setze A, B, C, D, E auf 0[0m
+[0;32mI (2398) app_main: Color: 1[0m
+[0;32mI (2398) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2398) app_main: OE-Pin: 0[0m
+[0;32mI (2398) app_main: row: 1, col: 1[0m
+[0;32mI (2498) app_main: Color: 2[0m
+[0;32mI (2498) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2498) app_main: OE-Pin: 0[0m
+[0;32mI (2498) app_main: row: 2, col: 2[0m
+[0;32mI (2598) app_main: Color: 0[0m
+[0;32mI (2598) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2598) app_main: OE-Pin: 0[0m
+[0;32mI (2598) app_main: row: 3, col: 3[0m
+[0;32mI (2698) app_main: Color: 1[0m
+[0;32mI (2698) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2698) app_main: OE-Pin: 0[0m
+[0;32mI (2698) app_main: row: 4, col: 4[0m
+[0;32mI (2798) app_main: Color: 2[0m
+[0;32mI (2798) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2798) app_main: OE-Pin: 0[0m
+[0;32mI (2798) app_main: row: 5, col: 5[0m
+[0;32mI (2898) app_main: Color: 0[0m
+[0;32mI (2898) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2898) app_main: OE-Pin: 0[0m
+[0;32mI (2898) app_main: row: 6, col: 6[0m
+[0;32mI (2998) app_main: Color: 1[0m
+[0;32mI (2998) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2998) app_main: OE-Pin: 0[0m
+[0;32mI (2998) app_main: row: 7, col: 7[0m
+[0;32mI (3098) app_main: Color: 2[0m
+[0;32mI (3098) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3098) app_main: OE-Pin: 0[0m
+[0;32mI (3098) app_main: row: 8, col: 8[0m
+[0;32mI (3198) app_main: Color: 0[0m
+[0;32mI (3198) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3198) app_main: OE-Pin: 0[0m
+[0;32mI (3198) app_main: row: 9, col: 9[0m
+[0;32mI (3298) app_main: Color: 1[0m
+[0;32mI (3298) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3298) app_main: OE-Pin: 0[0m
+[0;32mI (3298) app_main: row: 10, col: 10[0m
+[0;32mI (3398) app_main: Color: 2[0m
+[0;32mI (3398) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3398) app_main: OE-Pin: 0[0m
+[0;32mI (3398) app_main: row: 11, col: 11[0m
+[0;32mI (3498) app_main: Color: 0[0m
+[0;32mI (3498) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3498) app_main: OE-Pin: 0[0m
+[0;32mI (3498) app_main: row: 12, col: 12[0m
+[0;32mI (3598) app_main: Color: 1[0m
+[0;32mI (3598) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3598) app_main: OE-Pin: 0[0m
+[0;32mI (3598) app_main: row: 13, col: 13[0m
+[0;32mI (3698) app_main: Color: 2[0m
+[0;32mI (3698) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3698) app_main: OE-Pin: 0[0m
+[0;32mI (3698) app_main: row: 14, col: 14[0m
+[0;32mI (3798) app_main: Color: 0[0m
+[0;32mI (3798) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3798) app_main: OE-Pin: 0[0m
+[0;32mI (3798) app_main: row: 15, col: 15[0m
+[0;32mI (3898) app_main: Color: 1[0m
+[0;32mI (3898) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3898) app_main: OE-Pin: 0[0m
+[0;32mI (3898) app_main: row: 16, col: 16[0m
+[0;32mI (3998) app_main: Color: 2[0m
+[0;32mI (3998) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3998) app_main: OE-Pin: 0[0m
+[0;32mI (3998) app_main: row: 17, col: 17[0m
+[0;32mI (4098) app_main: Color: 0[0m
+[0;32mI (4098) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4098) app_main: OE-Pin: 0[0m
+[0;32mI (4098) app_main: row: 18, col: 18[0m
+[0;32mI (4198) app_main: Color: 1[0m
+[0;32mI (4198) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4198) app_main: OE-Pin: 0[0m
+[0;32mI (4198) app_main: row: 19, col: 19[0m
+[0;32mI (4298) app_main: Color: 2[0m
+[0;32mI (4298) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4298) app_main: OE-Pin: 0[0m
+[0;32mI (4298) app_main: row: 20, col: 20[0m
+[0;32mI (4398) app_main: Color: 0[0m
+[0;32mI (4398) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4398) app_main: OE-Pin: 0[0m
+[0;32mI (4398) app_main: row: 21, col: 21[0m
+[0;32mI (4498) app_main: Color: 1[0m
+[0;32mI (4498) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4498) app_main: OE-Pin: 0[0m
+[0;32mI (4498) app_main: row: 22, col: 22[0m
+[0;32mI (4598) app_main: Color: 2[0m
+[0;32mI (4598) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4598) app_main: OE-Pin: 0[0m
+[0;32mI (4598) app_main: row: 23, col: 23[0m
+[0;32mI (4698) app_main: Color: 0[0m
+[0;32mI (4698) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4698) app_main: OE-Pin: 0[0m
+[0;32mI (4698) app_main: row: 24, col: 24[0m
+[0;32mI (4798) app_main: Color: 1[0m
+[0;32mI (4798) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4798) app_main: OE-Pin: 0[0m
+[0;32mI (4798) app_main: row: 25, col: 25[0m
+[0;32mI (4898) app_main: Color: 2[0m
+[0;32mI (4898) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4898) app_main: OE-Pin: 0[0m
+[0;32mI (4898) app_main: row: 26, col: 26[0m
+[0;32mI (4998) app_main: Color: 0[0m
+[0;32mI (4998) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4998) app_main: OE-Pin: 0[0m
+[0;32mI (4998) app_main: row: 27, col: 27[0m
+[0;32mI (5098) app_main: Color: 1[0m
+[0;32mI (5098) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5098) app_main: OE-Pin: 0[0m
+[0;32mI (5098) app_main: row: 28, col: 28[0m
+[0;32mI (5198) app_main: Color: 2[0m
+[0;32mI (5198) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5198) app_main: OE-Pin: 0[0m
+[0;32mI (5198) app_main: row: 29, col: 29[0m
+[0;32mI (5298) app_main: Color: 0[0m
+[0;32mI (5298) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5298) app_main: OE-Pin: 0[0m
+[0;32mI (5298) app_main: row: 30, col: 30[0m
+[0;32mI (5398) app_main: Color: 1[0m
+[0;32mI (5398) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5398) app_main: OE-Pin: 0[0m
+[0;32mI (5398) app_main: row: 31, col: 31[0m
+[0;32mI (5498) app_main: Color: 2[0m
+[0;32mI (5498) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5498) app_main: OE-Pin: 0[0m
+[0;32mI (5498) app_main: row: 32, col: 32[0m
+[0;32mI (5598) app_main: Color: 0[0m
+[0;32mI (5598) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5598) app_main: OE-Pin: 0[0m
+[0;32mI (5598) app_main: row: 33, col: 33[0m
+[0;32mI (5698) app_main: Color: 1[0m
+[0;32mI (5698) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5698) app_main: OE-Pin: 0[0m
+[0;32mI (5698) app_main: row: 34, col: 34[0m
+[0;32mI (5798) app_main: Color: 2[0m
+[0;32mI (5798) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5798) app_main: OE-Pin: 0[0m
+[0;32mI (5798) app_main: row: 35, col: 35[0m
+[0;32mI (5898) app_main: Color: 0[0m
+[0;32mI (5898) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5898) app_main: OE-Pin: 0[0m
+[0;32mI (5898) app_main: row: 36, col: 36[0m
+[0;32mI (5998) app_main: Color: 1[0m
+[0;32mI (5998) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5998) app_main: OE-Pin: 0[0m
+[0;32mI (5998) app_main: row: 37, col: 37[0m
+[0;32mI (6098) app_main: Color: 2[0m
+[0;32mI (6098) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6098) app_main: OE-Pin: 0[0m
+[0;32mI (6098) app_main: row: 38, col: 38[0m
+[0;32mI (6198) app_main: Color: 0[0m
+[0;32mI (6198) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6198) app_main: OE-Pin: 0[0m
+[0;32mI (6198) app_main: row: 39, col: 39[0m
+[0;32mI (6298) app_main: Color: 1[0m
+[0;32mI (6298) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6298) app_main: OE-Pin: 0[0m
+[0;32mI (6298) app_main: row: 40, col: 40[0m
+[0;32mI (6398) app_main: Color: 2[0m
+[0;32mI (6398) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6398) app_main: OE-Pin: 0[0m
+[0;32mI (6398) app_main: row: 41, col: 41[0m
+[0;32mI (6498) app_main: Color: 0[0m
+[0;32mI (6498) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6498) app_main: OE-Pin: 0[0m
+[0;32mI (6498) app_main: row: 42, col: 42[0m
+[0;32mI (6598) app_main: Color: 1[0m
+[0;32mI (6598) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6598) app_main: OE-Pin: 0[0m
+[0;32mI (6598) app_main: row: 43, col: 43[0m
+[0;32mI (6698) app_main: Color: 2[0m
+[0;32mI (6698) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6698) app_main: OE-Pin: 0[0m
+[0;32mI (6698) app_main: row: 44, col: 44[0m
+[0;32mI (6798) app_main: Color: 0[0m
+[0;32mI (6798) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6798) app_main: OE-Pin: 0[0m
+[0;32mI (6798) app_main: row: 45, col: 45[0m
+[0;32mI (6898) app_main: Color: 1[0m
+[0;32mI (6898) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6898) app_main: OE-Pin: 0[0m
+[0;32mI (6898) app_main: row: 46, col: 46[0m
+[0;32mI (6998) app_main: Color: 2[0m
+[0;32mI (6998) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (6998) app_main: OE-Pin: 0[0m
+[0;32mI (6998) app_main: row: 47, col: 47[0m
+[0;32mI (7098) app_main: Color: 0[0m
+[0;32mI (7098) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7098) app_main: OE-Pin: 0[0m
+[0;32mI (7098) app_main: row: 0, col: 48[0m
+[0;32mI (7198) app_main: Color: 1[0m
+[0;32mI (7198) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7198) app_main: OE-Pin: 0[0m
+[0;32mI (7198) app_main: row: 1, col: 49[0m
+[0;32mI (7298) app_main: Color: 2[0m
+[0;32mI (7298) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7298) app_main: OE-Pin: 0[0m
+[0;32mI (7298) app_main: row: 2, col: 50[0m
+[0;32mI (7398) app_main: Color: 0[0m
+[0;32mI (7398) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7398) app_main: OE-Pin: 0[0m
+[0;32mI (7398) app_main: row: 3, col: 51[0m
+[0;32mI (7498) app_main: Color: 1[0m
+[0;32mI (7498) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7498) app_main: OE-Pin: 0[0m
+[0;32mI (7498) app_main: row: 4, col: 52[0m
+[0;32mI (7598) app_main: Color: 2[0m
+[0;32mI (7598) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7598) app_main: OE-Pin: 0[0m
+[0;32mI (7598) app_main: row: 5, col: 53[0m
+[0;32mI (7698) app_main: Color: 0[0m
+[0;32mI (7698) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7698) app_main: OE-Pin: 0[0m
+[0;32mI (7698) app_main: row: 6, col: 54[0m
+[0;32mI (7798) app_main: Color: 1[0m
+[0;32mI (7798) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7798) app_main: OE-Pin: 0[0m
+[0;32mI (7798) app_main: row: 7, col: 55[0m
+[0;32mI (7898) app_main: Color: 2[0m
+[0;32mI (7898) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7898) app_main: OE-Pin: 0[0m
+[0;32mI (7898) app_main: row: 8, col: 56[0m
+[0;32mI (7998) app_main: Color: 0[0m
+[0;32mI (7998) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (7998) app_main: OE-Pin: 0[0m
+[0;32mI (7998) app_main: row: 9, col: 57[0m
+[0;32mI (8098) app_main: Color: 1[0m
+[0;32mI (8098) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8098) app_main: OE-Pin: 0[0m
+[0;32mI (8098) app_main: row: 10, col: 58[0m
+[0;32mI (8198) app_main: Color: 2[0m
+[0;32mI (8198) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8198) app_main: OE-Pin: 0[0m
+[0;32mI (8198) app_main: row: 11, col: 59[0m
+[0;32mI (8298) app_main: Color: 0[0m
+[0;32mI (8298) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8298) app_main: OE-Pin: 0[0m
+[0;32mI (8298) app_main: row: 12, col: 60[0m
+[0;32mI (8398) app_main: Color: 1[0m
+[0;32mI (8398) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8398) app_main: OE-Pin: 0[0m
+[0;32mI (8398) app_main: row: 13, col: 61[0m
+[0;32mI (8498) app_main: Color: 2[0m
+[0;32mI (8498) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8498) app_main: OE-Pin: 0[0m
+[0;32mI (8498) app_main: row: 14, col: 62[0m
+[0;32mI (8598) app_main: Color: 0[0m
+[0;32mI (8598) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8598) app_main: OE-Pin: 0[0m
+[0;32mI (8598) app_main: row: 15, col: 63[0m
+[0;32mI (8698) app_main: Color: 1[0m
+[0;32mI (8698) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8698) app_main: OE-Pin: 0[0m
+[0;32mI (8698) app_main: row: 16, col: 64[0m
+[0;32mI (8798) app_main: Color: 2[0m
+[0;32mI (8798) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8798) app_main: OE-Pin: 0[0m
+[0;32mI (8798) app_main: row: 17, col: 65[0m
+[0;32mI (8898) app_main: Color: 0[0m
+[0;32mI (8898) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8898) app_main: OE-Pin: 0[0m
+[0;32mI (8898) app_main: row: 18, col: 66[0m
+[0;32mI (8998) app_main: Color: 1[0m
+[0;32mI (8998) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (8998) app_main: OE-Pin: 0[0m
+[0;32mI (8998) app_main: row: 19, col: 67[0m
+[0;32mI (9098) app_main: Color: 2[0m
+[0;32mI (9098) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9098) app_main: OE-Pin: 0[0m
+[0;32mI (9098) app_main: row: 20, col: 68[0m
+[0;32mI (9198) app_main: Color: 0[0m
+[0;32mI (9198) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9198) app_main: OE-Pin: 0[0m
+[0;32mI (9198) app_main: row: 21, col: 69[0m
+[0;32mI (9298) app_main: Color: 1[0m
+[0;32mI (9298) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9298) app_main: OE-Pin: 0[0m
+[0;32mI (9298) app_main: row: 22, col: 70[0m
+[0;32mI (9398) app_main: Color: 2[0m
+[0;32mI (9398) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9398) app_main: OE-Pin: 0[0m
+[0;32mI (9398) app_main: row: 23, col: 71[0m
+[0;32mI (9498) app_main: Color: 0[0m
+[0;32mI (9498) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9498) app_main: OE-Pin: 0[0m
+[0;32mI (9498) app_main: row: 24, col: 72[0m
+[0;32mI (9598) app_main: Color: 1[0m
+[0;32mI (9598) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9598) app_main: OE-Pin: 0[0m
+[0;32mI (9598) app_main: row: 25, col: 73[0m
+[0;32mI (9698) app_main: Color: 2[0m
+[0;32mI (9698) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9698) app_main: OE-Pin: 0[0m
+[0;32mI (9698) app_main: row: 26, col: 74[0m
+[0;32mI (9798) app_main: Color: 0[0m
+[0;32mI (9798) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9798) app_main: OE-Pin: 0[0m
+[0;32mI (9798) app_main: row: 27, col: 75[0m
+[0;32mI (9898) app_main: Color: 1[0m
+[0;32mI (9898) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9898) app_main: OE-Pin: 0[0m
+[0;32mI (9898) app_main: row: 28, col: 76[0m
+[0;32mI (9998) app_main: Color: 2[0m
+[0;32mI (9998) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (9998) app_main: OE-Pin: 0[0m
+[0;32mI (9998) app_main: row: 29, col: 77[0m
+[0;32mI (10098) app_main: Color: 0[0m
+[0;32mI (10098) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10098) app_main: OE-Pin: 0[0m
+[0;32mI (10098) app_main: row: 30, col: 78[0m
+[0;32mI (10198) app_main: Color: 1[0m
+[0;32mI (10198) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10198) app_main: OE-Pin: 0[0m
+[0;32mI (10198) app_main: row: 31, col: 79[0m
+[0;32mI (10298) app_main: Color: 2[0m
+[0;32mI (10298) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10298) app_main: OE-Pin: 0[0m
+[0;32mI (10298) app_main: row: 32, col: 80[0m
+[0;32mI (10398) app_main: Color: 0[0m
+[0;32mI (10398) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10398) app_main: OE-Pin: 0[0m
+[0;32mI (10398) app_main: row: 33, col: 81[0m
+[0;32mI (10498) app_main: Color: 1[0m
+[0;32mI (10498) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10498) app_main: OE-Pin: 0[0m
+[0;32mI (10498) app_main: row: 34, col: 82[0m
+[0;32mI (10598) app_main: Color: 2[0m
+[0;32mI (10598) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10598) app_main: OE-Pin: 0[0m
+[0;32mI (10598) app_main: row: 35, col: 83[0m
+[0;32mI (10698) app_main: Color: 0[0m
+[0;32mI (10698) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10698) app_main: OE-Pin: 0[0m
+[0;32mI (10698) app_main: row: 36, col: 84[0m
+[0;32mI (10798) app_main: Color: 1[0m
+[0;32mI (10798) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10798) app_main: OE-Pin: 0[0m
+[0;32mI (10798) app_main: row: 37, col: 85[0m
+[0;32mI (10898) app_main: Color: 2[0m
+[0;32mI (10898) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10898) app_main: OE-Pin: 0[0m
+[0;32mI (10898) app_main: row: 38, col: 86[0m
+[0;32mI (10998) app_main: Color: 0[0m
+[0;32mI (10998) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (10998) app_main: OE-Pin: 0[0m
+[0;32mI (10998) app_main: row: 39, col: 87[0m
+[0;32mI (11098) app_main: Color: 1[0m
+[0;32mI (11098) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11098) app_main: OE-Pin: 0[0m
+[0;32mI (11098) app_main: row: 40, col: 88[0m
+[0;32mI (11198) app_main: Color: 2[0m
+[0;32mI (11198) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11198) app_main: OE-Pin: 0[0m
+[0;32mI (11198) app_main: row: 41, col: 89[0m
+[0;32mI (11298) app_main: Color: 0[0m
+[0;32mI (11298) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11298) app_main: OE-Pin: 0[0m
+[0;32mI (11298) app_main: row: 42, col: 90[0m
+[0;32mI (11398) app_main: Color: 1[0m
+[0;32mI (11398) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11398) app_main: OE-Pin: 0[0m
+[0;32mI (11398) app_main: row: 43, col: 91[0m
+[0;32mI (11498) app_main: Color: 2[0m
+[0;32mI (11498) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11498) app_main: OE-Pin: 0[0m
+[0;32mI (11498) app_main: row: 44, col: 92[0m
+[0;32mI (11598) app_main: Color: 0[0m
+[0;32mI (11598) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11598) app_main: OE-Pin: 0[0m
+[0;32mI (11598) app_main: row: 45, col: 93[0m
+[0;32mI (11698) app_main: Color: 1[0m
+[0;32mI (11698) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11698) app_main: OE-Pin: 0[0m
+[0;32mI (11698) app_main: row: 46, col: 94[0m
+[0;32mI (11798) app_main: Color: 2[0m
+[0;32mI (11798) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11798) app_main: OE-Pin: 0[0m
+[0;32mI (11798) app_main: row: 47, col: 95[0m
+[0;32mI (11898) app_main: Color: 0[0m
+[0;32mI (11898) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11898) app_main: OE-Pin: 0[0m
+[0;32mI (11898) app_main: row: 0, col: 0[0m
+[0;32mI (11998) app_main: Color: 1[0m
+[0;32mI (11998) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (11998) app_main: OE-Pin: 0[0m
+[0;32mI (11998) app_main: row: 1, col: 1[0m
+[0;32mI (12098) app_main: Color: 2[0m
+[0;32mI (12098) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12098) app_main: OE-Pin: 0[0m
+[0;32mI (12098) app_main: row: 2, col: 2[0m
+[0;32mI (12198) app_main: Color: 0[0m
+[0;32mI (12198) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12198) app_main: OE-Pin: 0[0m
+[0;32mI (12198) app_main: row: 3, col: 3[0m
+[0;32mI (12298) app_main: Color: 1[0m
+[0;32mI (12298) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12298) app_main: OE-Pin: 0[0m
+[0;32mI (12298) app_main: row: 4, col: 4[0m
+[0;32mI (12398) app_main: Color: 2[0m
+[0;32mI (12398) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12398) app_main: OE-Pin: 0[0m
+[0;32mI (12398) app_main: row: 5, col: 5[0m
+[0;32mI (12498) app_main: Color: 0[0m
+[0;32mI (12498) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12498) app_main: OE-Pin: 0[0m
+[0;32mI (12498) app_main: row: 6, col: 6[0m
+[0;32mI (12598) app_main: Color: 1[0m
+[0;32mI (12598) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12598) app_main: OE-Pin: 0[0m
+[0;32mI (12598) app_main: row: 7, col: 7[0m
+[0;32mI (12698) app_main: Color: 2[0m
+[0;32mI (12698) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12698) app_main: OE-Pin: 0[0m
+[0;32mI (12698) app_main: row: 8, col: 8[0m
+[0;32mI (12798) app_main: Color: 0[0m
+[0;32mI (12798) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12798) app_main: OE-Pin: 0[0m
+[0;32mI (12798) app_main: row: 9, col: 9[0m
+[0;32mI (12898) app_main: Color: 1[0m
+[0;32mI (12898) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12898) app_main: OE-Pin: 0[0m
+[0;32mI (12898) app_main: row: 10, col: 10[0m
+[0;32mI (12998) app_main: Color: 2[0m
+[0;32mI (12998) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (12998) app_main: OE-Pin: 0[0m
+[0;32mI (12998) app_main: row: 11, col: 11[0m
+[0;32mI (13098) app_main: Color: 0[0m
+[0;32mI (13098) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13098) app_main: OE-Pin: 0[0m
+[0;32mI (13098) app_main: row: 12, col: 12[0m
+[0;32mI (13198) app_main: Color: 1[0m
+[0;32mI (13198) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13198) app_main: OE-Pin: 0[0m
+[0;32mI (13198) app_main: row: 13, col: 13[0m
+[0;32mI (13298) app_main: Color: 2[0m
+[0;32mI (13298) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13298) app_main: OE-Pin: 0[0m
+[0;32mI (13298) app_main: row: 14, col: 14[0m
+[0;32mI (13398) app_main: Color: 0[0m
+[0;32mI (13398) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13398) app_main: OE-Pin: 0[0m
+[0;32mI (13398) app_main: row: 15, col: 15[0m
+[0;32mI (13498) app_main: Color: 1[0m
+[0;32mI (13498) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13498) app_main: OE-Pin: 0[0m
+[0;32mI (13498) app_main: row: 16, col: 16[0m
+[0;32mI (13598) app_main: Color: 2[0m
+[0;32mI (13598) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13598) app_main: OE-Pin: 0[0m
+[0;32mI (13598) app_main: row: 17, col: 17[0m
+[0;32mI (13698) app_main: Color: 0[0m
+[0;32mI (13698) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13698) app_main: OE-Pin: 0[0m
+[0;32mI (13698) app_main: row: 18, col: 18[0m
+[0;32mI (13798) app_main: Color: 1[0m
+[0;32mI (13798) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13798) app_main: OE-Pin: 0[0m
+[0;32mI (13798) app_main: row: 19, col: 19[0m
+[0;32mI (13898) app_main: Color: 2[0m
+[0;32mI (13898) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13898) app_main: OE-Pin: 0[0m
+[0;32mI (13898) app_main: row: 20, col: 20[0m
+[0;32mI (13998) app_main: Color: 0[0m
+[0;32mI (13998) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (13998) app_main: OE-Pin: 0[0m
+[0;32mI (13998) app_main: row: 21, col: 21[0m
+[0;32mI (14098) app_main: Color: 1[0m
+[0;32mI (14098) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14098) app_main: OE-Pin: 0[0m
+[0;32mI (14098) app_main: row: 22, col: 22[0m
+[0;32mI (14198) app_main: Color: 2[0m
+[0;32mI (14198) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14198) app_main: OE-Pin: 0[0m
+[0;32mI (14198) app_main: row: 23, col: 23[0m
+[0;32mI (14298) app_main: Color: 0[0m
+[0;32mI (14298) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14298) app_main: OE-Pin: 0[0m
+[0;32mI (14298) app_main: row: 24, col: 24[0m
+[0;32mI (14398) app_main: Color: 1[0m
+[0;32mI (14398) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14398) app_main: OE-Pin: 0[0m
+[0;32mI (14398) app_main: row: 25, col: 25[0m
+[0;32mI (14498) app_main: Color: 2[0m
+[0;32mI (14498) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14498) app_main: OE-Pin: 0[0m
+[0;32mI (14498) app_main: row: 26, col: 26[0m
+[0;32mI (14598) app_main: Color: 0[0m
+[0;32mI (14598) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14598) app_main: OE-Pin: 0[0m
+[0;32mI (14598) app_main: row: 27, col: 27[0m
+[0;32mI (14698) app_main: Color: 1[0m
+[0;32mI (14698) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14698) app_main: OE-Pin: 0[0m
+[0;32mI (14698) app_main: row: 28, col: 28[0m
+[0;32mI (14798) app_main: Color: 2[0m
+[0;32mI (14798) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14798) app_main: OE-Pin: 0[0m
+[0;32mI (14798) app_main: row: 29, col: 29[0m
+[0;32mI (14898) app_main: Color: 0[0m
+[0;32mI (14898) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14898) app_main: OE-Pin: 0[0m
+[0;32mI (14898) app_main: row: 30, col: 30[0m
+[0;32mI (14998) app_main: Color: 1[0m
+[0;32mI (14998) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (14998) app_main: OE-Pin: 0[0m
+[0;32mI (14998) app_main: row: 31, col: 31[0m
+[0;32mI (15098) app_main: Color: 2[0m
+[0;32mI (15098) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15098) app_main: OE-Pin: 0[0m
+[0;32mI (15098) app_main: row: 32, col: 32[0m
+[0;32mI (15198) app_main: Color: 0[0m
+[0;32mI (15198) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15198) app_main: OE-Pin: 0[0m
+[0;32mI (15198) app_main: row: 33, col: 33[0m
+[0;32mI (15298) app_main: Color: 1[0m
+[0;32mI (15298) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15298) app_main: OE-Pin: 0[0m
+[0;32mI (15298) app_main: row: 34, col: 34[0m
+[0;32mI (15398) app_main: Color: 2[0m
+[0;32mI (15398) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15398) app_main: OE-Pin: 0[0m
+[0;32mI (15398) app_main: row: 35, col: 35[0m
+[0;32mI (15498) app_main: Color: 0[0m
+[0;32mI (15498) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15498) app_main: OE-Pin: 0[0m
+[0;32mI (15498) app_main: row: 36, col: 36[0m
+[0;32mI (15598) app_main: Color: 1[0m
+[0;32mI (15598) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15598) app_main: OE-Pin: 0[0m
+[0;32mI (15598) app_main: row: 37, col: 37[0m
+[0;32mI (15698) app_main: Color: 2[0m
+[0;32mI (15698) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15698) app_main: OE-Pin: 0[0m
+[0;32mI (15698) app_main: row: 38, col: 38[0m
+[0;32mI (15798) app_main: Color: 0[0m
+[0;32mI (15798) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15798) app_main: OE-Pin: 0[0m
+[0;32mI (15798) app_main: row: 39, col: 39[0m
+[0;32mI (15898) app_main: Color: 1[0m
+[0;32mI (15898) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15898) app_main: OE-Pin: 0[0m
+[0;32mI (15898) app_main: row: 40, col: 40[0m
+[0;32mI (15998) app_main: Color: 2[0m
+[0;32mI (15998) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (15998) app_main: OE-Pin: 0[0m
+[0;32mI (15998) app_main: row: 41, col: 41[0m
+[0;32mI (16098) app_main: Color: 0[0m
+[0;32mI (16098) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16098) app_main: OE-Pin: 0[0m
+[0;32mI (16098) app_main: row: 42, col: 42[0m
+[0;32mI (16198) app_main: Color: 1[0m
+[0;32mI (16198) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16198) app_main: OE-Pin: 0[0m
+[0;32mI (16198) app_main: row: 43, col: 43[0m
+[0;32mI (16298) app_main: Color: 2[0m
+[0;32mI (16298) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16298) app_main: OE-Pin: 0[0m
+[0;32mI (16298) app_main: row: 44, col: 44[0m
+[0;32mI (16398) app_main: Color: 0[0m
+[0;32mI (16398) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16398) app_main: OE-Pin: 0[0m
+[0;32mI (16398) app_main: row: 45, col: 45[0m
+[0;32mI (16498) app_main: Color: 1[0m
+[0;32mI (16498) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16498) app_main: OE-Pin: 0[0m
+[0;32mI (16498) app_main: row: 46, col: 46[0m
+[0;32mI (16598) app_main: Color: 2[0m
+[0;32mI (16598) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16598) app_main: OE-Pin: 0[0m
+[0;32mI (16598) app_main: row: 47, col: 47[0m
+[0;32mI (16698) app_main: Color: 0[0m
+[0;32mI (16698) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16698) app_main: OE-Pin: 0[0m
+[0;32mI (16698) app_main: row: 0, col: 48[0m
+[0;32mI (16798) app_main: Color: 1[0m
+[0;32mI (16798) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16798) app_main: OE-Pin: 0[0m
+[0;32mI (16798) app_main: row: 1, col: 49[0m
+[0;32mI (16898) app_main: Color: 2[0m
+[0;32mI (16898) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16898) app_main: OE-Pin: 0[0m
+[0;32mI (16898) app_main: row: 2, col: 50[0m
+[0;32mI (16998) app_main: Color: 0[0m
+[0;32mI (16998) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (16998) app_main: OE-Pin: 0[0m
+[0;32mI (16998) app_main: row: 3, col: 51[0m
+[0;32mI (17098) app_main: Color: 1[0m
+[0;32mI (17098) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17098) app_main: OE-Pin: 0[0m
+[0;32mI (17098) app_main: row: 4, col: 52[0m
+[0;32mI (17198) app_main: Color: 2[0m
+[0;32mI (17198) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17198) app_main: OE-Pin: 0[0m
+[0;32mI (17198) app_main: row: 5, col: 53[0m
+[0;32mI (17298) app_main: Color: 0[0m
+[0;32mI (17298) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17298) app_main: OE-Pin: 0[0m
+[0;32mI (17298) app_main: row: 6, col: 54[0m
+[0;32mI (17398) app_main: Color: 1[0m
+[0;32mI (17398) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17398) app_main: OE-Pin: 0[0m
+[0;32mI (17398) app_main: row: 7, col: 55[0m
+[0;32mI (17498) app_main: Color: 2[0m
+[0;32mI (17498) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17498) app_main: OE-Pin: 0[0m
+[0;32mI (17498) app_main: row: 8, col: 56[0m
+[0;32mI (17598) app_main: Color: 0[0m
+[0;32mI (17598) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17598) app_main: OE-Pin: 0[0m
+[0;32mI (17598) app_main: row: 9, col: 57[0m
+[0;32mI (17698) app_main: Color: 1[0m
+[0;32mI (17698) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17698) app_main: OE-Pin: 0[0m
+[0;32mI (17698) app_main: row: 10, col: 58[0m
+[0;32mI (17798) app_main: Color: 2[0m
+[0;32mI (17798) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17798) app_main: OE-Pin: 0[0m
+[0;32mI (17798) app_main: row: 11, col: 59[0m
+[0;32mI (17898) app_main: Color: 0[0m
+[0;32mI (17898) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17898) app_main: OE-Pin: 0[0m
+[0;32mI (17898) app_main: row: 12, col: 60[0m
+[0;32mI (17998) app_main: Color: 1[0m
+[0;32mI (17998) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (17998) app_main: OE-Pin: 0[0m
+[0;32mI (17998) app_main: row: 13, col: 61[0m
+[0;32mI (18098) app_main: Color: 2[0m
+[0;32mI (18098) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18098) app_main: OE-Pin: 0[0m
+[0;32mI (18098) app_main: row: 14, col: 62[0m
+[0;32mI (18198) app_main: Color: 0[0m
+[0;32mI (18198) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18198) app_main: OE-Pin: 0[0m
+[0;32mI (18198) app_main: row: 15, col: 63[0m
+[0;32mI (18298) app_main: Color: 1[0m
+[0;32mI (18298) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18298) app_main: OE-Pin: 0[0m
+[0;32mI (18298) app_main: row: 16, col: 64[0m
+[0;32mI (18398) app_main: Color: 2[0m
+[0;32mI (18398) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18398) app_main: OE-Pin: 0[0m
+[0;32mI (18398) app_main: row: 17, col: 65[0m
+[0;32mI (18498) app_main: Color: 0[0m
+[0;32mI (18498) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18498) app_main: OE-Pin: 0[0m
+[0;32mI (18498) app_main: row: 18, col: 66[0m
+[0;32mI (18598) app_main: Color: 1[0m
+[0;32mI (18598) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18598) app_main: OE-Pin: 0[0m
+[0;32mI (18598) app_main: row: 19, col: 67[0m
+[0;32mI (18698) app_main: Color: 2[0m
+[0;32mI (18698) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18698) app_main: OE-Pin: 0[0m
+[0;32mI (18698) app_main: row: 20, col: 68[0m
+[0;32mI (18798) app_main: Color: 0[0m
+[0;32mI (18798) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18798) app_main: OE-Pin: 0[0m
+[0;32mI (18798) app_main: row: 21, col: 69[0m
+[0;32mI (18898) app_main: Color: 1[0m
+[0;32mI (18898) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18898) app_main: OE-Pin: 0[0m
+[0;32mI (18898) app_main: row: 22, col: 70[0m
+[0;32mI (18998) app_main: Color: 2[0m
+[0;32mI (18998) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (18998) app_main: OE-Pin: 0[0m
+[0;32mI (18998) app_main: row: 23, col: 71[0m
+[0;32mI (19098) app_main: Color: 0[0m
+[0;32mI (19098) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19098) app_main: OE-Pin: 0[0m
+[0;32mI (19098) app_main: row: 24, col: 72[0m
+[0;32mI (19198) app_main: Color: 1[0m
+[0;32mI (19198) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19198) app_main: OE-Pin: 0[0m
+[0;32mI (19198) app_main: row: 25, col: 73[0m
+[0;32mI (19298) app_main: Color: 2[0m
+[0;32mI (19298) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19298) app_main: OE-Pin: 0[0m
+[0;32mI (19298) app_main: row: 26, col: 74[0m
+[0;32mI (19398) app_main: Color: 0[0m
+[0;32mI (19398) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19398) app_main: OE-Pin: 0[0m
+[0;32mI (19398) app_main: row: 27, col: 75[0m
+[0;32mI (19498) app_main: Color: 1[0m
+[0;32mI (19498) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19498) app_main: OE-Pin: 0[0m
+[0;32mI (19498) app_main: row: 28, col: 76[0m
+[0;32mI (19598) app_main: Color: 2[0m
+[0;32mI (19598) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19598) app_main: OE-Pin: 0[0m
+[0;32mI (19598) app_main: row: 29, col: 77[0m
+[0;32mI (19698) app_main: Color: 0[0m
+[0;32mI (19698) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19698) app_main: OE-Pin: 0[0m
+[0;32mI (19698) app_main: row: 30, col: 78[0m
+[0;32mI (19798) app_main: Color: 1[0m
+[0;32mI (19798) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19798) app_main: OE-Pin: 0[0m
+[0;32mI (19798) app_main: row: 31, col: 79[0m
+[0;32mI (19898) app_main: Color: 2[0m
+[0;32mI (19898) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19898) app_main: OE-Pin: 0[0m
+[0;32mI (19898) app_main: row: 32, col: 80[0m
+[0;32mI (19998) app_main: Color: 0[0m
+[0;32mI (19998) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (19998) app_main: OE-Pin: 0[0m
+[0;32mI (19998) app_main: row: 33, col: 81[0m
+[0;32mI (20098) app_main: Color: 1[0m
+[0;32mI (20098) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20098) app_main: OE-Pin: 0[0m
+[0;32mI (20098) app_main: row: 34, col: 82[0m
+[0;32mI (20198) app_main: Color: 2[0m
+[0;32mI (20198) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20198) app_main: OE-Pin: 0[0m
+[0;32mI (20198) app_main: row: 35, col: 83[0m
+[0;32mI (20298) app_main: Color: 0[0m
+[0;32mI (20298) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20298) app_main: OE-Pin: 0[0m
+[0;32mI (20298) app_main: row: 36, col: 84[0m
+[0;32mI (20398) app_main: Color: 1[0m
+[0;32mI (20398) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20398) app_main: OE-Pin: 0[0m
+[0;32mI (20398) app_main: row: 37, col: 85[0m
+[0;32mI (20498) app_main: Color: 2[0m
+[0;32mI (20498) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20498) app_main: OE-Pin: 0[0m
+[0;32mI (20498) app_main: row: 38, col: 86[0m
+[0;32mI (20598) app_main: Color: 0[0m
+[0;32mI (20598) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20598) app_main: OE-Pin: 0[0m
+[0;32mI (20598) app_main: row: 39, col: 87[0m
+[0;32mI (20698) app_main: Color: 1[0m
+[0;32mI (20698) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20698) app_main: OE-Pin: 0[0m
+[0;32mI (20698) app_main: row: 40, col: 88[0m
+[0;32mI (20798) app_main: Color: 2[0m
+[0;32mI (20798) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20798) app_main: OE-Pin: 0[0m
+[0;32mI (20798) app_main: row: 41, col: 89[0m
+[0;32mI (20898) app_main: Color: 0[0m
+[0;32mI (20898) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20898) app_main: OE-Pin: 0[0m
+[0;32mI (20898) app_main: row: 42, col: 90[0m
+[0;32mI (20998) app_main: Color: 1[0m
+[0;32mI (20998) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (20998) app_main: OE-Pin: 0[0m
+[0;32mI (20998) app_main: row: 43, col: 91[0m
+[0;32mI (21098) app_main: Color: 2[0m
+[0;32mI (21098) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21098) app_main: OE-Pin: 0[0m
+[0;32mI (21098) app_main: row: 44, col: 92[0m
+[0;32mI (21198) app_main: Color: 0[0m
+[0;32mI (21198) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21198) app_main: OE-Pin: 0[0m
+[0;32mI (21198) app_main: row: 45, col: 93[0m
+[0;32mI (21298) app_main: Color: 1[0m
+[0;32mI (21298) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21298) app_main: OE-Pin: 0[0m
+[0;32mI (21298) app_main: row: 46, col: 94[0m
+[0;32mI (21398) app_main: Color: 2[0m
+[0;32mI (21398) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21398) app_main: OE-Pin: 0[0m
+[0;32mI (21398) app_main: row: 47, col: 95[0m
+[0;32mI (21498) app_main: Color: 0[0m
+[0;32mI (21498) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21498) app_main: OE-Pin: 0[0m
+[0;32mI (21498) app_main: row: 0, col: 0[0m
+[0;32mI (21598) app_main: Color: 1[0m
+[0;32mI (21598) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21598) app_main: OE-Pin: 0[0m
+[0;32mI (21598) app_main: row: 1, col: 1[0m
+[0;32mI (21698) app_main: Color: 2[0m
+[0;32mI (21698) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21698) app_main: OE-Pin: 0[0m
+[0;32mI (21698) app_main: row: 2, col: 2[0m
+[0;32mI (21798) app_main: Color: 0[0m
+[0;32mI (21798) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21798) app_main: OE-Pin: 0[0m
+[0;32mI (21798) app_main: row: 3, col: 3[0m
+[0;32mI (21898) app_main: Color: 1[0m
+[0;32mI (21898) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21898) app_main: OE-Pin: 0[0m
+[0;32mI (21898) app_main: row: 4, col: 4[0m
+[0;32mI (21998) app_main: Color: 2[0m
+[0;32mI (21998) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (21998) app_main: OE-Pin: 0[0m
+[0;32mI (21998) app_main: row: 5, col: 5[0m
+[0;32mI (22098) app_main: Color: 0[0m
+[0;32mI (22098) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22098) app_main: OE-Pin: 0[0m
+[0;32mI (22098) app_main: row: 6, col: 6[0m
+[0;32mI (22198) app_main: Color: 1[0m
+[0;32mI (22198) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22198) app_main: OE-Pin: 0[0m
+[0;32mI (22198) app_main: row: 7, col: 7[0m
+[0;32mI (22298) app_main: Color: 2[0m
+[0;32mI (22298) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22298) app_main: OE-Pin: 0[0m
+[0;32mI (22298) app_main: row: 8, col: 8[0m
+[0;32mI (22398) app_main: Color: 0[0m
+[0;32mI (22398) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22398) app_main: OE-Pin: 0[0m
+[0;32mI (22398) app_main: row: 9, col: 9[0m
+[0;32mI (22498) app_main: Color: 1[0m
+[0;32mI (22498) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22498) app_main: OE-Pin: 0[0m
+[0;32mI (22498) app_main: row: 10, col: 10[0m
+[0;32mI (22598) app_main: Color: 2[0m
+[0;32mI (22598) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22598) app_main: OE-Pin: 0[0m
+[0;32mI (22598) app_main: row: 11, col: 11[0m
+[0;32mI (22698) app_main: Color: 0[0m
+[0;32mI (22698) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22698) app_main: OE-Pin: 0[0m
+[0;32mI (22698) app_main: row: 12, col: 12[0m
+[0;32mI (22798) app_main: Color: 1[0m
+[0;32mI (22798) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22798) app_main: OE-Pin: 0[0m
+[0;32mI (22798) app_main: row: 13, col: 13[0m
+[0;32mI (22898) app_main: Color: 2[0m
+[0;32mI (22898) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22898) app_main: OE-Pin: 0[0m
+[0;32mI (22898) app_main: row: 14, col: 14[0m
+[0;32mI (22998) app_main: Color: 0[0m
+[0;32mI (22998) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (22998) app_main: OE-Pin: 0[0m
+[0;32mI (22998) app_main: row: 15, col: 15[0m
+[0;32mI (23098) app_main: Color: 1[0m
+[0;32mI (23098) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23098) app_main: OE-Pin: 0[0m
+[0;32mI (23098) app_main: row: 16, col: 16[0m
+[0;32mI (23198) app_main: Color: 2[0m
+[0;32mI (23198) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23198) app_main: OE-Pin: 0[0m
+[0;32mI (23198) app_main: row: 17, col: 17[0m
+[0;32mI (23298) app_main: Color: 0[0m
+[0;32mI (23298) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23298) app_main: OE-Pin: 0[0m
+[0;32mI (23298) app_main: row: 18, col: 18[0m
+[0;32mI (23398) app_main: Color: 1[0m
+[0;32mI (23398) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23398) app_main: OE-Pin: 0[0m
+[0;32mI (23398) app_main: row: 19, col: 19[0m
+[0;32mI (23498) app_main: Color: 2[0m
+[0;32mI (23498) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23498) app_main: OE-Pin: 0[0m
+[0;32mI (23498) app_main: row: 20, col: 20[0m
+[0;32mI (23598) app_main: Color: 0[0m
+[0;32mI (23598) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23598) app_main: OE-Pin: 0[0m
+[0;32mI (23598) app_main: row: 21, col: 21[0m
+[0;32mI (23698) app_main: Color: 1[0m
+[0;32mI (23698) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23698) app_main: OE-Pin: 0[0m
+[0;32mI (23698) app_main: row: 22, col: 22[0m
+[0;32mI (23798) app_main: Color: 2[0m
+[0;32mI (23798) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23798) app_main: OE-Pin: 0[0m
+[0;32mI (23798) app_main: row: 23, col: 23[0m
+[0;32mI (23898) app_main: Color: 0[0m
+[0;32mI (23898) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23898) app_main: OE-Pin: 0[0m
+[0;32mI (23898) app_main: row: 24, col: 24[0m
+[0;32mI (23998) app_main: Color: 1[0m
+[0;32mI (23998) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (23998) app_main: OE-Pin: 0[0m
+[0;32mI (23998) app_main: row: 25, col: 25[0m
+[0;32mI (24098) app_main: Color: 2[0m
+[0;32mI (24098) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24098) app_main: OE-Pin: 0[0m
+[0;32mI (24098) app_main: row: 26, col: 26[0m
+[0;32mI (24198) app_main: Color: 0[0m
+[0;32mI (24198) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24198) app_main: OE-Pin: 0[0m
+[0;32mI (24198) app_main: row: 27, col: 27[0m
+[0;32mI (24298) app_main: Color: 1[0m
+[0;32mI (24298) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24298) app_main: OE-Pin: 0[0m
+[0;32mI (24298) app_main: row: 28, col: 28[0m
+[0;32mI (24398) app_main: Color: 2[0m
+[0;32mI (24398) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24398) app_main: OE-Pin: 0[0m
+[0;32mI (24398) app_main: row: 29, col: 29[0m
+[0;32mI (24498) app_main: Color: 0[0m
+[0;32mI (24498) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24498) app_main: OE-Pin: 0[0m
+[0;32mI (24498) app_main: row: 30, col: 30[0m
+[0;32mI (24598) app_main: Color: 1[0m
+[0;32mI (24598) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24598) app_main: OE-Pin: 0[0m
+[0;32mI (24598) app_main: row: 31, col: 31[0m
+[0;32mI (24698) app_main: Color: 2[0m
+[0;32mI (24698) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24698) app_main: OE-Pin: 0[0m
+[0;32mI (24698) app_main: row: 32, col: 32[0m
+[0;32mI (24798) app_main: Color: 0[0m
+[0;32mI (24798) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24798) app_main: OE-Pin: 0[0m
+[0;32mI (24798) app_main: row: 33, col: 33[0m
+[0;32mI (24898) app_main: Color: 1[0m
+[0;32mI (24898) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24898) app_main: OE-Pin: 0[0m
+[0;32mI (24898) app_main: row: 34, col: 34[0m
+[0;32mI (24998) app_main: Color: 2[0m
+[0;32mI (24998) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (24998) app_main: OE-Pin: 0[0m
+[0;32mI (24998) app_main: row: 35, col: 35[0m
+[0;32mI (25098) app_main: Color: 0[0m
+[0;32mI (25098) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25098) app_main: OE-Pin: 0[0m
+[0;32mI (25098) app_main: row: 36, col: 36[0m
+[0;32mI (25198) app_main: Color: 1[0m
+[0;32mI (25198) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25198) app_main: OE-Pin: 0[0m
+[0;32mI (25198) app_main: row: 37, col: 37[0m
+[0;32mI (25298) app_main: Color: 2[0m
+[0;32mI (25298) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25298) app_main: OE-Pin: 0[0m
+[0;32mI (25298) app_main: row: 38, col: 38[0m
+[0;32mI (25398) app_main: Color: 0[0m
+[0;32mI (25398) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25398) app_main: OE-Pin: 0[0m
+[0;32mI (25398) app_main: row: 39, col: 39[0m
+[0;32mI (25498) app_main: Color: 1[0m
+[0;32mI (25498) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25498) app_main: OE-Pin: 0[0m
+[0;32mI (25498) app_main: row: 40, col: 40[0m
+[0;32mI (25598) app_main: Color: 2[0m
+[0;32mI (25598) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25598) app_main: OE-Pin: 0[0m
+[0;32mI (25598) app_main: row: 41, col: 41[0m
+[0;32mI (25698) app_main: Color: 0[0m
+[0;32mI (25698) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25698) app_main: OE-Pin: 0[0m
+[0;32mI (25698) app_main: row: 42, col: 42[0m
+[0;32mI (25798) app_main: Color: 1[0m
+[0;32mI (25798) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25798) app_main: OE-Pin: 0[0m
+[0;32mI (25798) app_main: row: 43, col: 43[0m
+[0;32mI (25898) app_main: Color: 2[0m
+[0;32mI (25898) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25898) app_main: OE-Pin: 0[0m
+[0;32mI (25898) app_main: row: 44, col: 44[0m
+[0;32mI (25998) app_main: Color: 0[0m
+[0;32mI (25998) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (25998) app_main: OE-Pin: 0[0m
+[0;32mI (25998) app_main: row: 45, col: 45[0m
+[0;32mI (26098) app_main: Color: 1[0m
+[0;32mI (26098) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26098) app_main: OE-Pin: 0[0m
+[0;32mI (26098) app_main: row: 46, col: 46[0m
+[0;32mI (26198) app_main: Color: 2[0m
+[0;32mI (26198) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26198) app_main: OE-Pin: 0[0m
+[0;32mI (26198) app_main: row: 47, col: 47[0m
+[0;32mI (26298) app_main: Color: 0[0m
+[0;32mI (26298) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26298) app_main: OE-Pin: 0[0m
+[0;32mI (26298) app_main: row: 0, col: 48[0m
+[0;32mI (26398) app_main: Color: 1[0m
+[0;32mI (26398) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26398) app_main: OE-Pin: 0[0m
+[0;32mI (26398) app_main: row: 1, col: 49[0m
+[0;32mI (26498) app_main: Color: 2[0m
+[0;32mI (26498) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26498) app_main: OE-Pin: 0[0m
+[0;32mI (26498) app_main: row: 2, col: 50[0m
+[0;32mI (26598) app_main: Color: 0[0m
+[0;32mI (26598) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26598) app_main: OE-Pin: 0[0m
+[0;32mI (26598) app_main: row: 3, col: 51[0m
+[0;32mI (26698) app_main: Color: 1[0m
+[0;32mI (26698) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26698) app_main: OE-Pin: 0[0m
+[0;32mI (26698) app_main: row: 4, col: 52[0m
+[0;32mI (26798) app_main: Color: 2[0m
+[0;32mI (26798) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26798) app_main: OE-Pin: 0[0m
+[0;32mI (26798) app_main: row: 5, col: 53[0m
+[0;32mI (26898) app_main: Color: 0[0m
+[0;32mI (26898) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26898) app_main: OE-Pin: 0[0m
+[0;32mI (26898) app_main: row: 6, col: 54[0m
+[0;32mI (26998) app_main: Color: 1[0m
+[0;32mI (26998) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (26998) app_main: OE-Pin: 0[0m
+[0;32mI (26998) app_main: row: 7, col: 55[0m
+[0;32mI (27098) app_main: Color: 2[0m
+[0;32mI (27098) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27098) app_main: OE-Pin: 0[0m
+[0;32mI (27098) app_main: row: 8, col: 56[0m
+[0;32mI (27198) app_main: Color: 0[0m
+[0;32mI (27198) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27198) app_main: OE-Pin: 0[0m
+[0;32mI (27198) app_main: row: 9, col: 57[0m
+[0;32mI (27298) app_main: Color: 1[0m
+[0;32mI (27298) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27298) app_main: OE-Pin: 0[0m
+[0;32mI (27298) app_main: row: 10, col: 58[0m
+[0;32mI (27398) app_main: Color: 2[0m
+[0;32mI (27398) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27398) app_main: OE-Pin: 0[0m
+[0;32mI (27398) app_main: row: 11, col: 59[0m
+[0;32mI (27498) app_main: Color: 0[0m
+[0;32mI (27498) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27498) app_main: OE-Pin: 0[0m
+[0;32mI (27498) app_main: row: 12, col: 60[0m
+[0;32mI (27598) app_main: Color: 1[0m
+[0;32mI (27598) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27598) app_main: OE-Pin: 0[0m
+[0;32mI (27598) app_main: row: 13, col: 61[0m
+[0;32mI (27698) app_main: Color: 2[0m
+[0;32mI (27698) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27698) app_main: OE-Pin: 0[0m
+[0;32mI (27698) app_main: row: 14, col: 62[0m
+[0;32mI (27798) app_main: Color: 0[0m
+[0;32mI (27798) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27798) app_main: OE-Pin: 0[0m
+[0;32mI (27798) app_main: row: 15, col: 63[0m
+[0;32mI (27898) app_main: Color: 1[0m
+[0;32mI (27898) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27898) app_main: OE-Pin: 0[0m
+[0;32mI (27898) app_main: row: 16, col: 64[0m
+[0;32mI (27998) app_main: Color: 2[0m
+[0;32mI (27998) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (27998) app_main: OE-Pin: 0[0m
+[0;32mI (27998) app_main: row: 17, col: 65[0m
+[0;32mI (28098) app_main: Color: 0[0m
+[0;32mI (28098) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28098) app_main: OE-Pin: 0[0m
+[0;32mI (28098) app_main: row: 18, col: 66[0m
+[0;32mI (28198) app_main: Color: 1[0m
+[0;32mI (28198) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28198) app_main: OE-Pin: 0[0m
+[0;32mI (28198) app_main: row: 19, col: 67[0m
+[0;32mI (28298) app_main: Color: 2[0m
+[0;32mI (28298) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28298) app_main: OE-Pin: 0[0m
+[0;32mI (28298) app_main: row: 20, col: 68[0m
+[0;32mI (28398) app_main: Color: 0[0m
+[0;32mI (28398) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28398) app_main: OE-Pin: 0[0m
+[0;32mI (28398) app_main: row: 21, col: 69[0m
+[0;32mI (28498) app_main: Color: 1[0m
+[0;32mI (28498) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28498) app_main: OE-Pin: 0[0m
+[0;32mI (28498) app_main: row: 22, col: 70[0m
+[0;32mI (28598) app_main: Color: 2[0m
+[0;32mI (28598) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28598) app_main: OE-Pin: 0[0m
+[0;32mI (28598) app_main: row: 23, col: 71[0m
+[0;32mI (28698) app_main: Color: 0[0m
+[0;32mI (28698) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28698) app_main: OE-Pin: 0[0m
+[0;32mI (28698) app_main: row: 24, col: 72[0m
+[0;32mI (28798) app_main: Color: 1[0m
+[0;32mI (28798) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28798) app_main: OE-Pin: 0[0m
+[0;32mI (28798) app_main: row: 25, col: 73[0m
+[0;32mI (28898) app_main: Color: 2[0m
+[0;32mI (28898) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28898) app_main: OE-Pin: 0[0m
+[0;32mI (28898) app_main: row: 26, col: 74[0m
+[0;32mI (28998) app_main: Color: 0[0m
+[0;32mI (28998) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (28998) app_main: OE-Pin: 0[0m
+[0;32mI (28998) app_main: row: 27, col: 75[0m
+[0;32mI (29098) app_main: Color: 1[0m
+[0;32mI (29098) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29098) app_main: OE-Pin: 0[0m
+[0;32mI (29098) app_main: row: 28, col: 76[0m
+[0;32mI (29198) app_main: Color: 2[0m
+[0;32mI (29198) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29198) app_main: OE-Pin: 0[0m
+[0;32mI (29198) app_main: row: 29, col: 77[0m
+[0;32mI (29298) app_main: Color: 0[0m
+[0;32mI (29298) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29298) app_main: OE-Pin: 0[0m
+[0;32mI (29298) app_main: row: 30, col: 78[0m
+[0;32mI (29398) app_main: Color: 1[0m
+[0;32mI (29398) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29398) app_main: OE-Pin: 0[0m
+[0;32mI (29398) app_main: row: 31, col: 79[0m
+[0;32mI (29498) app_main: Color: 2[0m
+[0;32mI (29498) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29498) app_main: OE-Pin: 0[0m
+[0;32mI (29498) app_main: row: 32, col: 80[0m
+[0;32mI (29598) app_main: Color: 0[0m
+[0;32mI (29598) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29598) app_main: OE-Pin: 0[0m
+[0;32mI (29598) app_main: row: 33, col: 81[0m
+[0;32mI (29698) app_main: Color: 1[0m
+[0;32mI (29698) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29698) app_main: OE-Pin: 0[0m
+[0;32mI (29698) app_main: row: 34, col: 82[0m
+[0;32mI (29798) app_main: Color: 2[0m
+[0;32mI (29798) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29798) app_main: OE-Pin: 0[0m
+[0;32mI (29798) app_main: row: 35, col: 83[0m
+[0;32mI (29898) app_main: Color: 0[0m
+[0;32mI (29898) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29898) app_main: OE-Pin: 0[0m
+[0;32mI (29898) app_main: row: 36, col: 84[0m
+[0;32mI (29998) app_main: Color: 1[0m
+[0;32mI (29998) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (29998) app_main: OE-Pin: 0[0m
+[0;32mI (29998) app_main: row: 37, col: 85[0m
+[0;32mI (30098) app_main: Color: 2[0m
+[0;32mI (30098) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30098) app_main: OE-Pin: 0[0m
+[0;32mI (30098) app_main: row: 38, col: 86[0m
+[0;32mI (30198) app_main: Color: 0[0m
+[0;32mI (30198) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30198) app_main: OE-Pin: 0[0m
+[0;32mI (30198) app_main: row: 39, col: 87[0m
+[0;32mI (30298) app_main: Color: 1[0m
+[0;32mI (30298) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30298) app_main: OE-Pin: 0[0m
+[0;32mI (30298) app_main: row: 40, col: 88[0m
+[0;32mI (30398) app_main: Color: 2[0m
+[0;32mI (30398) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30398) app_main: OE-Pin: 0[0m
+[0;32mI (30398) app_main: row: 41, col: 89[0m
+[0;32mI (30498) app_main: Color: 0[0m
+[0;32mI (30498) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30498) app_main: OE-Pin: 0[0m
+[0;32mI (30498) app_main: row: 42, col: 90[0m
+[0;32mI (30598) app_main: Color: 1[0m
+[0;32mI (30598) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30598) app_main: OE-Pin: 0[0m
+[0;32mI (30598) app_main: row: 43, col: 91[0m
+[0;32mI (30698) app_main: Color: 2[0m
+[0;32mI (30698) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30698) app_main: OE-Pin: 0[0m
+[0;32mI (30698) app_main: row: 44, col: 92[0m
+[0;32mI (30798) app_main: Color: 0[0m
+[0;32mI (30798) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30798) app_main: OE-Pin: 0[0m
+[0;32mI (30798) app_main: row: 45, col: 93[0m
+[0;32mI (30898) app_main: Color: 1[0m
+[0;32mI (30898) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30898) app_main: OE-Pin: 0[0m
+[0;32mI (30898) app_main: row: 46, col: 94[0m
+[0;32mI (30998) app_main: Color: 2[0m
+[0;32mI (30998) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (30998) app_main: OE-Pin: 0[0m
+[0;32mI (30998) app_main: row: 47, col: 95[0m
+[0;32mI (31098) app_main: Color: 0[0m
+[0;32mI (31098) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31098) app_main: OE-Pin: 0[0m
+[0;32mI (31098) app_main: row: 0, col: 0[0m
+[0;32mI (31198) app_main: Color: 1[0m
+[0;32mI (31198) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31198) app_main: OE-Pin: 0[0m
+[0;32mI (31198) app_main: row: 1, col: 1[0m
+[0;32mI (31298) app_main: Color: 2[0m
+[0;32mI (31298) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31298) app_main: OE-Pin: 0[0m
+[0;32mI (31298) app_main: row: 2, col: 2[0m
+[0;32mI (31398) app_main: Color: 0[0m
+[0;32mI (31398) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31398) app_main: OE-Pin: 0[0m
+[0;32mI (31398) app_main: row: 3, col: 3[0m
+[0;32mI (31498) app_main: Color: 1[0m
+[0;32mI (31498) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31498) app_main: OE-Pin: 0[0m
+[0;32mI (31498) app_main: row: 4, col: 4[0m
+[0;32mI (31598) app_main: Color: 2[0m
+[0;32mI (31598) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31598) app_main: OE-Pin: 0[0m
+[0;32mI (31598) app_main: row: 5, col: 5[0m
+[0;32mI (31698) app_main: Color: 0[0m
+[0;32mI (31698) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31698) app_main: OE-Pin: 0[0m
+[0;32mI (31698) app_main: row: 6, col: 6[0m
+[0;32mI (31798) app_main: Color: 1[0m
+[0;32mI (31798) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31798) app_main: OE-Pin: 0[0m
+[0;32mI (31798) app_main: row: 7, col: 7[0m
+[0;32mI (31898) app_main: Color: 2[0m
+[0;32mI (31898) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31898) app_main: OE-Pin: 0[0m
+[0;32mI (31898) app_main: row: 8, col: 8[0m
+[0;32mI (31998) app_main: Color: 0[0m
+[0;32mI (31998) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (31998) app_main: OE-Pin: 0[0m
+[0;32mI (31998) app_main: row: 9, col: 9[0m
+[0;32mI (32098) app_main: Color: 1[0m
+[0;32mI (32098) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32098) app_main: OE-Pin: 0[0m
+[0;32mI (32098) app_main: row: 10, col: 10[0m
+[0;32mI (32198) app_main: Color: 2[0m
+[0;32mI (32198) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32198) app_main: OE-Pin: 0[0m
+[0;32mI (32198) app_main: row: 11, col: 11[0m
+[0;32mI (32298) app_main: Color: 0[0m
+[0;32mI (32298) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32298) app_main: OE-Pin: 0[0m
+[0;32mI (32298) app_main: row: 12, col: 12[0m
+[0;32mI (32398) app_main: Color: 1[0m
+[0;32mI (32398) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32398) app_main: OE-Pin: 0[0m
+[0;32mI (32398) app_main: row: 13, col: 13[0m
+[0;32mI (32498) app_main: Color: 2[0m
+[0;32mI (32498) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32498) app_main: OE-Pin: 0[0m
+[0;32mI (32498) app_main: row: 14, col: 14[0m
+[0;32mI (32598) app_main: Color: 0[0m
+[0;32mI (32598) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32598) app_main: OE-Pin: 0[0m
+[0;32mI (32598) app_main: row: 15, col: 15[0m
+[0;32mI (32698) app_main: Color: 1[0m
+[0;32mI (32698) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32698) app_main: OE-Pin: 0[0m
+[0;32mI (32698) app_main: row: 16, col: 16[0m
+[0;32mI (32798) app_main: Color: 2[0m
+[0;32mI (32798) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32798) app_main: OE-Pin: 0[0m
+[0;32mI (32798) app_main: row: 17, col: 17[0m
+[0;32mI (32898) app_main: Color: 0[0m
+[0;32mI (32898) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32898) app_main: OE-Pin: 0[0m
+[0;32mI (32898) app_main: row: 18, col: 18[0m
+[0;32mI (32998) app_main: Color: 1[0m
+[0;32mI (32998) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (32998) app_main: OE-Pin: 0[0m
+[0;32mI (32998) app_main: row: 19, col: 19[0m
+[0;32mI (33098) app_main: Color: 2[0m
+[0;32mI (33098) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33098) app_main: OE-Pin: 0[0m
+[0;32mI (33098) app_main: row: 20, col: 20[0m
+[0;32mI (33198) app_main: Color: 0[0m
+[0;32mI (33198) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33198) app_main: OE-Pin: 0[0m
+[0;32mI (33198) app_main: row: 21, col: 21[0m
+[0;32mI (33298) app_main: Color: 1[0m
+[0;32mI (33298) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33298) app_main: OE-Pin: 0[0m
+[0;32mI (33298) app_main: row: 22, col: 22[0m
+[0;32mI (33398) app_main: Color: 2[0m
+[0;32mI (33398) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33398) app_main: OE-Pin: 0[0m
+[0;32mI (33398) app_main: row: 23, col: 23[0m
+[0;32mI (33498) app_main: Color: 0[0m
+[0;32mI (33498) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33498) app_main: OE-Pin: 0[0m
+[0;32mI (33498) app_main: row: 24, col: 24[0m
+[0;32mI (33598) app_main: Color: 1[0m
+[0;32mI (33598) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33598) app_main: OE-Pin: 0[0m
+[0;32mI (33598) app_main: row: 25, col: 25[0m
+[0;32mI (33698) app_main: Color: 2[0m
+[0;32mI (33698) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33698) app_main: OE-Pin: 0[0m
+[0;32mI (33698) app_main: row: 26, col: 26[0m
+[0;32mI (33798) app_main: Color: 0[0m
+[0;32mI (33798) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33798) app_main: OE-Pin: 0[0m
+[0;32mI (33798) app_main: row: 27, col: 27[0m
+[0;32mI (33898) app_main: Color: 1[0m
+[0;32mI (33898) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33898) app_main: OE-Pin: 0[0m
+[0;32mI (33898) app_main: row: 28, col: 28[0m
+[0;32mI (33998) app_main: Color: 2[0m
+[0;32mI (33998) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (33998) app_main: OE-Pin: 0[0m
+[0;32mI (33998) app_main: row: 29, col: 29[0m
+[0;32mI (34098) app_main: Color: 0[0m
+[0;32mI (34098) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34098) app_main: OE-Pin: 0[0m
+[0;32mI (34098) app_main: row: 30, col: 30[0m
+[0;32mI (34198) app_main: Color: 1[0m
+[0;32mI (34198) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34198) app_main: OE-Pin: 0[0m
+[0;32mI (34198) app_main: row: 31, col: 31[0m
+[0;32mI (34298) app_main: Color: 2[0m
+[0;32mI (34298) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34298) app_main: OE-Pin: 0[0m
+[0;32mI (34298) app_main: row: 32, col: 32[0m
+[0;32mI (34398) app_main: Color: 0[0m
+[0;32mI (34398) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34398) app_main: OE-Pin: 0[0m
+[0;32mI (34398) app_main: row: 33, col: 33[0m
+[0;32mI (34498) app_main: Color: 1[0m
+[0;32mI (34498) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34498) app_main: OE-Pin: 0[0m
+[0;32mI (34498) app_main: row: 34, col: 34[0m
+[0;32mI (34598) app_main: Color: 2[0m
+[0;32mI (34598) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34598) app_main: OE-Pin: 0[0m
+[0;32mI (34598) app_main: row: 35, col: 35[0m
+[0;32mI (34698) app_main: Color: 0[0m
+[0;32mI (34698) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34698) app_main: OE-Pin: 0[0m
+[0;32mI (34698) app_main: row: 36, col: 36[0m
+[0;32mI (34798) app_main: Color: 1[0m
+[0;32mI (34798) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34798) app_main: OE-Pin: 0[0m
+[0;32mI (34798) app_main: row: 37, col: 37[0m
+[0;32mI (34898) app_main: Color: 2[0m
+[0;32mI (34898) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34898) app_main: OE-Pin: 0[0m
+[0;32mI (34898) app_main: row: 38, col: 38[0m
+[0;32mI (34998) app_main: Color: 0[0m
+[0;32mI (34998) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (34998) app_main: OE-Pin: 0[0m
+[0;32mI (34998) app_main: row: 39, col: 39[0m
+[0;32mI (35098) app_main: Color: 1[0m
+[0;32mI (35098) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35098) app_main: OE-Pin: 0[0m
+[0;32mI (35098) app_main: row: 40, col: 40[0m
+[0;32mI (35198) app_main: Color: 2[0m
+[0;32mI (35198) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35198) app_main: OE-Pin: 0[0m
+[0;32mI (35198) app_main: row: 41, col: 41[0m
+[0;32mI (35298) app_main: Color: 0[0m
+[0;32mI (35298) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35298) app_main: OE-Pin: 0[0m
+[0;32mI (35298) app_main: row: 42, col: 42[0m
+[0;32mI (35398) app_main: Color: 1[0m
+[0;32mI (35398) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35398) app_main: OE-Pin: 0[0m
+[0;32mI (35398) app_main: row: 43, col: 43[0m
+[0;32mI (35498) app_main: Color: 2[0m
+[0;32mI (35498) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35498) app_main: OE-Pin: 0[0m
+[0;32mI (35498) app_main: row: 44, col: 44[0m
+[0;32mI (35598) app_main: Color: 0[0m
+[0;32mI (35598) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35598) app_main: OE-Pin: 0[0m
+[0;32mI (35598) app_main: row: 45, col: 45[0m
+[0;32mI (35698) app_main: Color: 1[0m
+[0;32mI (35698) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35698) app_main: OE-Pin: 0[0m
+[0;32mI (35698) app_main: row: 46, col: 46[0m
+[0;32mI (35798) app_main: Color: 2[0m
+[0;32mI (35798) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35798) app_main: OE-Pin: 0[0m
+[0;32mI (35798) app_main: row: 47, col: 47[0m
+[0;32mI (35898) app_main: Color: 0[0m
+[0;32mI (35898) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35898) app_main: OE-Pin: 0[0m
+[0;32mI (35898) app_main: row: 0, col: 48[0m
+[0;32mI (35998) app_main: Color: 1[0m
+[0;32mI (35998) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (35998) app_main: OE-Pin: 0[0m
+[0;32mI (35998) app_main: row: 1, col: 49[0m
+[0;32mI (36098) app_main: Color: 2[0m
+[0;32mI (36098) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36098) app_main: OE-Pin: 0[0m
+[0;32mI (36098) app_main: row: 2, col: 50[0m
+[0;32mI (36198) app_main: Color: 0[0m
+[0;32mI (36198) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36198) app_main: OE-Pin: 0[0m
+[0;32mI (36198) app_main: row: 3, col: 51[0m
+[0;32mI (36298) app_main: Color: 1[0m
+[0;32mI (36298) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36298) app_main: OE-Pin: 0[0m
+[0;32mI (36298) app_main: row: 4, col: 52[0m
+[0;32mI (36398) app_main: Color: 2[0m
+[0;32mI (36398) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36398) app_main: OE-Pin: 0[0m
+[0;32mI (36398) app_main: row: 5, col: 53[0m
+[0;32mI (36498) app_main: Color: 0[0m
+[0;32mI (36498) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36498) app_main: OE-Pin: 0[0m
+[0;32mI (36498) app_main: row: 6, col: 54[0m
+[0;32mI (36598) app_main: Color: 1[0m
+[0;32mI (36598) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36598) app_main: OE-Pin: 0[0m
+[0;32mI (36598) app_main: row: 7, col: 55[0m
+[0;32mI (36698) app_main: Color: 2[0m
+[0;32mI (36698) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36698) app_main: OE-Pin: 0[0m
+[0;32mI (36698) app_main: row: 8, col: 56[0m
+[0;32mI (36798) app_main: Color: 0[0m
+[0;32mI (36798) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36798) app_main: OE-Pin: 0[0m
+[0;32mI (36798) app_main: row: 9, col: 57[0m
+[0;32mI (36898) app_main: Color: 1[0m
+[0;32mI (36898) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36898) app_main: OE-Pin: 0[0m
+[0;32mI (36898) app_main: row: 10, col: 58[0m
+[0;32mI (36998) app_main: Color: 2[0m
+[0;32mI (36998) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (36998) app_main: OE-Pin: 0[0m
+[0;32mI (36998) app_main: row: 11, col: 59[0m
+[0;32mI (37098) app_main: Color: 0[0m
+[0;32mI (37098) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37098) app_main: OE-Pin: 0[0m
+[0;32mI (37098) app_main: row: 12, col: 60[0m
+[0;32mI (37198) app_main: Color: 1[0m
+[0;32mI (37198) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37198) app_main: OE-Pin: 0[0m
+[0;32mI (37198) app_main: row: 13, col: 61[0m
+[0;32mI (37298) app_main: Color: 2[0m
+[0;32mI (37298) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37298) app_main: OE-Pin: 0[0m
+[0;32mI (37298) app_main: row: 14, col: 62[0m
+[0;32mI (37398) app_main: Color: 0[0m
+[0;32mI (37398) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37398) app_main: OE-Pin: 0[0m
+[0;32mI (37398) app_main: row: 15, col: 63[0m
+[0;32mI (37498) app_main: Color: 1[0m
+[0;32mI (37498) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37498) app_main: OE-Pin: 0[0m
+[0;32mI (37498) app_main: row: 16, col: 64[0m
+[0;32mI (37598) app_main: Color: 2[0m
+[0;32mI (37598) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37598) app_main: OE-Pin: 0[0m
+[0;32mI (37598) app_main: row: 17, col: 65[0m
+[0;32mI (37698) app_main: Color: 0[0m
+[0;32mI (37698) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37698) app_main: OE-Pin: 0[0m
+[0;32mI (37698) app_main: row: 18, col: 66[0m
+[0;32mI (37798) app_main: Color: 1[0m
+[0;32mI (37798) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37798) app_main: OE-Pin: 0[0m
+[0;32mI (37798) app_main: row: 19, col: 67[0m
+[0;32mI (37898) app_main: Color: 2[0m
+[0;32mI (37898) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37898) app_main: OE-Pin: 0[0m
+[0;32mI (37898) app_main: row: 20, col: 68[0m
+[0;32mI (37998) app_main: Color: 0[0m
+[0;32mI (37998) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (37998) app_main: OE-Pin: 0[0m
+[0;32mI (37998) app_main: row: 21, col: 69[0m
+[0;32mI (38098) app_main: Color: 1[0m
+[0;32mI (38098) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38098) app_main: OE-Pin: 0[0m
+[0;32mI (38098) app_main: row: 22, col: 70[0m
+[0;32mI (38198) app_main: Color: 2[0m
+[0;32mI (38198) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38198) app_main: OE-Pin: 0[0m
+[0;32mI (38198) app_main: row: 23, col: 71[0m
+[0;32mI (38298) app_main: Color: 0[0m
+[0;32mI (38298) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38298) app_main: OE-Pin: 0[0m
+[0;32mI (38298) app_main: row: 24, col: 72[0m
+[0;32mI (38398) app_main: Color: 1[0m
+[0;32mI (38398) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38398) app_main: OE-Pin: 0[0m
+[0;32mI (38398) app_main: row: 25, col: 73[0m
+[0;32mI (38498) app_main: Color: 2[0m
+[0;32mI (38498) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38498) app_main: OE-Pin: 0[0m
+[0;32mI (38498) app_main: row: 26, col: 74[0m
+[0;32mI (38598) app_main: Color: 0[0m
+[0;32mI (38598) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38598) app_main: OE-Pin: 0[0m
+[0;32mI (38598) app_main: row: 27, col: 75[0m
+[0;32mI (38698) app_main: Color: 1[0m
+[0;32mI (38698) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38698) app_main: OE-Pin: 0[0m
+[0;32mI (38698) app_main: row: 28, col: 76[0m
+[0;32mI (38798) app_main: Color: 2[0m
+[0;32mI (38798) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38798) app_main: OE-Pin: 0[0m
+[0;32mI (38798) app_main: row: 29, col: 77[0m
+[0;32mI (38898) app_main: Color: 0[0m
+[0;32mI (38898) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38898) app_main: OE-Pin: 0[0m
+[0;32mI (38898) app_main: row: 30, col: 78[0m
+[0;32mI (38998) app_main: Color: 1[0m
+[0;32mI (38998) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (38998) app_main: OE-Pin: 0[0m
+[0;32mI (38998) app_main: row: 31, col: 79[0m
+[0;32mI (39098) app_main: Color: 2[0m
+[0;32mI (39098) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39098) app_main: OE-Pin: 0[0m
+[0;32mI (39098) app_main: row: 32, col: 80[0m
+[0;32mI (39198) app_main: Color: 0[0m
+[0;32mI (39198) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39198) app_main: OE-Pin: 0[0m
+[0;32mI (39198) app_main: row: 33, col: 81[0m
+[0;32mI (39298) app_main: Color: 1[0m
+[0;32mI (39298) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39298) app_main: OE-Pin: 0[0m
+[0;32mI (39298) app_main: row: 34, col: 82[0m
+[0;32mI (39398) app_main: Color: 2[0m
+[0;32mI (39398) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39398) app_main: OE-Pin: 0[0m
+[0;32mI (39398) app_main: row: 35, col: 83[0m
+[0;32mI (39498) app_main: Color: 0[0m
+[0;32mI (39498) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39498) app_main: OE-Pin: 0[0m
+[0;32mI (39498) app_main: row: 36, col: 84[0m
+[0;32mI (39598) app_main: Color: 1[0m
+[0;32mI (39598) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39598) app_main: OE-Pin: 0[0m
+[0;32mI (39598) app_main: row: 37, col: 85[0m
+[0;32mI (39698) app_main: Color: 2[0m
+[0;32mI (39698) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39698) app_main: OE-Pin: 0[0m
+[0;32mI (39698) app_main: row: 38, col: 86[0m
+[0;32mI (39798) app_main: Color: 0[0m
+[0;32mI (39798) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39798) app_main: OE-Pin: 0[0m
+[0;32mI (39798) app_main: row: 39, col: 87[0m
+[0;32mI (39898) app_main: Color: 1[0m
+[0;32mI (39898) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39898) app_main: OE-Pin: 0[0m
+[0;32mI (39898) app_main: row: 40, col: 88[0m
+[0;32mI (39998) app_main: Color: 2[0m
+[0;32mI (39998) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (39998) app_main: OE-Pin: 0[0m
+[0;32mI (39998) app_main: row: 41, col: 89[0m
+[0;32mI (40098) app_main: Color: 0[0m
+[0;32mI (40098) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40098) app_main: OE-Pin: 0[0m
+[0;32mI (40098) app_main: row: 42, col: 90[0m
+[0;32mI (40198) app_main: Color: 1[0m
+[0;32mI (40198) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40198) app_main: OE-Pin: 0[0m
+[0;32mI (40198) app_main: row: 43, col: 91[0m
+[0;32mI (40298) app_main: Color: 2[0m
+[0;32mI (40298) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40298) app_main: OE-Pin: 0[0m
+[0;32mI (40298) app_main: row: 44, col: 92[0m
+[0;32mI (40398) app_main: Color: 0[0m
+[0;32mI (40398) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40398) app_main: OE-Pin: 0[0m
+[0;32mI (40398) app_main: row: 45, col: 93[0m
+[0;32mI (40498) app_main: Color: 1[0m
+[0;32mI (40498) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40498) app_main: OE-Pin: 0[0m
+[0;32mI (40498) app_main: row: 46, col: 94[0m
+[0;32mI (40598) app_main: Color: 2[0m
+[0;32mI (40598) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40598) app_main: OE-Pin: 0[0m
+[0;32mI (40598) app_main: row: 47, col: 95[0m
+[0;32mI (40698) app_main: Color: 0[0m
+[0;32mI (40698) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40698) app_main: OE-Pin: 0[0m
+[0;32mI (40698) app_main: row: 0, col: 0[0m
+[0;32mI (40798) app_main: Color: 1[0m
+[0;32mI (40798) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40798) app_main: OE-Pin: 0[0m
+[0;32mI (40798) app_main: row: 1, col: 1[0m
+[0;32mI (40898) app_main: Color: 2[0m
+[0;32mI (40898) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40898) app_main: OE-Pin: 0[0m
+[0;32mI (40898) app_main: row: 2, col: 2[0m
+[0;32mI (40998) app_main: Color: 0[0m
+[0;32mI (40998) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (40998) app_main: OE-Pin: 0[0m
+[0;32mI (40998) app_main: row: 3, col: 3[0m
+[0;32mI (41098) app_main: Color: 1[0m
+[0;32mI (41098) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41098) app_main: OE-Pin: 0[0m
+[0;32mI (41098) app_main: row: 4, col: 4[0m
+[0;32mI (41198) app_main: Color: 2[0m
+[0;32mI (41198) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41198) app_main: OE-Pin: 0[0m
+[0;32mI (41198) app_main: row: 5, col: 5[0m
+[0;32mI (41298) app_main: Color: 0[0m
+[0;32mI (41298) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41298) app_main: OE-Pin: 0[0m
+[0;32mI (41298) app_main: row: 6, col: 6[0m
+[0;32mI (41398) app_main: Color: 1[0m
+[0;32mI (41398) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41398) app_main: OE-Pin: 0[0m
+[0;32mI (41398) app_main: row: 7, col: 7[0m
+[0;32mI (41498) app_main: Color: 2[0m
+[0;32mI (41498) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41498) app_main: OE-Pin: 0[0m
+[0;32mI (41498) app_main: row: 8, col: 8[0m
+[0;32mI (41598) app_main: Color: 0[0m
+[0;32mI (41598) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41598) app_main: OE-Pin: 0[0m
+[0;32mI (41598) app_main: row: 9, col: 9[0m
+[0;32mI (41698) app_main: Color: 1[0m
+[0;32mI (41698) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41698) app_main: OE-Pin: 0[0m
+[0;32mI (41698) app_main: row: 10, col: 10[0m
+[0;32mI (41798) app_main: Color: 2[0m
+[0;32mI (41798) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41798) app_main: OE-Pin: 0[0m
+[0;32mI (41798) app_main: row: 11, col: 11[0m
+[0;32mI (41898) app_main: Color: 0[0m
+[0;32mI (41898) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41898) app_main: OE-Pin: 0[0m
+[0;32mI (41898) app_main: row: 12, col: 12[0m
+[0;32mI (41998) app_main: Color: 1[0m
+[0;32mI (41998) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (41998) app_main: OE-Pin: 0[0m
+[0;32mI (41998) app_main: row: 13, col: 13[0m
+[0;32mI (42098) app_main: Color: 2[0m
+[0;32mI (42098) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42098) app_main: OE-Pin: 0[0m
+[0;32mI (42098) app_main: row: 14, col: 14[0m
+[0;32mI (42198) app_main: Color: 0[0m
+[0;32mI (42198) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42198) app_main: OE-Pin: 0[0m
+[0;32mI (42198) app_main: row: 15, col: 15[0m
+[0;32mI (42298) app_main: Color: 1[0m
+[0;32mI (42298) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42298) app_main: OE-Pin: 0[0m
+[0;32mI (42298) app_main: row: 16, col: 16[0m
+[0;32mI (42398) app_main: Color: 2[0m
+[0;32mI (42398) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42398) app_main: OE-Pin: 0[0m
+[0;32mI (42398) app_main: row: 17, col: 17[0m
+[0;32mI (42498) app_main: Color: 0[0m
+[0;32mI (42498) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42498) app_main: OE-Pin: 0[0m
+[0;32mI (42498) app_main: row: 18, col: 18[0m
+[0;32mI (42598) app_main: Color: 1[0m
+[0;32mI (42598) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42598) app_main: OE-Pin: 0[0m
+[0;32mI (42598) app_main: row: 19, col: 19[0m
+[0;32mI (42698) app_main: Color: 2[0m
+[0;32mI (42698) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42698) app_main: OE-Pin: 0[0m
+[0;32mI (42698) app_main: row: 20, col: 20[0m
+[0;32mI (42798) app_main: Color: 0[0m
+[0;32mI (42798) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42798) app_main: OE-Pin: 0[0m
+[0;32mI (42798) app_main: row: 21, col: 21[0m
+[0;32mI (42898) app_main: Color: 1[0m
+[0;32mI (42898) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42898) app_main: OE-Pin: 0[0m
+[0;32mI (42898) app_main: row: 22, col: 22[0m
+[0;32mI (42998) app_main: Color: 2[0m
+[0;32mI (42998) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (42998) app_main: OE-Pin: 0[0m
+[0;32mI (42998) app_main: row: 23, col: 23[0m
+[0;32mI (43098) app_main: Color: 0[0m
+[0;32mI (43098) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43098) app_main: OE-Pin: 0[0m
+[0;32mI (43098) app_main: row: 24, col: 24[0m
+[0;32mI (43198) app_main: Color: 1[0m
+[0;32mI (43198) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43198) app_main: OE-Pin: 0[0m
+[0;32mI (43198) app_main: row: 25, col: 25[0m
+[0;32mI (43298) app_main: Color: 2[0m
+[0;32mI (43298) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43298) app_main: OE-Pin: 0[0m
+[0;32mI (43298) app_main: row: 26, col: 26[0m
+[0;32mI (43398) app_main: Color: 0[0m
+[0;32mI (43398) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43398) app_main: OE-Pin: 0[0m
+[0;32mI (43398) app_main: row: 27, col: 27[0m
+[0;32mI (43498) app_main: Color: 1[0m
+[0;32mI (43498) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43498) app_main: OE-Pin: 0[0m
+[0;32mI (43498) app_main: row: 28, col: 28[0m
+[0;32mI (43598) app_main: Color: 2[0m
+[0;32mI (43598) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43598) app_main: OE-Pin: 0[0m
+[0;32mI (43598) app_main: row: 29, col: 29[0m
+[0;32mI (43698) app_main: Color: 0[0m
+[0;32mI (43698) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43698) app_main: OE-Pin: 0[0m
+[0;32mI (43698) app_main: row: 30, col: 30[0m
+[0;32mI (43798) app_main: Color: 1[0m
+[0;32mI (43798) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43798) app_main: OE-Pin: 0[0m
+[0;32mI (43798) app_main: row: 31, col: 31[0m
+[0;32mI (43898) app_main: Color: 2[0m
+[0;32mI (43898) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43898) app_main: OE-Pin: 0[0m
+[0;32mI (43898) app_main: row: 32, col: 32[0m
+[0;32mI (43998) app_main: Color: 0[0m
+[0;32mI (43998) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (43998) app_main: OE-Pin: 0[0m
+[0;32mI (43998) app_main: row: 33, col: 33[0m
+[0;32mI (44098) app_main: Color: 1[0m
+[0;32mI (44098) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44098) app_main: OE-Pin: 0[0m
+[0;32mI (44098) app_main: row: 34, col: 34[0m
+[0;32mI (44198) app_main: Color: 2[0m
+[0;32mI (44198) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44198) app_main: OE-Pin: 0[0m
+[0;32mI (44198) app_main: row: 35, col: 35[0m
+[0;32mI (44298) app_main: Color: 0[0m
+[0;32mI (44298) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44298) app_main: OE-Pin: 0[0m
+[0;32mI (44298) app_main: row: 36, col: 36[0m
+[0;32mI (44398) app_main: Color: 1[0m
+[0;32mI (44398) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44398) app_main: OE-Pin: 0[0m
+[0;32mI (44398) app_main: row: 37, col: 37[0m
+[0;32mI (44498) app_main: Color: 2[0m
+[0;32mI (44498) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44498) app_main: OE-Pin: 0[0m
+[0;32mI (44498) app_main: row: 38, col: 38[0m
+[0;32mI (44598) app_main: Color: 0[0m
+[0;32mI (44598) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44598) app_main: OE-Pin: 0[0m
+[0;32mI (44598) app_main: row: 39, col: 39[0m
+[0;32mI (44698) app_main: Color: 1[0m
+[0;32mI (44698) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44698) app_main: OE-Pin: 0[0m
+[0;32mI (44698) app_main: row: 40, col: 40[0m
+[0;32mI (44798) app_main: Color: 2[0m
+[0;32mI (44798) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44798) app_main: OE-Pin: 0[0m
+[0;32mI (44798) app_main: row: 41, col: 41[0m
+[0;32mI (44898) app_main: Color: 0[0m
+[0;32mI (44898) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44898) app_main: OE-Pin: 0[0m
+[0;32mI (44898) app_main: row: 42, col: 42[0m
+[0;32mI (44998) app_main: Color: 1[0m
+[0;32mI (44998) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (44998) app_main: OE-Pin: 0[0m
+[0;32mI (44998) app_main: row: 43, col: 43[0m
+[0;32mI (45098) app_main: Color: 2[0m
+[0;32mI (45098) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45098) app_main: OE-Pin: 0[0m
+[0;32mI (45098) app_main: row: 44, col: 44[0m
+[0;32mI (45198) app_main: Color: 0[0m
+[0;32mI (45198) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45198) app_main: OE-Pin: 0[0m
+[0;32mI (45198) app_main: row: 45, col: 45[0m
+[0;32mI (45298) app_main: Color: 1[0m
+[0;32mI (45298) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45298) app_main: OE-Pin: 0[0m
+[0;32mI (45298) app_main: row: 46, col: 46[0m
+[0;32mI (45398) app_main: Color: 2[0m
+[0;32mI (45398) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45398) app_main: OE-Pin: 0[0m
+[0;32mI (45398) app_main: row: 47, col: 47[0m
+[0;32mI (45498) app_main: Color: 0[0m
+[0;32mI (45498) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45498) app_main: OE-Pin: 0[0m
+[0;32mI (45498) app_main: row: 0, col: 48[0m
+[0;32mI (45598) app_main: Color: 1[0m
+[0;32mI (45598) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45598) app_main: OE-Pin: 0[0m
+[0;32mI (45598) app_main: row: 1, col: 49[0m
+[0;32mI (45698) app_main: Color: 2[0m
+[0;32mI (45698) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45698) app_main: OE-Pin: 0[0m
+[0;32mI (45698) app_main: row: 2, col: 50[0m
+[0;32mI (45798) app_main: Color: 0[0m
+[0;32mI (45798) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45798) app_main: OE-Pin: 0[0m
+[0;32mI (45798) app_main: row: 3, col: 51[0m
+[0;32mI (45898) app_main: Color: 1[0m
+[0;32mI (45898) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45898) app_main: OE-Pin: 0[0m
+[0;32mI (45898) app_main: row: 4, col: 52[0m
+[0;32mI (45998) app_main: Color: 2[0m
+[0;32mI (45998) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (45998) app_main: OE-Pin: 0[0m
+[0;32mI (45998) app_main: row: 5, col: 53[0m
+[0;32mI (46098) app_main: Color: 0[0m
+[0;32mI (46098) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46098) app_main: OE-Pin: 0[0m
+[0;32mI (46098) app_main: row: 6, col: 54[0m
+[0;32mI (46198) app_main: Color: 1[0m
+[0;32mI (46198) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46198) app_main: OE-Pin: 0[0m
+[0;32mI (46198) app_main: row: 7, col: 55[0m
+[0;32mI (46298) app_main: Color: 2[0m
+[0;32mI (46298) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46298) app_main: OE-Pin: 0[0m
+[0;32mI (46298) app_main: row: 8, col: 56[0m
+[0;32mI (46398) app_main: Color: 0[0m
+[0;32mI (46398) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46398) app_main: OE-Pin: 0[0m
+[0;32mI (46398) app_main: row: 9, col: 57[0m
+[0;32mI (46498) app_main: Color: 1[0m
+[0;32mI (46498) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46498) app_main: OE-Pin: 0[0m
+[0;32mI (46498) app_main: row: 10, col: 58[0m
+[0;32mI (46598) app_main: Color: 2[0m
+[0;32mI (46598) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46598) app_main: OE-Pin: 0[0m
+[0;32mI (46598) app_main: row: 11, col: 59[0m
+[0;32mI (46698) app_main: Color: 0[0m
+[0;32mI (46698) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46698) app_main: OE-Pin: 0[0m
+[0;32mI (46698) app_main: row: 12, col: 60[0m
+[0;32mI (46798) app_main: Color: 1[0m
+[0;32mI (46798) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46798) app_main: OE-Pin: 0[0m
+[0;32mI (46798) app_main: row: 13, col: 61[0m
+[0;32mI (46898) app_main: Color: 2[0m
+[0;32mI (46898) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46898) app_main: OE-Pin: 0[0m
+[0;32mI (46898) app_main: row: 14, col: 62[0m
+[0;32mI (46998) app_main: Color: 0[0m
+[0;32mI (46998) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (46998) app_main: OE-Pin: 0[0m
+[0;32mI (46998) app_main: row: 15, col: 63[0m
+[0;32mI (47098) app_main: Color: 1[0m
+[0;32mI (47098) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47098) app_main: OE-Pin: 0[0m
+[0;32mI (47098) app_main: row: 16, col: 64[0m
+[0;32mI (47198) app_main: Color: 2[0m
+[0;32mI (47198) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47198) app_main: OE-Pin: 0[0m
+[0;32mI (47198) app_main: row: 17, col: 65[0m
+[0;32mI (47298) app_main: Color: 0[0m
+[0;32mI (47298) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47298) app_main: OE-Pin: 0[0m
+[0;32mI (47298) app_main: row: 18, col: 66[0m
+[0;32mI (47398) app_main: Color: 1[0m
+[0;32mI (47398) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47398) app_main: OE-Pin: 0[0m
+[0;32mI (47398) app_main: row: 19, col: 67[0m
+[0;32mI (47498) app_main: Color: 2[0m
+[0;32mI (47498) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47498) app_main: OE-Pin: 0[0m
+[0;32mI (47498) app_main: row: 20, col: 68[0m
+[0;32mI (47598) app_main: Color: 0[0m
+[0;32mI (47598) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47598) app_main: OE-Pin: 0[0m
+[0;32mI (47598) app_main: row: 21, col: 69[0m
+[0;32mI (47698) app_main: Color: 1[0m
+[0;32mI (47698) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47698) app_main: OE-Pin: 0[0m
+[0;32mI (47698) app_main: row: 22, col: 70[0m
+[0;32mI (47798) app_main: Color: 2[0m
+[0;32mI (47798) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47798) app_main: OE-Pin: 0[0m
+[0;32mI (47798) app_main: row: 23, col: 71[0m
+[0;32mI (47898) app_main: Color: 0[0m
+[0;32mI (47898) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47898) app_main: OE-Pin: 0[0m
+[0;32mI (47898) app_main: row: 24, col: 72[0m
+[0;32mI (47998) app_main: Color: 1[0m
+[0;32mI (47998) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (47998) app_main: OE-Pin: 0[0m
+[0;32mI (47998) app_main: row: 25, col: 73[0m
+[0;32mI (48098) app_main: Color: 2[0m
+[0;32mI (48098) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48098) app_main: OE-Pin: 0[0m
+[0;32mI (48098) app_main: row: 26, col: 74[0m
+[0;32mI (48198) app_main: Color: 0[0m
+[0;32mI (48198) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48198) app_main: OE-Pin: 0[0m
+[0;32mI (48198) app_main: row: 27, col: 75[0m
+[0;32mI (48298) app_main: Color: 1[0m
+[0;32mI (48298) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48298) app_main: OE-Pin: 0[0m
+[0;32mI (48298) app_main: row: 28, col: 76[0m
+[0;32mI (48398) app_main: Color: 2[0m
+[0;32mI (48398) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48398) app_main: OE-Pin: 0[0m
+[0;32mI (48398) app_main: row: 29, col: 77[0m
+[0;32mI (48498) app_main: Color: 0[0m
+[0;32mI (48498) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48498) app_main: OE-Pin: 0[0m
+[0;32mI (48498) app_main: row: 30, col: 78[0m
+[0;32mI (48598) app_main: Color: 1[0m
+[0;32mI (48598) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48598) app_main: OE-Pin: 0[0m
+[0;32mI (48598) app_main: row: 31, col: 79[0m
+[0;32mI (48698) app_main: Color: 2[0m
+[0;32mI (48698) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48698) app_main: OE-Pin: 0[0m
+[0;32mI (48698) app_main: row: 32, col: 80[0m
+[0;32mI (48798) app_main: Color: 0[0m
+[0;32mI (48798) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48798) app_main: OE-Pin: 0[0m
+[0;32mI (48798) app_main: row: 33, col: 81[0m
+[0;32mI (48898) app_main: Color: 1[0m
+[0;32mI (48898) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48898) app_main: OE-Pin: 0[0m
+[0;32mI (48898) app_main: row: 34, col: 82[0m
+[0;32mI (48998) app_main: Color: 2[0m
+[0;32mI (48998) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (48998) app_main: OE-Pin: 0[0m
+[0;32mI (48998) app_main: row: 35, col: 83[0m
+[0;32mI (49098) app_main: Color: 0[0m
+[0;32mI (49098) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49098) app_main: OE-Pin: 0[0m
+[0;32mI (49098) app_main: row: 36, col: 84[0m
+[0;32mI (49198) app_main: Color: 1[0m
+[0;32mI (49198) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49198) app_main: OE-Pin: 0[0m
+[0;32mI (49198) app_main: row: 37, col: 85[0m
+[0;32mI (49298) app_main: Color: 2[0m
+[0;32mI (49298) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49298) app_main: OE-Pin: 0[0m
+[0;32mI (49298) app_main: row: 38, col: 86[0m
+[0;32mI (49398) app_main: Color: 0[0m
+[0;32mI (49398) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49398) app_main: OE-Pin: 0[0m
+[0;32mI (49398) app_main: row: 39, col: 87[0m
+[0;32mI (49498) app_main: Color: 1[0m
+[0;32mI (49498) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49498) app_main: OE-Pin: 0[0m
+[0;32mI (49498) app_main: row: 40, col: 88[0m
+[0;32mI (49598) app_main: Color: 2[0m
+[0;32mI (49598) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49598) app_main: OE-Pin: 0[0m
+[0;32mI (49598) app_main: row: 41, col: 89[0m
+[0;32mI (49698) app_main: Color: 0[0m
+[0;32mI (49698) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49698) app_main: OE-Pin: 0[0m
+[0;32mI (49698) app_main: row: 42, col: 90[0m
+[0;32mI (49798) app_main: Color: 1[0m
+[0;32mI (49798) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49798) app_main: OE-Pin: 0[0m
+[0;32mI (49798) app_main: row: 43, col: 91[0m
+[0;32mI (49898) app_main: Color: 2[0m
+[0;32mI (49898) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49898) app_main: OE-Pin: 0[0m
+[0;32mI (49898) app_main: row: 44, col: 92[0m
+[0;32mI (49998) app_main: Color: 0[0m
+[0;32mI (49998) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (49998) app_main: OE-Pin: 0[0m
+[0;32mI (49998) app_main: row: 45, col: 93[0m
+[0;32mI (50098) app_main: Color: 1[0m
+[0;32mI (50098) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50098) app_main: OE-Pin: 0[0m
+[0;32mI (50098) app_main: row: 46, col: 94[0m
+[0;32mI (50198) app_main: Color: 2[0m
+[0;32mI (50198) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50198) app_main: OE-Pin: 0[0m
+[0;32mI (50198) app_main: row: 47, col: 95[0m
+[0;32mI (50298) app_main: Color: 0[0m
+[0;32mI (50298) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50298) app_main: OE-Pin: 0[0m
+[0;32mI (50298) app_main: row: 0, col: 0[0m
+[0;32mI (50398) app_main: Color: 1[0m
+[0;32mI (50398) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50398) app_main: OE-Pin: 0[0m
+[0;32mI (50398) app_main: row: 1, col: 1[0m
+[0;32mI (50498) app_main: Color: 2[0m
+[0;32mI (50498) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50498) app_main: OE-Pin: 0[0m
+[0;32mI (50498) app_main: row: 2, col: 2[0m
+[0;32mI (50598) app_main: Color: 0[0m
+[0;32mI (50598) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50598) app_main: OE-Pin: 0[0m
+[0;32mI (50598) app_main: row: 3, col: 3[0m
+[0;32mI (50698) app_main: Color: 1[0m
+[0;32mI (50698) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50698) app_main: OE-Pin: 0[0m
+[0;32mI (50698) app_main: row: 4, col: 4[0m
+[0;32mI (50798) app_main: Color: 2[0m
+[0;32mI (50798) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50798) app_main: OE-Pin: 0[0m
+[0;32mI (50798) app_main: row: 5, col: 5[0m
+[0;32mI (50898) app_main: Color: 0[0m
+[0;32mI (50898) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50898) app_main: OE-Pin: 0[0m
+[0;32mI (50898) app_main: row: 6, col: 6[0m
+[0;32mI (50998) app_main: Color: 1[0m
+[0;32mI (50998) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (50998) app_main: OE-Pin: 0[0m
+[0;32mI (50998) app_main: row: 7, col: 7[0m
+[0;32mI (51098) app_main: Color: 2[0m
+[0;32mI (51098) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51098) app_main: OE-Pin: 0[0m
+[0;32mI (51098) app_main: row: 8, col: 8[0m
+[0;32mI (51198) app_main: Color: 0[0m
+[0;32mI (51198) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51198) app_main: OE-Pin: 0[0m
+[0;32mI (51198) app_main: row: 9, col: 9[0m
+[0;32mI (51298) app_main: Color: 1[0m
+[0;32mI (51298) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51298) app_main: OE-Pin: 0[0m
+[0;32mI (51298) app_main: row: 10, col: 10[0m
+[0;32mI (51398) app_main: Color: 2[0m
+[0;32mI (51398) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51398) app_main: OE-Pin: 0[0m
+[0;32mI (51398) app_main: row: 11, col: 11[0m
+[0;32mI (51498) app_main: Color: 0[0m
+[0;32mI (51498) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51498) app_main: OE-Pin: 0[0m
+[0;32mI (51498) app_main: row: 12, col: 12[0m
+[0;32mI (51598) app_main: Color: 1[0m
+[0;32mI (51598) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51598) app_main: OE-Pin: 0[0m
+[0;32mI (51598) app_main: row: 13, col: 13[0m
+[0;32mI (51698) app_main: Color: 2[0m
+[0;32mI (51698) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51698) app_main: OE-Pin: 0[0m
+[0;32mI (51698) app_main: row: 14, col: 14[0m
+[0;32mI (51798) app_main: Color: 0[0m
+[0;32mI (51798) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51798) app_main: OE-Pin: 0[0m
+[0;32mI (51798) app_main: row: 15, col: 15[0m
+[0;32mI (51898) app_main: Color: 1[0m
+[0;32mI (51898) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51898) app_main: OE-Pin: 0[0m
+[0;32mI (51898) app_main: row: 16, col: 16[0m
+[0;32mI (51998) app_main: Color: 2[0m
+[0;32mI (51998) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (51998) app_main: OE-Pin: 0[0m
+[0;32mI (51998) app_main: row: 17, col: 17[0m
+[0;32mI (52098) app_main: Color: 0[0m
+[0;32mI (52098) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52098) app_main: OE-Pin: 0[0m
+[0;32mI (52098) app_main: row: 18, col: 18[0m
+[0;32mI (52198) app_main: Color: 1[0m
+[0;32mI (52198) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52198) app_main: OE-Pin: 0[0m
+[0;32mI (52198) app_main: row: 19, col: 19[0m
+[0;32mI (52298) app_main: Color: 2[0m
+[0;32mI (52298) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52298) app_main: OE-Pin: 0[0m
+[0;32mI (52298) app_main: row: 20, col: 20[0m
+[0;32mI (52398) app_main: Color: 0[0m
+[0;32mI (52398) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52398) app_main: OE-Pin: 0[0m
+[0;32mI (52398) app_main: row: 21, col: 21[0m
+[0;32mI (52498) app_main: Color: 1[0m
+[0;32mI (52498) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52498) app_main: OE-Pin: 0[0m
+[0;32mI (52498) app_main: row: 22, col: 22[0m
+[0;32mI (52598) app_main: Color: 2[0m
+[0;32mI (52598) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52598) app_main: OE-Pin: 0[0m
+[0;32mI (52598) app_main: row: 23, col: 23[0m
+[0;32mI (52698) app_main: Color: 0[0m
+[0;32mI (52698) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52698) app_main: OE-Pin: 0[0m
+[0;32mI (52698) app_main: row: 24, col: 24[0m
+[0;32mI (52798) app_main: Color: 1[0m
+[0;32mI (52798) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52798) app_main: OE-Pin: 0[0m
+[0;32mI (52798) app_main: row: 25, col: 25[0m
+[0;32mI (52898) app_main: Color: 2[0m
+[0;32mI (52898) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52898) app_main: OE-Pin: 0[0m
+[0;32mI (52898) app_main: row: 26, col: 26[0m
+[0;32mI (52998) app_main: Color: 0[0m
+[0;32mI (52998) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (52998) app_main: OE-Pin: 0[0m
+[0;32mI (52998) app_main: row: 27, col: 27[0m
+[0;32mI (53098) app_main: Color: 1[0m
+[0;32mI (53098) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53098) app_main: OE-Pin: 0[0m
+[0;32mI (53098) app_main: row: 28, col: 28[0m
+[0;32mI (53198) app_main: Color: 2[0m
+[0;32mI (53198) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53198) app_main: OE-Pin: 0[0m
+[0;32mI (53198) app_main: row: 29, col: 29[0m
+[0;32mI (53298) app_main: Color: 0[0m
+[0;32mI (53298) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53298) app_main: OE-Pin: 0[0m
+[0;32mI (53298) app_main: row: 30, col: 30[0m
+[0;32mI (53398) app_main: Color: 1[0m
+[0;32mI (53398) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53398) app_main: OE-Pin: 0[0m
+[0;32mI (53398) app_main: row: 31, col: 31[0m
+[0;32mI (53498) app_main: Color: 2[0m
+[0;32mI (53498) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53498) app_main: OE-Pin: 0[0m
+[0;32mI (53498) app_main: row: 32, col: 32[0m
+[0;32mI (53598) app_main: Color: 0[0m
+[0;32mI (53598) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53598) app_main: OE-Pin: 0[0m
+[0;32mI (53598) app_main: row: 33, col: 33[0m
+[0;32mI (53698) app_main: Color: 1[0m
+[0;32mI (53698) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53698) app_main: OE-Pin: 0[0m
+[0;32mI (53698) app_main: row: 34, col: 34[0m
+[0;32mI (53798) app_main: Color: 2[0m
+[0;32mI (53798) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53798) app_main: OE-Pin: 0[0m
+[0;32mI (53798) app_main: row: 35, col: 35[0m
+[0;32mI (53898) app_main: Color: 0[0m
+[0;32mI (53898) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53898) app_main: OE-Pin: 0[0m
+[0;32mI (53898) app_main: row: 36, col: 36[0m
+[0;32mI (53998) app_main: Color: 1[0m
+[0;32mI (53998) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (53998) app_main: OE-Pin: 0[0m
+[0;32mI (53998) app_main: row: 37, col: 37[0m
+[0;32mI (54098) app_main: Color: 2[0m
+[0;32mI (54098) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54098) app_main: OE-Pin: 0[0m
+[0;32mI (54098) app_main: row: 38, col: 38[0m
+[0;32mI (54198) app_main: Color: 0[0m
+[0;32mI (54198) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54198) app_main: OE-Pin: 0[0m
+[0;32mI (54198) app_main: row: 39, col: 39[0m
+[0;32mI (54298) app_main: Color: 1[0m
+[0;32mI (54298) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54298) app_main: OE-Pin: 0[0m
+[0;32mI (54298) app_main: row: 40, col: 40[0m
+[0;32mI (54398) app_main: Color: 2[0m
+[0;32mI (54398) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54398) app_main: OE-Pin: 0[0m
+[0;32mI (54398) app_main: row: 41, col: 41[0m
+[0;32mI (54498) app_main: Color: 0[0m
+[0;32mI (54498) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54498) app_main: OE-Pin: 0[0m
+[0;32mI (54498) app_main: row: 42, col: 42[0m
+[0;32mI (54598) app_main: Color: 1[0m
+[0;32mI (54598) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54598) app_main: OE-Pin: 0[0m
+[0;32mI (54598) app_main: row: 43, col: 43[0m
+[0;32mI (54698) app_main: Color: 2[0m
+[0;32mI (54698) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54698) app_main: OE-Pin: 0[0m
+[0;32mI (54698) app_main: row: 44, col: 44[0m
+[0;32mI (54798) app_main: Color: 0[0m
+[0;32mI (54798) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54798) app_main: OE-Pin: 0[0m
+[0;32mI (54798) app_main: row: 45, col: 45[0m
+[0;32mI (54898) app_main: Color: 1[0m
+[0;32mI (54898) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54898) app_main: OE-Pin: 0[0m
+[0;32mI (54898) app_main: row: 46, col: 46[0m
+[0;32mI (54998) app_main: Color: 2[0m
+[0;32mI (54998) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (54998) app_main: OE-Pin: 0[0m
+[0;32mI (54998) app_main: row: 47, col: 47[0m
+[0;32mI (55098) app_main: Color: 0[0m
+[0;32mI (55098) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55098) app_main: OE-Pin: 0[0m
+[0;32mI (55098) app_main: row: 0, col: 48[0m
+[0;32mI (55198) app_main: Color: 1[0m
+[0;32mI (55198) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55198) app_main: OE-Pin: 0[0m
+[0;32mI (55198) app_main: row: 1, col: 49[0m
+[0;32mI (55298) app_main: Color: 2[0m
+[0;32mI (55298) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55298) app_main: OE-Pin: 0[0m
+[0;32mI (55298) app_main: row: 2, col: 50[0m
+[0;32mI (55398) app_main: Color: 0[0m
+[0;32mI (55398) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55398) app_main: OE-Pin: 0[0m
+[0;32mI (55398) app_main: row: 3, col: 51[0m
+[0;32mI (55498) app_main: Color: 1[0m
+[0;32mI (55498) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55498) app_main: OE-Pin: 0[0m
+[0;32mI (55498) app_main: row: 4, col: 52[0m
+[0;32mI (55598) app_main: Color: 2[0m
+[0;32mI (55598) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55598) app_main: OE-Pin: 0[0m
+[0;32mI (55598) app_main: row: 5, col: 53[0m
+[0;32mI (55698) app_main: Color: 0[0m
+[0;32mI (55698) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55698) app_main: OE-Pin: 0[0m
+[0;32mI (55698) app_main: row: 6, col: 54[0m
+[0;32mI (55798) app_main: Color: 1[0m
+[0;32mI (55798) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55798) app_main: OE-Pin: 0[0m
+[0;32mI (55798) app_main: row: 7, col: 55[0m
+[0;32mI (55898) app_main: Color: 2[0m
+[0;32mI (55898) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55898) app_main: OE-Pin: 0[0m
+[0;32mI (55898) app_main: row: 8, col: 56[0m
+[0;32mI (55998) app_main: Color: 0[0m
+[0;32mI (55998) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (55998) app_main: OE-Pin: 0[0m
+[0;32mI (55998) app_main: row: 9, col: 57[0m
+[0;32mI (56098) app_main: Color: 1[0m
+[0;32mI (56098) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56098) app_main: OE-Pin: 0[0m
+[0;32mI (56098) app_main: row: 10, col: 58[0m
+[0;32mI (56198) app_main: Color: 2[0m
+[0;32mI (56198) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56198) app_main: OE-Pin: 0[0m
+[0;32mI (56198) app_main: row: 11, col: 59[0m
+[0;32mI (56298) app_main: Color: 0[0m
+[0;32mI (56298) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56298) app_main: OE-Pin: 0[0m
+[0;32mI (56298) app_main: row: 12, col: 60[0m
+[0;32mI (56398) app_main: Color: 1[0m
+[0;32mI (56398) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56398) app_main: OE-Pin: 0[0m
+[0;32mI (56398) app_main: row: 13, col: 61[0m
+[0;32mI (56498) app_main: Color: 2[0m
+[0;32mI (56498) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56498) app_main: OE-Pin: 0[0m
+[0;32mI (56498) app_main: row: 14, col: 62[0m
+[0;32mI (56598) app_main: Color: 0[0m
+[0;32mI (56598) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56598) app_main: OE-Pin: 0[0m
+[0;32mI (56598) app_main: row: 15, col: 63[0m
+[0;32mI (56698) app_main: Color: 1[0m
+[0;32mI (56698) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56698) app_main: OE-Pin: 0[0m
+[0;32mI (56698) app_main: row: 16, col: 64[0m
+[0;32mI (56798) app_main: Color: 2[0m
+[0;32mI (56798) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56798) app_main: OE-Pin: 0[0m
+[0;32mI (56798) app_main: row: 17, col: 65[0m
+[0;32mI (56898) app_main: Color: 0[0m
+[0;32mI (56898) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56898) app_main: OE-Pin: 0[0m
+[0;32mI (56898) app_main: row: 18, col: 66[0m
+[0;32mI (56998) app_main: Color: 1[0m
+[0;32mI (56998) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (56998) app_main: OE-Pin: 0[0m
+[0;32mI (56998) app_main: row: 19, col: 67[0m
+[0;32mI (57098) app_main: Color: 2[0m
+[0;32mI (57098) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57098) app_main: OE-Pin: 0[0m
+[0;32mI (57098) app_main: row: 20, col: 68[0m
+[0;32mI (57198) app_main: Color: 0[0m
+[0;32mI (57198) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57198) app_main: OE-Pin: 0[0m
+[0;32mI (57198) app_main: row: 21, col: 69[0m
+[0;32mI (57298) app_main: Color: 1[0m
+[0;32mI (57298) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57298) app_main: OE-Pin: 0[0m
+[0;32mI (57298) app_main: row: 22, col: 70[0m
+[0;32mI (57398) app_main: Color: 2[0m
+[0;32mI (57398) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57398) app_main: OE-Pin: 0[0m
+[0;32mI (57398) app_main: row: 23, col: 71[0m
+[0;32mI (57498) app_main: Color: 0[0m
+[0;32mI (57498) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57498) app_main: OE-Pin: 0[0m
+[0;32mI (57498) app_main: row: 24, col: 72[0m
+[0;32mI (57598) app_main: Color: 1[0m
+[0;32mI (57598) DEBUG: ROW = 24 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57598) app_main: OE-Pin: 0[0m
+[0;32mI (57598) app_main: row: 25, col: 73[0m
+[0;32mI (57698) app_main: Color: 2[0m
+[0;32mI (57698) DEBUG: ROW = 25 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57698) app_main: OE-Pin: 0[0m
+[0;32mI (57698) app_main: row: 26, col: 74[0m
+[0;32mI (57798) app_main: Color: 0[0m
+[0;32mI (57798) DEBUG: ROW = 26 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57798) app_main: OE-Pin: 0[0m
+[0;32mI (57798) app_main: row: 27, col: 75[0m
+[0;32mI (57898) app_main: Color: 1[0m
+[0;32mI (57898) DEBUG: ROW = 27 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57898) app_main: OE-Pin: 0[0m
+[0;32mI (57898) app_main: row: 28, col: 76[0m
+[0;32mI (57998) app_main: Color: 2[0m
+[0;32mI (57998) DEBUG: ROW = 28 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (57998) app_main: OE-Pin: 0[0m
+[0;32mI (57998) app_main: row: 29, col: 77[0m
+[0;32mI (58098) app_main: Color: 0[0m
+[0;32mI (58098) DEBUG: ROW = 29 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58098) app_main: OE-Pin: 0[0m
+[0;32mI (58098) app_main: row: 30, col: 78[0m
+[0;32mI (58198) app_main: Color: 1[0m
+[0;32mI (58198) DEBUG: ROW = 30 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58198) app_main: OE-Pin: 0[0m
+[0;32mI (58198) app_main: row: 31, col: 79[0m
+[0;32mI (58298) app_main: Color: 2[0m
+[0;32mI (58298) DEBUG: ROW = 31 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58298) app_main: OE-Pin: 0[0m
+[0;32mI (58298) app_main: row: 32, col: 80[0m
+[0;32mI (58398) app_main: Color: 0[0m
+[0;32mI (58398) DEBUG: ROW = 32 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58398) app_main: OE-Pin: 0[0m
+[0;32mI (58398) app_main: row: 33, col: 81[0m
+[0;32mI (58498) app_main: Color: 1[0m
+[0;32mI (58498) DEBUG: ROW = 33 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58498) app_main: OE-Pin: 0[0m
+[0;32mI (58498) app_main: row: 34, col: 82[0m
+[0;32mI (58598) app_main: Color: 2[0m
+[0;32mI (58598) DEBUG: ROW = 34 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58598) app_main: OE-Pin: 0[0m
+[0;32mI (58598) app_main: row: 35, col: 83[0m
+[0;32mI (58698) app_main: Color: 0[0m
+[0;32mI (58698) DEBUG: ROW = 35 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58698) app_main: OE-Pin: 0[0m
+[0;32mI (58698) app_main: row: 36, col: 84[0m
+[0;32mI (58798) app_main: Color: 1[0m
+[0;32mI (58798) DEBUG: ROW = 36 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58798) app_main: OE-Pin: 0[0m
+[0;32mI (58798) app_main: row: 37, col: 85[0m
+[0;32mI (58898) app_main: Color: 2[0m
+[0;32mI (58898) DEBUG: ROW = 37 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58898) app_main: OE-Pin: 0[0m
+[0;32mI (58898) app_main: row: 38, col: 86[0m
+[0;32mI (58998) app_main: Color: 0[0m
+[0;32mI (58998) DEBUG: ROW = 38 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (58998) app_main: OE-Pin: 0[0m
+[0;32mI (58998) app_main: row: 39, col: 87[0m
+[0;32mI (59098) app_main: Color: 1[0m
+[0;32mI (59098) DEBUG: ROW = 39 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59098) app_main: OE-Pin: 0[0m
+[0;32mI (59098) app_main: row: 40, col: 88[0m
+[0;32mI (59198) app_main: Color: 2[0m
+[0;32mI (59198) DEBUG: ROW = 40 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59198) app_main: OE-Pin: 0[0m
+[0;32mI (59198) app_main: row: 41, col: 89[0m
+[0;32mI (59298) app_main: Color: 0[0m
+[0;32mI (59298) DEBUG: ROW = 41 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59298) app_main: OE-Pin: 0[0m
+[0;32mI (59298) app_main: row: 42, col: 90[0m
+[0;32mI (59398) app_main: Color: 1[0m
+[0;32mI (59398) DEBUG: ROW = 42 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59398) app_main: OE-Pin: 0[0m
+[0;32mI (59398) app_main: row: 43, col: 91[0m
+[0;32mI (59498) app_main: Color: 2[0m
+[0;32mI (59498) DEBUG: ROW = 43 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59498) app_main: OE-Pin: 0[0m
+[0;32mI (59498) app_main: row: 44, col: 92[0m
+[0;32mI (59598) app_main: Color: 0[0m
+[0;32mI (59598) DEBUG: ROW = 44 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59598) app_main: OE-Pin: 0[0m
+[0;32mI (59598) app_main: row: 45, col: 93[0m
+[0;32mI (59698) app_main: Color: 1[0m
+[0;32mI (59698) DEBUG: ROW = 45 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59698) app_main: OE-Pin: 0[0m
+[0;32mI (59698) app_main: row: 46, col: 94[0m
+[0;32mI (59798) app_main: Color: 2[0m
+[0;32mI (59798) DEBUG: ROW = 46 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59798) app_main: OE-Pin: 0[0m
+[0;32mI (59798) app_main: row: 47, col: 95[0m
+[0;32mI (59898) app_main: Color: 0[0m
+[0;32mI (59898) DEBUG: ROW = 47 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59898) app_main: OE-Pin: 0[0m
+[0;32mI (59898) app_main: row: 0, col: 0[0m
+[0;32mI (59998) app_main: Color: 1[0m
+[0;32mI (59998) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (59998) app_main: OE-Pin: 0[0m
+[0;32mI (59998) app_main: row: 1, col: 1[0m
+[0;32mI (60098) app_main: Color: 2[0m
+[0;32mI (60098) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60098) app_main: OE-Pin: 0[0m
+[0;32mI (60098) app_main: row: 2, col: 2[0m
+[0;32mI (60198) app_main: Color: 0[0m
+[0;32mI (60198) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60198) app_main: OE-Pin: 0[0m
+[0;32mI (60198) app_main: row: 3, col: 3[0m
+[0;32mI (60298) app_main: Color: 1[0m
+[0;32mI (60298) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (60298) app_main: OE-Pin: 0[0m
+[0;32mI (60298) app_main: row: 4, col: 4[0m

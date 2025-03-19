@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "stationfiftyone",
-    "project_version":    "ace9dbd-dirty",
+    "project_version":    "6047e59-dirty",
     "project_path":       "/home/ms/Documents/stationfiftyone",
     "idf_path":           "/home/ms/esp/esp-idf",
     "build_dir":          "/home/ms/Documents/stationfiftyone/build",
