@@ -1,0 +1,67 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev//ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/stationfiftyone/build/stationfiftyone.elf /home/ms/Documents/stationfiftyone/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev//ttyUSB0'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev//ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x400d8272: task_wdt_timeout_handling at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8634: task_wdt_isr at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008306d: _xt_lowint1 at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4008456d: esp_crosscore_int_send_yield at /home/ms/esp/esp-idf/components/esp_system/crosscore_int.c:124
+0x400883ce: vTaskDelay at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1588 (discriminator 1)
+0x400d6cb6: test_pattern at /home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c:167
+0x400d69fe: app_main at /home/ms/Documents/stationfiftyone/main/stationfiftyone.c:31
+0x400e6310: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40086919: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400d8272: task_wdt_timeout_handling at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8634: task_wdt_isr at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008306d: _xt_lowint1 at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4008456d: esp_crosscore_int_send_yield at /home/ms/esp/esp-idf/components/esp_system/crosscore_int.c:124
+0x400883ce: vTaskDelay at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1588 (discriminator 1)
+0x400d6cb6: test_pattern at /home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c:167
+0x400d69fe: app_main at /home/ms/Documents/stationfiftyone/main/stationfiftyone.c:31
+0x400e6310: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40086919: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400d8272: task_wdt_timeout_handling at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8634: task_wdt_isr at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008306d: _xt_lowint1 at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4008456d: esp_crosscore_int_send_yield at /home/ms/esp/esp-idf/components/esp_system/crosscore_int.c:124
+0x400883ce: vTaskDelay at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1588 (discriminator 1)
+0x400d6cb6: test_pattern at /home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c:167
+0x400d69fe: app_main at /home/ms/Documents/stationfiftyone/main/stationfiftyone.c:31
+0x400e6310: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40086919: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400d8272: task_wdt_timeout_handling at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8634: task_wdt_isr at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008306d: _xt_lowint1 at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4008456d: esp_crosscore_int_send_yield at /home/ms/esp/esp-idf/components/esp_system/crosscore_int.c:124
+0x400883ce: vTaskDelay at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:1588 (discriminator 1)
+0x400d6cb6: test_pattern at /home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c:167
+0x400d69fe: app_main at /home/ms/Documents/stationfiftyone/main/stationfiftyone.c:31
+0x400e6310: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40086919: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400d8272: task_wdt_timeout_handling at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8634: task_wdt_isr at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008306d: _xt_lowint1 at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d7120: gpio_ll_set_level at /home/ms/esp/esp-idf/components/hal/esp32/include/hal/gpio_ll.h:538
+ (inlined by) gpio_set_level at /home/ms/esp/esp-idf/components/esp_driver_gpio/src/gpio.c:239
+0x400d6c8e: test_pattern at /home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c:160
+0x400d69fe: app_main at /home/ms/Documents/stationfiftyone/main/stationfiftyone.c:31
+0x400e6310: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40086919: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x400d8272: task_wdt_timeout_handling at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8634: task_wdt_isr at /home/ms/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x4008306d: _xt_lowint1 at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d70a8: gpio_set_level at /home/ms/esp/esp-idf/components/esp_driver_gpio/src/gpio.c:238 (discriminator 2)
+0x400d6c8e: test_pattern at /home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c:160
+0x400d69fe: app_main at /home/ms/Documents/stationfiftyone/main/stationfiftyone.c:31
+0x400e6310: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40086919: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m

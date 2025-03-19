@@ -1,0 +1,407 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev//ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/stationfiftyone/build/stationfiftyone.elf /home/ms/Documents/stationfiftyone/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev//ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2025 19:09:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aea0h ( 44704) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001aec8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001aeec vaddr=3ffb0000 size=023fch (  9212) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=0001d2f0 vaddr=40080000 size=02d28h ( 11560) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1681ch ( 92188) map[0m
+[0;32mI (154) esp_image: segment 5: paddr=00036844 vaddr=40082d28 size=0a938h ( 43320) load[0m
+[0;32mI (177) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (177) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) app_init: Application information:[0m
+[0;32mI (196) app_init: Project name:     stationfiftyone[0m
+[0;32mI (201) app_init: App version:      ace9dbd-dirty[0m
+[0;32mI (205) app_init: Compile time:     Mar  7 2025 19:05:02[0m
+[0;32mI (210) app_init: ELF file SHA256:  ab2d4ea63...[0m
+[0;32mI (215) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (220) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (224) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (228) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (232) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFB62D0 len 00029D30 (167 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 4008D660 len 000129A0 (74 KiB): IRAM[0m
+[0;32mI (266) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) app_main: Running stationfiftyone[0m
+[0;32mI (294) test_pattern: Start test pattern[0m
+[0;32mI (394) test_pattern: Start test pattern[0m
+[0;32mI (494) test_pattern: Start test pattern[0m
+[0;32mI (594) test_pattern: Start test pattern[0m
+[0;32mI (694) test_pattern: Start test pattern[0m
+[0;32mI (794) test_pattern: Start test pattern[0m
+[0;32mI (894) test_pattern: Start test pattern[0m
+[0;32mI (994) test_pattern: Start test pattern[0m
+[0;32mI (1094) test_pattern: Start test pattern[0m
+[0;32mI (1194) test_pattern: Start test pattern[0m
+[0;32mI (1294) test_pattern: Start test pattern[0m
+[0;32mI (1394) test_pattern: Start test pattern[0m
+[0;32mI (1494) test_pattern: Start test pattern[0m
+[0;32mI (1594) test_pattern: Start test pattern[0m
+[0;32mI (1694) test_pattern: Start test pattern[0m
+[0;32mI (1794) test_pattern: Start test pattern[0m
+[0;32mI (1894) test_pattern: Start test pattern[0m
+[0;32mI (1994) test_pattern: Start test pattern[0m
+[0;32mI (2094) test_pattern: Start test pattern[0m
+[0;32mI (2194) test_pattern: Start test pattern[0m
+[0;32mI (2294) test_pattern: Start test pattern[0m
+[0;32mI (2394) test_pattern: Start test pattern[0m
+[0;32mI (2494) test_pattern: Start test pattern[0m
+[0;32mI (2594) test_pattern: Start test pattern[0m
+[0;32mI (2694) test_pattern: Start test pattern[0m
+[0;32mI (2794) test_pattern: Start test pattern[0m
+[0;32mI (2894) test_pattern: Start test pattern[0m
+[0;32mI (2994) test_pattern: Start test pattern[0m
+[0;32mI (3094) test_pattern: Start test pattern[0m
+[0;32mI (3194) test_pattern: Start test pattern[0m
+[0;32mI (3294) test_pattern: Start test pattern[0m
+[0;32mI (3394) test_pattern: Start test pattern[0m
+[0;32mI (3494) test_pattern: Start test pattern[0m
+[0;32mI (3594) test_pattern: Start test pattern[0m
+[0;32mI (3694) test_pattern: Start test pattern[0m
+[0;32mI (3794) test_pattern: Start test pattern[0m
+[0;32mI (3894) test_pattern: Start test pattern[0m
+[0;32mI (3994) test_pattern: Start test pattern[0m
+[0;32mI (4094) test_pattern: Start test pattern[0m
+[0;32mI (4194) test_pattern: Start test pattern[0m
+[0;32mI (4294) test_pattern: Start test pattern[0m
+[0;32mI (4394) test_pattern: Start test pattern[0m
+[0;32mI (4494) test_pattern: Start test pattern[0m
+[0;32mI (4594) test_pattern: Start test pattern[0m
+[0;32mI (4694) test_pattern: Start test pattern[0m
+[0;32mI (4794) test_pattern: Start test pattern[0m
+[0;32mI (4894) test_pattern: Start test pattern[0m
+[0;32mI (4994) test_pattern: Start test pattern[0m
+[0;32mI (5094) test_pattern: Start test pattern[0m
+[0;32mI (5194) test_pattern: Start test pattern[0m
+[0;32mI (5294) test_pattern: Start test pattern[0m
+[0;32mI (5394) test_pattern: Start test pattern[0m
+[0;32mI (5494) test_pattern: Start test pattern[0m
+[0;32mI (5594) test_pattern: Start test pattern[0m
+[0;32mI (5694) test_pattern: Start test pattern[0m
+[0;32mI (5794) test_pattern: Start test pattern[0m
+[0;32mI (5894) test_pattern: Start test pattern[0m
+[0;32mI (5994) test_pattern: Start test pattern[0m
+[0;32mI (6094) test_pattern: Start test pattern[0m
+[0;32mI (6194) test_pattern: Start test pattern[0m
+[0;32mI (6294) test_pattern: Start test pattern[0m
+[0;32mI (6394) test_pattern: Start test pattern[0m
+[0;32mI (6494) test_pattern: Start test pattern[0m
+[0;32mI (6594) test_pattern: Start test pattern[0m
+[0;32mI (6694) test_pattern: Start test pattern[0m
+[0;32mI (6794) test_pattern: Start test pattern[0m
+[0;32mI (6894) test_pattern: Start test pattern[0m
+[0;32mI (6994) test_pattern: Start test pattern[0m
+[0;32mI (7094) test_pattern: Start test pattern[0m
+[0;32mI (7194) test_pattern: Start test pattern[0m
+[0;32mI (7294) test_pattern: Start test pattern[0m
+[0;32mI (7394) test_pattern: Start test pattern[0m
+[0;32mI (7494) test_pattern: Start test pattern[0m
+[0;32mI (7594) test_pattern: Start test pattern[0m
+[0;32mI (7694) test_pattern: Start test pattern[0m
+[0;32mI (7794) test_pattern: Start test pattern[0m
+[0;32mI (7894) test_pattern: Start test pattern[0m
+[0;32mI (7994) test_pattern: Start test pattern[0m
+[0;32mI (8094) test_pattern: Start test pattern[0m
+[0;32mI (8194) test_pattern: Start test pattern[0m
+[0;32mI (8294) test_pattern: Start test pattern[0m
+[0;32mI (8394) test_pattern: Start test pattern[0m
+[0;32mI (8494) test_pattern: Start test pattern[0m
+[0;32mI (8594) test_pattern: Start test pattern[0m
+[0;32mI (8694) test_pattern: Start test pattern[0m
+[0;32mI (8794) test_pattern: Start test pattern[0m
+[0;32mI (8894) test_pattern: Start test pattern[0m
+[0;32mI (8994) test_pattern: Start test pattern[0m
+[0;32mI (9094) test_pattern: Start test pattern[0m
+[0;32mI (9194) test_pattern: Start test pattern[0m
+[0;32mI (9294) test_pattern: Start test pattern[0m
+[0;32mI (9394) test_pattern: Start test pattern[0m
+[0;32mI (9494) test_pattern: Start test pattern[0m
+[0;32mI (9594) test_pattern: Start test pattern[0m
+[0;32mI (9694) test_pattern: Start test pattern[0m
+[0;32mI (9794) test_pattern: Start test pattern[0m
+[0;32mI (9894) test_pattern: Start test pattern[0m
+[0;32mI (9994) test_pattern: Start test pattern[0m
+[0;32mI (10094) test_pattern: Start test pattern[0m
+[0;32mI (10194) test_pattern: Start test pattern[0m
+[0;32mI (10294) test_pattern: Start test pattern[0m
+[0;32mI (10394) test_pattern: Start test pattern[0m
+[0;32mI (10494) test_pattern: Start test pattern[0m
+[0;32mI (10594) test_pattern: Start test pattern[0m
+[0;32mI (10694) test_pattern: Start test pattern[0m
+[0;32mI (10794) test_pattern: Start test pattern[0m
+[0;32mI (10894) test_pattern: Start test pattern[0m
+[0;32mI (10994) test_pattern: Start test pattern[0m
+[0;32mI (11094) test_pattern: Start test pattern[0m
+[0;32mI (11194) test_pattern: Start test pattern[0m
+[0;32mI (11294) test_pattern: Start test pattern[0m
+[0;32mI (11394) test_pattern: Start test pattern[0m
+[0;32mI (11494) test_pattern: Start test pattern[0m
+[0;32mI (11594) test_pattern: Start test pattern[0m
+[0;32mI (11694) test_pattern: Start test pattern[0m
+[0;32mI (11794) test_pattern: Start test pattern[0m
+[0;32mI (11894) test_pattern: Start test pattern[0m
+[0;32mI (11994) test_pattern: Start test pattern[0m
+[0;32mI (12094) test_pattern: Start test pattern[0m
+[0;32mI (12194) test_pattern: Start test pattern[0m
+[0;32mI (12294) test_pattern: Start test pattern[0m
+[0;32mI (12394) test_pattern: Start test pattern[0m
+[0;32mI (12494) test_pattern: Start test pattern[0m
+[0;32mI (12594) test_pattern: Start test pattern[0m
+[0;32mI (12694) test_pattern: Start test pattern[0m
+[0;32mI (12794) test_pattern: Start test pattern[0m
+[0;32mI (12894) test_pattern: Start test pattern[0m
+[0;32mI (12994) test_pattern: Start test pattern[0m
+[0;32mI (13094) test_pattern: Start test pattern[0m
+[0;32mI (13194) test_pattern: Start test pattern[0m
+[0;32mI (13294) test_pattern: Start test pattern[0m
+[0;32mI (13394) test_pattern: Start test pattern[0m
+[0;32mI (13494) test_pattern: Start test pattern[0m
+[0;32mI (13594) test_pattern: Start test pattern[0m
+[0;32mI (13694) test_pattern: Start test pattern[0m
+[0;32mI (13794) test_pattern: Start test pattern[0m
+[0;32mI (13894) test_pattern: Start test pattern[0m
+[0;32mI (13994) test_pattern: Start test pattern[0m
+[0;32mI (14094) test_pattern: Start test pattern[0m
+[0;32mI (14194) test_pattern: Start test pattern[0m
+[0;32mI (14294) test_pattern: Start test pattern[0m
+[0;32mI (14394) test_pattern: Start test pattern[0m
+[0;32mI (14494) test_pattern: Start test pattern[0m
+[0;32mI (14594) test_pattern: Start test pattern[0m
+[0;32mI (14694) test_pattern: Start test pattern[0m
+[0;32mI (14794) test_pattern: Start test pattern[0m
+[0;32mI (14894) test_pattern: Start test pattern[0m
+[0;32mI (14994) test_pattern: Start test pattern[0m
+[0;32mI (15094) test_pattern: Start test pattern[0m
+[0;32mI (15194) test_pattern: Start test pattern[0m
+[0;32mI (15294) test_pattern: Start test pattern[0m
+[0;32mI (15394) test_pattern: Start test pattern[0m
+[0;32mI (15494) test_pattern: Start test pattern[0m
+[0;32mI (15594) test_pattern: Start test pattern[0m
+[0;32mI (15694) test_pattern: Start test pattern[0m
+[0;32mI (15794) test_pattern: Start test pattern[0m
+[0;32mI (15894) test_pattern: Start test pattern[0m
+[0;32mI (15994) test_pattern: Start test pattern[0m
+[0;32mI (16094) test_pattern: Start test pattern[0m
+[0;32mI (16194) test_pattern: Start test pattern[0m
+[0;32mI (16294) test_pattern: Start test pattern[0m
+[0;32mI (16394) test_pattern: Start test pattern[0m
+[0;32mI (16494) test_pattern: Start test pattern[0m
+[0;32mI (16594) test_pattern: Start test pattern[0m
+[0;32mI (16694) test_pattern: Start test pattern[0m
+[0;32mI (16794) test_pattern: Start test pattern[0m
+[0;32mI (16894) test_pattern: Start test pattern[0m
+[0;32mI (16994) test_pattern: Start test pattern[0m
+[0;32mI (17094) test_pattern: Start test pattern[0m
+[0;32mI (17194) test_pattern: Start test pattern[0m
+[0;32mI (17294) test_pattern: Start test pattern[0m
+[0;32mI (17394) test_pattern: Start test pattern[0m
+[0;32mI (17494) test_pattern: Start test pattern[0m
+[0;32mI (17594) test_pattern: Start test pattern[0m
+[0;32mI (17694) test_pattern: Start test pattern[0m
+[0;32mI (17794) test_pattern: Start test pattern[0m
+[0;32mI (17894) test_pattern: Start test pattern[0m
+[0;32mI (17994) test_pattern: Start test pattern[0m
+[0;32mI (18094) test_pattern: Start test pattern[0m
+[0;32mI (18194) test_pattern: Start test pattern[0m
+[0;32mI (18294) test_pattern: Start test pattern[0m
+[0;32mI (18394) test_pattern: Start test pattern[0m
+[0;32mI (18494) test_pattern: Start test pattern[0m
+[0;32mI (18594) test_pattern: Start test pattern[0m
+[0;32mI (18694) test_pattern: Start test pattern[0m
+[0;32mI (18794) test_pattern: Start test pattern[0m
+[0;32mI (18894) test_pattern: Start test pattern[0m
+[0;32mI (18994) test_pattern: Start test pattern[0m
+[0;32mI (19094) test_pattern: Start test pattern[0m
+[0;32mI (19194) test_pattern: Start test pattern[0m
+[0;32mI (19294) test_pattern: Start test pattern[0m
+[0;32mI (19394) test_pattern: Start test pattern[0m
+[0;32mI (19494) test_pattern: Start test pattern[0m
+[0;32mI (19594) test_pattern: Start test pattern[0m
+[0;32mI (19694) test_pattern: Start test pattern[0m
+[0;32mI (19794) test_pattern: Start test pattern[0m
+[0;32mI (19894) test_pattern: Start test pattern[0m
+[0;32mI (19994) test_pattern: Start test pattern[0m
+[0;32mI (20094) test_pattern: Start test pattern[0m
+[0;32mI (20194) test_pattern: Start test pattern[0m
+[0;32mI (20294) test_pattern: Start test pattern[0m
+[0;32mI (20394) test_pattern: Start test pattern[0m
+[0;32mI (20494) test_pattern: Start test pattern[0m
+[0;32mI (20594) test_pattern: Start test pattern[0m
+[0;32mI (20694) test_pattern: Start test pattern[0m
+[0;32mI (20794) test_pattern: Start test pattern[0m
+[0;32mI (20894) test_pattern: Start test pattern[0m
+[0;32mI (20994) test_pattern: Start test pattern[0m
+[0;32mI (21094) test_pattern: Start test pattern[0m
+[0;32mI (21194) test_pattern: Start test pattern[0m
+[0;32mI (21294) test_pattern: Start test pattern[0m
+[0;32mI (21394) test_pattern: Start test pattern[0m
+[0;32mI (21494) test_pattern: Start test pattern[0m
+[0;32mI (21594) test_pattern: Start test pattern[0m
+[0;32mI (21694) test_pattern: Start test pattern[0m
+[0;32mI (21794) test_pattern: Start test pattern[0m
+[0;32mI (21894) test_pattern: Start test pattern[0m
+[0;32mI (21994) test_pattern: Start test pattern[0m
+[0;32mI (22094) test_pattern: Start test pattern[0m
+[0;32mI (22194) test_pattern: Start test pattern[0m
+[0;32mI (22294) test_pattern: Start test pattern[0m
+[0;32mI (22394) test_pattern: Start test pattern[0m
+[0;32mI (22494) test_pattern: Start test pattern[0m
+[0;32mI (22594) test_pattern: Start test pattern[0m
+[0;32mI (22694) test_pattern: Start test pattern[0m
+[0;32mI (22794) test_pattern: Start test pattern[0m
+[0;32mI (22894) test_pattern: Start test pattern[0m
+[0;32mI (22994) test_pattern: Start test pattern[0m
+[0;32mI (23094) test_pattern: Start test pattern[0m
+[0;32mI (23194) test_pattern: Start test pattern[0m
+[0;32mI (23294) test_pattern: Start test pattern[0m
+[0;32mI (23394) test_pattern: Start test pattern[0m
+[0;32mI (23494) test_pattern: Start test pattern[0m
+[0;32mI (23594) test_pattern: Start test pattern[0m
+[0;32mI (23694) test_pattern: Start test pattern[0m
+[0;32mI (23794) test_pattern: Start test pattern[0m
+[0;32mI (23894) test_pattern: Start test pattern[0m
+[0;32mI (23994) test_pattern: Start test pattern[0m
+[0;32mI (24094) test_pattern: Start test pattern[0m
+[0;32mI (24194) test_pattern: Start test pattern[0m
+[0;32mI (24294) test_pattern: Start test pattern[0m
+[0;32mI (24394) test_pattern: Start test pattern[0m
+[0;32mI (24494) test_pattern: Start test pattern[0m
+[0;32mI (24594) test_pattern: Start test pattern[0m
+[0;32mI (24694) test_pattern: Start test pattern[0m
+[0;32mI (24794) test_pattern: Start test pattern[0m
+[0;32mI (24894) test_pattern: Start test pattern[0m
+[0;32mI (24994) test_pattern: Start test pattern[0m
+[0;32mI (25094) test_pattern: Start test pattern[0m
+[0;32mI (25194) test_pattern: Start test pattern[0m
+[0;32mI (25294) test_pattern: Start test pattern[0m
+[0;32mI (25394) test_pattern: Start test pattern[0m
+[0;32mI (25494) test_pattern: Start test pattern[0m
+[0;32mI (25594) test_pattern: Start test pattern[0m
+[0;32mI (25694) test_pattern: Start test pattern[0m
+[0;32mI (25794) test_pattern: Start test pattern[0m
+[0;32mI (25894) test_pattern: Start test pattern[0m
+[0;32mI (25994) test_pattern: Start test pattern[0m
+[0;32mI (26094) test_pattern: Start test pattern[0m
+[0;32mI (26194) test_pattern: Start test pattern[0m
+[0;32mI (26294) test_pattern: Start test pattern[0m
+[0;32mI (26394) test_pattern: Start test pattern[0m
+[0;32mI (26494) test_pattern: Start test pattern[0m
+[0;32mI (26594) test_pattern: Start test pattern[0m
+[0;32mI (26694) test_pattern: Start test pattern[0m
+[0;32mI (26794) test_pattern: Start test pattern[0m
+[0;32mI (26894) test_pattern: Start test pattern[0m
+[0;32mI (26994) test_pattern: Start test pattern[0m
+[0;32mI (27094) test_pattern: Start test pattern[0m
+[0;32mI (27194) test_pattern: Start test pattern[0m
+[0;32mI (27294) test_pattern: Start test pattern[0m
+[0;32mI (27394) test_pattern: Start test pattern[0m
+[0;32mI (27494) test_pattern: Start test pattern[0m
+[0;32mI (27594) test_pattern: Start test pattern[0m
+[0;32mI (27694) test_pattern: Start test pattern[0m
+[0;32mI (27794) test_pattern: Start test pattern[0m
+[0;32mI (27894) test_pattern: Start test pattern[0m
+[0;32mI (27994) test_pattern: Start test pattern[0m
+[0;32mI (28094) test_pattern: Start test pattern[0m
+[0;32mI (28194) test_pattern: Start test pattern[0m
+[0;32mI (28294) test_pattern: Start test pattern[0m
+[0;32mI (28394) test_pattern: Start test pattern[0m
+[0;32mI (28494) test_pattern: Start test pattern[0m
+[0;32mI (28594) test_pattern: Start test pattern[0m
+[0;32mI (28694) test_pattern: Start test pattern[0m
+[0;32mI (28794) test_pattern: Start test pattern[0m
+[0;32mI (28894) test_pattern: Start test pattern[0m
+[0;32mI (28994) test_pattern: Start test pattern[0m
+[0;32mI (29094) test_pattern: Start test pattern[0m
+[0;32mI (29194) test_pattern: Start test pattern[0m
+[0;32mI (29294) test_pattern: Start test pattern[0m
+[0;32mI (29394) test_pattern: Start test pattern[0m
+[0;32mI (29494) test_pattern: Start test pattern[0m
+[0;32mI (29594) test_pattern: Start test pattern[0m
+[0;32mI (29694) test_pattern: Start test pattern[0m
+[0;32mI (29794) test_pattern: Start test pattern[0m
+[0;32mI (29894) test_pattern: Start test pattern[0m
+[0;32mI (29994) test_pattern: Start test pattern[0m
+[0;32mI (30094) test_pattern: Start test pattern[0m
+[0;32mI (30194) test_pattern: Start test pattern[0m
+[0;32mI (30294) test_pattern: Start test pattern[0m
+[0;32mI (30394) test_pattern: Start test pattern[0m
+[0;32mI (30494) test_pattern: Start test pattern[0m
+[0;32mI (30594) test_pattern: Start test pattern[0m
+[0;32mI (30694) test_pattern: Start test pattern[0m
+[0;32mI (30794) test_pattern: Start test pattern[0m
+[0;32mI (30894) test_pattern: Start test pattern[0m
+[0;32mI (30994) test_pattern: Start test pattern[0m
+[0;32mI (31094) test_pattern: Start test pattern[0m
+[0;32mI (31194) test_pattern: Start test pattern[0m
+[0;32mI (31294) test_pattern: Start test pattern[0m
+[0;32mI (31394) test_pattern: Start test pattern[0m
+[0;32mI (31494) test_pattern: Start test pattern[0m
+[0;32mI (31594) test_pattern: Start test pattern[0m
+[0;32mI (31694) test_pattern: Start test pattern[0m
+[0;32mI (31794) test_pattern: Start test pattern[0m
+[0;32mI (31894) test_pattern: Start test pattern[0m
+[0;32mI (31994) test_pattern: Start test pattern[0m
+[0;32mI (32094) test_pattern: Start test pattern[0m
+[0;32mI (32194) test_pattern: Start test pattern[0m
+[0;32mI (32294) test_pattern: Start test pattern[0m
+[0;32mI (32394) test_pattern: Start test pattern[0m
+[0;32mI (32494) test_pattern: Start test pattern[0m
+[0;32mI (32594) test_pattern: Start test pattern[0m
+[0;32mI (32694) test_pattern: Start test pattern[0m
+[0;32mI (32794) test_pattern: Start test pattern[0m
+[0;32mI (32894) test_pattern: Start test pattern[0m
+[0;32mI (32994) test_pattern: Start test pattern[0m
+[0;32mI (33094) test_pattern: Start test pattern[0m
+[0;32mI (33194) test_pattern: Start test pattern[0m
+[0;32mI (33294) test_pattern: Start test pattern[0m
+[0;32mI (33394) test_pattern: Start test pattern[0m
+[0;32mI (33494) test_pattern: Start test pattern[0m
+[0;32mI (33594) test_pattern: Start test pattern[0m
+[0;32mI (33694) test_pattern: Start test pattern[0m
+[0;32mI (33794) test_pattern: Start test pattern[0m
+[0;32mI (33894) test_pattern: Start test pattern[0m
+[0;32mI (33994) test_pattern: Start test pattern[0m
+[0;32mI (34094) test_pattern: Start test pattern[0m
+[0;32mI (34194) test_pattern: Start test pattern[0m
+[0;32mI (34294) test_pattern: Start test pattern[0m
+[0;32mI (34394) test_pattern: Start test pattern[0m
+[0;32mI (34494) test_pattern: Start test pattern[0m
+[0;32mI (34594) test_pattern: Start test pattern[0m
+[0;32mI (34694) test_pattern: Start test pattern[0m
+[0;32mI (34794) test_pattern: Start test pattern[0m
+[0;32mI (34894) test_pattern: Start test pattern[0m
+[0;32mI (34994) test_pattern: Start test pattern[0m
+[0;32mI (35094) test_pattern: Start test pattern[0m
+[0;32mI (35194) test_pattern: Start test pattern[0m

@@ -1,0 +1,185 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/stationfiftyone/build/stationfiftyone.elf /home/ms/Documents/stationfiftyone/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2025 19:09:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.0[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a124h ( 41252) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001a14c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=0001a170 vaddr=3ffb0000 size=0236ch (  9068) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001c4e4 vaddr=40080000 size=03b34h ( 15156) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1486ch ( 84076) map[0m
+[0;32mI (150) esp_image: segment 5: paddr=00034894 vaddr=40083b34 size=09264h ( 37476) load[0m
+[0;32mI (171) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) app_init: Application information:[0m
+[0;32mI (190) app_init: Project name:     stationfiftyone[0m
+[0;32mI (194) app_init: App version:      ace9dbd-dirty[0m
+[0;32mI (199) app_init: Compile time:     Mar  7 2025 19:05:02[0m
+[0;32mI (204) app_init: ELF file SHA256:  08e97d8b1...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (214) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (217) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (237) heap_init: At 3FFB2C30 len 0002D3D0 (180 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (253) heap_init: At 4008CD98 len 00013268 (76 KiB): IRAM[0m
+[0;32mI (260) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (278) main_task: Started on CPU0[0m
+[0;32mI (288) main_task: Calling app_main()[0m
+[0;32mI (288) gpio: GPIO[23]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (288) gpio: GPIO[22]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (298) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (308) gpio: GPIO[17]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (308) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (318) gpio: GPIO[25]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (328) gpio: GPIO[26]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (338) gpio: GPIO[27]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (348) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (368) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (378) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (388) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) DEBUG: Start LED Test[0m
+[0;32mI (398) DEBUG: Setze A, B, C, D, E auf 1[0m
+[0;32mI (1398) DEBUG: Setze A, B, C, D, E auf 0[0m
+[0;32mI (2398) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2398) DEBUG: OE-Pin: 0[0m
+[0;32mI (2398) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2398) DEBUG: LAT Puls![0m
+[0;32mI (2498) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2498) DEBUG: OE-Pin: 0[0m
+[0;32mI (2498) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2498) DEBUG: LAT Puls![0m
+[0;32mI (2598) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2598) DEBUG: OE-Pin: 0[0m
+[0;32mI (2598) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2598) DEBUG: LAT Puls![0m
+[0;32mI (2698) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2698) DEBUG: OE-Pin: 0[0m
+[0;32mI (2698) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2698) DEBUG: LAT Puls![0m
+[0;32mI (2798) DEBUG: ROW = 4 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2798) DEBUG: OE-Pin: 0[0m
+[0;32mI (2798) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2798) DEBUG: LAT Puls![0m
+[0;32mI (2898) DEBUG: ROW = 5 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2898) DEBUG: OE-Pin: 0[0m
+[0;32mI (2898) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2898) DEBUG: LAT Puls![0m
+[0;32mI (2998) DEBUG: ROW = 6 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (2998) DEBUG: OE-Pin: 0[0m
+[0;32mI (2998) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (2998) DEBUG: LAT Puls![0m
+[0;32mI (3098) DEBUG: ROW = 7 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3098) DEBUG: OE-Pin: 0[0m
+[0;32mI (3098) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3098) DEBUG: LAT Puls![0m
+[0;32mI (3198) DEBUG: ROW = 8 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3198) DEBUG: OE-Pin: 0[0m
+[0;32mI (3198) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3198) DEBUG: LAT Puls![0m
+[0;32mI (3298) DEBUG: ROW = 9 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3298) DEBUG: OE-Pin: 0[0m
+[0;32mI (3298) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3298) DEBUG: LAT Puls![0m
+[0;32mI (3398) DEBUG: ROW = 10 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3398) DEBUG: OE-Pin: 0[0m
+[0;32mI (3398) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3398) DEBUG: LAT Puls![0m
+[0;32mI (3498) DEBUG: ROW = 11 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3498) DEBUG: OE-Pin: 0[0m
+[0;32mI (3498) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3498) DEBUG: LAT Puls![0m
+[0;32mI (3598) DEBUG: ROW = 12 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3598) DEBUG: OE-Pin: 0[0m
+[0;32mI (3598) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3598) DEBUG: LAT Puls![0m
+[0;32mI (3698) DEBUG: ROW = 13 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3698) DEBUG: OE-Pin: 0[0m
+[0;32mI (3698) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3698) DEBUG: LAT Puls![0m
+[0;32mI (3798) DEBUG: ROW = 14 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3798) DEBUG: OE-Pin: 0[0m
+[0;32mI (3798) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3798) DEBUG: LAT Puls![0m
+[0;32mI (3898) DEBUG: ROW = 15 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3898) DEBUG: OE-Pin: 0[0m
+[0;32mI (3898) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3898) DEBUG: LAT Puls![0m
+[0;32mI (3998) DEBUG: ROW = 16 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (3998) DEBUG: OE-Pin: 0[0m
+[0;32mI (3998) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (3998) DEBUG: LAT Puls![0m
+[0;32mI (4098) DEBUG: ROW = 17 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4098) DEBUG: OE-Pin: 0[0m
+[0;32mI (4098) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4098) DEBUG: LAT Puls![0m
+[0;32mI (4198) DEBUG: ROW = 18 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4198) DEBUG: OE-Pin: 0[0m
+[0;32mI (4198) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4198) DEBUG: LAT Puls![0m
+[0;32mI (4298) DEBUG: ROW = 19 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4298) DEBUG: OE-Pin: 0[0m
+[0;32mI (4298) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4298) DEBUG: LAT Puls![0m
+[0;32mI (4398) DEBUG: ROW = 20 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4398) DEBUG: OE-Pin: 0[0m
+[0;32mI (4398) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4398) DEBUG: LAT Puls![0m
+[0;32mI (4498) DEBUG: ROW = 21 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4498) DEBUG: OE-Pin: 0[0m
+[0;32mI (4498) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4498) DEBUG: LAT Puls![0m
+[0;32mI (4598) DEBUG: ROW = 22 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4598) DEBUG: OE-Pin: 0[0m
+[0;32mI (4598) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4598) DEBUG: LAT Puls![0m
+[0;32mI (4698) DEBUG: ROW = 23 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4698) DEBUG: OE-Pin: 0[0m
+[0;32mI (4698) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4698) DEBUG: LAT Puls![0m
+[0;32mI (4798) DEBUG: ROW = 0 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4798) DEBUG: OE-Pin: 0[0m
+[0;32mI (4798) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4798) DEBUG: LAT Puls![0m
+[0;32mI (4898) DEBUG: ROW = 1 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4898) DEBUG: OE-Pin: 0[0m
+[0;32mI (4898) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4898) DEBUG: LAT Puls![0m
+[0;32mI (4998) DEBUG: ROW = 2 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (4998) DEBUG: OE-Pin: 0[0m
+[0;32mI (4998) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (4998) DEBUG: LAT Puls![0m
+[0;32mI (5098) DEBUG: ROW = 3 | A=0, B=0, C=0, D=0, E=0[0m
+[0;32mI (5098) DEBUG: OE-Pin: 0[0m
+[0;32mI (5098) DEBUG: CLK-Puls gesendet.[0m
+[0;32mI (5098) DEBUG: LAT Puls![0m

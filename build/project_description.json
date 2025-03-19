@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "stationfiftyone",
-    "project_version":    "1",
+    "project_version":    "ace9dbd-dirty",
     "project_path":       "/home/ms/Documents/stationfiftyone",
     "idf_path":           "/home/ms/esp/esp-idf",
     "build_dir":          "/home/ms/Documents/stationfiftyone/build",
@@ -1210,7 +1210,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/ms/Documents/stationfiftyone/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/ms/Documents/stationfiftyone/main/stationfiftyone.c" ],
+            "sources": [ "/home/ms/Documents/stationfiftyone/main/stationfiftyone.c", "/home/ms/Documents/stationfiftyone/main/waveshare_matrixpanel_96x48.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
