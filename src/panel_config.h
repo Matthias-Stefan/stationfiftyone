@@ -47,4 +47,5 @@ typedef struct _adafruit_bonnet_pinout_s
     u32 post_addr_delay;
 } adafruit_bonnet_pinout_s;
 
+
 adafruit_bonnet_pinout_s create_adafruit_bonnet_pinout();
