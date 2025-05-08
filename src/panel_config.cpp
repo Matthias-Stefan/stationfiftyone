@@ -1,8 +1,8 @@
 #include "panel_config.h"
 
-hub75_adafruit_bonnet_pinout_s create_adafruit_bonnet_pinout()
+adafruit_bonnet_pinout_s create_adafruit_bonnet_pinout()
 {
-    hub75_adafruit_bonnet_pinout_s result = {};
+    adafruit_bonnet_pinout_s result = {};
     result.pin_rgb = { 5, 13, 6, 12, 16, 23 };
     result.pin_addr = { 22, 26, 27, 20, 24 };
     result.pin_oe = 4;

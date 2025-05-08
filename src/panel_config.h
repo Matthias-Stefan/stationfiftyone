@@ -2,10 +2,8 @@
 
 #include "defines.h"
 
-/** @brief */
 typedef u8 gpio_pin;
 
-/** @brief */
 typedef enum _rgb_index_e
 {
     R1 = 0,
@@ -18,7 +16,6 @@ typedef enum _rgb_index_e
     RGB_INDEX_MAX
 } rgb_index_e;
 
-/** @brief */
 typedef enum _addr_index_e {
     A = 0,
     B,
@@ -29,8 +26,7 @@ typedef enum _addr_index_e {
     ADDR_INDEX_MAX
 } addr_index_e;
 
-/** @brief */
-typedef struct _hub75_adafruit_bonnet_pinout_s 
+typedef struct _adafruit_bonnet_pinout_s 
 {
     gpio_pin pin_rgb[RGB_INDEX_MAX];
     gpio_pin pin_addr[ADDR_INDEX_MAX];  
@@ -49,7 +45,6 @@ typedef struct _hub75_adafruit_bonnet_pinout_s
     u32 post_oe_delay;
     u32 post_latch_delay;
     u32 post_addr_delay;
-} hub75_adafruit_bonnet_pinout_s;
+} adafruit_bonnet_pinout_s;
 
-/** @brief */
-hub75_adafruit_bonnet_pinout_s create_adafruit_bonnet_pinout();
+adafruit_bonnet_pinout_s create_adafruit_bonnet_pinout();
