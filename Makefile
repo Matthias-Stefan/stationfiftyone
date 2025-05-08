@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -O2 -std=c++20
+CXXFLAGS = -Wall -Wextra -O0 -g -std=c++20
 LDFLAGS = -lgpiod
 
 SRC_DIR = src

@@ -7,6 +7,10 @@ In the **first stage**, the focus is on bringing up a **Waveshare RGB LED Matrix
 
 <pre> 
 stationfiftyone/
+├── .vscode/
+│   └── c_cpp_properties.json
+│   └── launch.json
+│   └── tasks.json
 ├── src/
 │   └── defines.h
 │   └── hub75_driver.cpp

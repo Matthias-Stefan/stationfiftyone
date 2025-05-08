@@ -2,9 +2,12 @@
 
 #include "panel_config.h"
 
+#include <gpiod.h>
+
 typedef struct _hub75_driver_s 
 {
     adafruit_bonnet_pinout_s pinout;
+    gpiod_chip* chip;
 } hub75_driver_s;
 
 
