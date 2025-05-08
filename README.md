@@ -8,7 +8,10 @@ In the **first stage**, the focus is on bringing up a **Waveshare RGB LED Matrix
 <pre> 
 stationfiftyone/
 ├── src/
+│   └── defines.h
 │   └── main.cpp
+│   └── panel_config.cpp
+│   └── panel_config.h
 ├── Makefile
 └── README.md 
 </pre>
