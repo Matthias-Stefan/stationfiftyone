@@ -1,0 +1,15 @@
+CXX = g++
+CXXFLAGS = -Wall -Wextra -O2 -std=c++17
+LDFLAGS = -lgpiod
+
+SRC_DIR = src
+SRC = $(shell find $(SRC_DIR) -name '*.cpp')
+OUT = stationfiftyone
+
+all: $(OUT)
+
+$(OUT): $(SRC)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
+
+clean:
+	rm -f $(OUT)
