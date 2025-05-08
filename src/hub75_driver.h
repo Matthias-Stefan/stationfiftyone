@@ -2,9 +2,13 @@
 
 #include "panel_config.h"
 
-struct hub75_driver_s;
+typedef struct _hub75_driver_s 
+{
+    adafruit_bonnet_pinout_s pinout;
+} hub75_driver_s;
 
-hub75_driver_s* hub75_create(const adafruit_bonnet_pinout_s* pinout);
+
+b8 hub75_create(const adafruit_bonnet_pinout_s* pinout, hub75_driver_s* out_hub75_driver);
 
 void hub75_destroy(hub75_driver_s* driver);
 
