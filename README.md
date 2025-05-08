@@ -9,6 +9,8 @@ In the **first stage**, the focus is on bringing up a **Waveshare RGB LED Matrix
 stationfiftyone/
 ├── src/
 │   └── defines.h
+│   └── hub75_driver.cpp
+│   └── hub75_driver.h
 │   └── main.cpp
 │   └── panel_config.cpp
 │   └── panel_config.h
