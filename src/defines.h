@@ -2,6 +2,9 @@
 
 #include <stdbool.h>
 
+#define MATRIX_PANEL_WIDTH 96
+#define MATRIX_PANEL_HEIGHT 48
+
 // unsigned int types.
 
 /** @brief unsigned 8-bit integer */

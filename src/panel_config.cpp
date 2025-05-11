@@ -15,7 +15,7 @@ adafruit_bonnet_pinout_s create_adafruit_bonnet_pinout()
     result.pin_addr[B] = 26;
     result.pin_addr[C] = 27;
     result.pin_addr[D] = 20;
-    result.pin_addr[E] = 24;
+    result.pin_addr[E] = 8;
 
     result.pin_oe = 4;
     result.pin_clk = 17;

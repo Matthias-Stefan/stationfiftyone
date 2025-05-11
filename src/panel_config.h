@@ -2,6 +2,8 @@
 
 #include "defines.h"
 
+#define HUB75_PIN_COUNT 14
+
 typedef u8 gpio_pin;
 
 typedef enum _rgb_index_e

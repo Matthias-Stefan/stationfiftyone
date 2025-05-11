@@ -8,6 +8,7 @@ typedef struct _hub75_driver_s
 {
     adafruit_bonnet_pinout_s pinout;
     gpiod_chip* chip;
+    gpiod_line* lines[32];
 } hub75_driver_s;
 
 
