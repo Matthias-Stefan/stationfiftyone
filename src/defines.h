@@ -3,7 +3,20 @@
 #include <stdbool.h>
 
 #define MATRIX_PANEL_WIDTH 96
+
 #define MATRIX_PANEL_HEIGHT 48
+
+#define MATRIX_PANEL_HEIGHT_HALF 24
+
+
+typedef enum _rgb_e
+{
+    r,
+    g,
+    b,
+
+    RGB_MAX
+} rgb_e;
 
 // unsigned int types.
 

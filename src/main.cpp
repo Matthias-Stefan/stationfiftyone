@@ -6,7 +6,11 @@
 #include <iostream>
 #include <unistd.h> 
 
+// vcgencmd measure_temp
 
+
+#define TARGET_FPS 60
+#define FRAME_TIME_US (1000000 / TARGET_FPS) 
 
 static u8 framebuffer[MATRIX_PANEL_HEIGHT][MATRIX_PANEL_WIDTH][3];
 
@@ -20,14 +24,21 @@ int main()
         return 1;
     }
 
-    for (int y = 0; y < MATRIX_PANEL_HEIGHT; ++y) 
+    for (int y = 0; y < MATRIX_PANEL_HEIGHT; ++y)
     {
-        int Color = 255;
-        for (int x = 0; x < MATRIX_PANEL_WIDTH; ++x) 
+        u8 red = 64;
+        if (y < 12)
         {
-            framebuffer[y][x][0] = Color;
-            framebuffer[y][x][1] = 0;
-            framebuffer[y][x][2] = Color;
+            red = 128;
+        }
+        u8 green = 255;
+        u8 blue = 0;
+
+        for (int x = 0; x < MATRIX_PANEL_WIDTH; ++x)
+        {
+            framebuffer[y][x][r] = red;
+            framebuffer[y][x][g] = green;
+            framebuffer[y][x][b] = blue;
         }
     }
 
@@ -36,20 +47,33 @@ int main()
 
     while (true) 
     {
-        for (int y = 0; y < 24; ++y)
+        for (int pwm_level = 0; pwm_level < PWM_STEPS; ++pwm_level)
         {
-            u8 row_data[MATRIX_PANEL_WIDTH * 3] = {};
-            for (int x = 0; x < MATRIX_PANEL_WIDTH; ++x)
+            for (int y = 0; y < MATRIX_PANEL_HEIGHT_HALF; ++y)
             {
-                row_data[x * 3 + 0] = framebuffer[y][x][0];
-                row_data[x * 3 + 1] = framebuffer[y][x][1];
-                row_data[x * 3 + 2] = framebuffer[y][x][2];
-            }
+                u8 row_data[MATRIX_PANEL_WIDTH * 6] = {};
+                for (int x = 0; x < MATRIX_PANEL_WIDTH; ++x)
+                {
+                    u8 r1 = framebuffer[y][x][r] >> 6;
+                    u8 g1 = framebuffer[y][x][g] >> 6;
+                    u8 b1 = framebuffer[y][x][b] >> 6;
 
-            hub75_draw_row(&driver, y, row_data);
-            hub75_show(&driver);
+                    u8 r2 = framebuffer[y + MATRIX_PANEL_HEIGHT_HALF][x][r] >> 6;
+                    u8 g2 = framebuffer[y + MATRIX_PANEL_HEIGHT_HALF][x][g] >> 6;
+                    u8 b2 = framebuffer[y + MATRIX_PANEL_HEIGHT_HALF][x][b] >> 6;
+
+                    row_data[x * 6 + 0] = (r1 > pwm_level) ? 255 : 0;
+                    row_data[x * 6 + 1] = (g1 > pwm_level) ? 255 : 0;
+                    row_data[x * 6 + 2] = (b1 > pwm_level) ? 255 : 0;
+                    row_data[x * 6 + 3] = (r2 > pwm_level) ? 255 : 0;
+                    row_data[x * 6 + 4] = (g2 > pwm_level) ? 255 : 0;
+                    row_data[x * 6 + 5] = (b2 > pwm_level) ? 255 : 0;
+                }
+
+                hub75_draw_row(&driver, y, row_data);
+                hub75_show(&driver);
+            }
         }
-        
         frame_count++;
 
         auto now = std::chrono::steady_clock::now();

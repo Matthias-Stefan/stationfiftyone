@@ -15,6 +15,7 @@ static void gpio_write_pin(hub75_driver_s* driver, u8 pin, b8 value)
     if (result != 0)
     {
         int x = 5;
+        (void)x;
     }
 }
 
@@ -45,15 +46,32 @@ b8 hub75_create(const adafruit_bonnet_pinout_s* pinout, hub75_driver_s* out_hub7
     u8 all_pins[HUB75_PIN_COUNT] = {
         pinout->pin_rgb[R1], pinout->pin_rgb[G1], pinout->pin_rgb[B1],
         pinout->pin_rgb[R2], pinout->pin_rgb[G2], pinout->pin_rgb[B2],
-        pinout->pin_addr[A], pinout->pin_addr[B], pinout->pin_addr[C], pinout->pin_addr[D], pinout->pin_addr[E],
+        pinout->pin_addr[A_Addr], pinout->pin_addr[B_Addr], pinout->pin_addr[C_Addr], pinout->pin_addr[D_Addr], pinout->pin_addr[E_Addr],
         pinout->pin_oe, pinout->pin_lat, pinout->pin_clk
     };
 
     for (int pin_idx = 0; pin_idx < HUB75_PIN_COUNT; ++pin_idx)
     {
         u8 pin = all_pins[pin_idx];
-        out_hub75_driver->lines[pin] = gpiod_chip_get_line(out_hub75_driver->chip, pin);
-        gpiod_line_request_output(out_hub75_driver->lines[pin], "stationfiftyone", 0);
+        gpiod_line* line = gpiod_chip_get_line(out_hub75_driver->chip, pin);
+        if (!line || gpiod_line_request_output(line, "hub75", 0) != 0)
+            return false;
+
+        out_hub75_driver->lines[pin] = line;
+    }
+
+    gpiod_line_bulk_init(&out_hub75_driver->rgb_bulk);
+
+    gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[R1]]);
+    gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[G1]]);
+    gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[B1]]);
+    gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[R2]]);
+    gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[G2]]);
+    gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[B2]]);
+
+    if (gpiod_line_bulk_num_lines(&out_hub75_driver->rgb_bulk) != 6)
+    {   
+        return false;
     }
 
     return true;
@@ -84,36 +102,27 @@ void hub75_draw_row(hub75_driver_s* driver, u8 row, const u8* rgb_data)
 {
     const auto& p = driver->pinout;
 
-    int a = (row >> A) & 1;
-    int b = (row >> B) & 1;
-    int c = (row >> C) & 1;
-    int d = (row >> D) & 1;
-    int e = (row >> E) & 1;
+    gpio_write_pin(driver, p.pin_addr[A_Addr], (row >> 0) & 1);
+    gpio_write_pin(driver, p.pin_addr[B_Addr], (row >> 1) & 1);
+    gpio_write_pin(driver, p.pin_addr[C_Addr], (row >> 2) & 1);
+    gpio_write_pin(driver, p.pin_addr[D_Addr], (row >> 3) & 1);
+    gpio_write_pin(driver, p.pin_addr[E_Addr], (row >> 4) & 1);
 
-    gpio_write_pin(driver, p.pin_addr[A], a);
-    gpio_write_pin(driver, p.pin_addr[B], b);
-    gpio_write_pin(driver, p.pin_addr[C], c);
-    gpio_write_pin(driver, p.pin_addr[D], d);
-    gpio_write_pin(driver, p.pin_addr[E], e);
+    int values[6] = {0};
 
-    // TODO: get right color shit
     for (int x = 0; x < MATRIX_PANEL_WIDTH; ++x) 
     {
-        u8 r = rgb_data[x * 3 + 0];
-        u8 g = rgb_data[x * 3 + 1];
-        u8 b = rgb_data[x * 3 + 2];
+        const u8* px = &rgb_data[x * 6];
 
-        gpio_write_pin(driver, p.pin_rgb[R1], r > 127);
-        gpio_write_pin(driver, p.pin_rgb[G1], g > 127);
-        gpio_write_pin(driver, p.pin_rgb[B1], b > 127);
+        values[0] = px[0] == 255 ? 1 : 0; // R1
+        values[1] = px[1] == 255 ? 1 : 0; // G1
+        values[2] = px[2] == 255 ? 1 : 0; // B1
+        values[3] = px[3] == 255 ? 1 : 0; // R2
+        values[4] = px[4] == 255 ? 1 : 0; // G2
+        values[5] = px[5] == 255 ? 1 : 0; // B2
 
-        gpio_write_pin(driver, p.pin_rgb[R2], r > 127);
-        gpio_write_pin(driver, p.pin_rgb[G2], g > 127);
-        gpio_write_pin(driver, p.pin_rgb[B2], b > 127);
+        int result = gpiod_line_set_value_bulk(&driver->rgb_bulk, values);
 
         gpio_pulse_pin(driver, p.pin_clk);
     }
-
-    int end = 5;
-    (void)end;
 }

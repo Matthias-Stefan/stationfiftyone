@@ -19,11 +19,11 @@ typedef enum _rgb_index_e
 } rgb_index_e;
 
 typedef enum _addr_index_e {
-    A = 0,
-    B,
-    C,
-    D,
-    E,
+    A_Addr = 0,
+    B_Addr,
+    C_Addr,
+    D_Addr,
+    E_Addr,
 
     ADDR_INDEX_MAX
 } addr_index_e;
