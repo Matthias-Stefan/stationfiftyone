@@ -11,12 +11,7 @@
 
 static void gpio_write_pin(hub75_driver_s* driver, u8 pin, b8 value) 
 {
-    int result = gpiod_line_set_value(driver->lines[pin], value);
-    if (result != 0)
-    {
-        int x = 5;
-        (void)x;
-    }
+    gpiod_line_set_value(driver->lines[pin], value);
 }
 
 
@@ -54,10 +49,18 @@ b8 hub75_create(const adafruit_bonnet_pinout_s* pinout, hub75_driver_s* out_hub7
     {
         u8 pin = all_pins[pin_idx];
         gpiod_line* line = gpiod_chip_get_line(out_hub75_driver->chip, pin);
-        if (!line || gpiod_line_request_output(line, "hub75", 0) != 0)
-            return false;
-
         out_hub75_driver->lines[pin] = line;
+    }
+
+    for (int pin_idx = RGB_INDEX_MAX; pin_idx < HUB75_PIN_COUNT; ++pin_idx)
+    {
+        u8 pin = all_pins[pin_idx];
+        gpiod_line* line = out_hub75_driver->lines[pin];
+
+        if (!line || gpiod_line_request_output(line, "hub75_driver", 0) != 0)
+        {
+            return false;
+        }
     }
 
     gpiod_line_bulk_init(&out_hub75_driver->rgb_bulk);
@@ -68,6 +71,18 @@ b8 hub75_create(const adafruit_bonnet_pinout_s* pinout, hub75_driver_s* out_hub7
     gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[R2]]);
     gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[G2]]);
     gpiod_line_bulk_add(&out_hub75_driver->rgb_bulk, out_hub75_driver->lines[pinout->pin_rgb[B2]]);
+
+    struct gpiod_line_request_config config = {
+        .consumer = "hub75_driver",
+        .request_type = GPIOD_LINE_REQUEST_DIRECTION_OUTPUT,
+        .flags = 0
+    };
+
+    int default_vals[] = { 0, 0, 0, 0, 0, 0 };
+    if (gpiod_line_request_bulk(&out_hub75_driver->rgb_bulk, &config, default_vals) < 0) 
+    {
+        return false;
+    }
 
     if (gpiod_line_bulk_num_lines(&out_hub75_driver->rgb_bulk) != 6)
     {   
@@ -122,7 +137,6 @@ void hub75_draw_row(hub75_driver_s* driver, u8 row, const u8* rgb_data)
         values[5] = px[5] == 255 ? 1 : 0; // B2
 
         int result = gpiod_line_set_value_bulk(&driver->rgb_bulk, values);
-
         gpio_pulse_pin(driver, p.pin_clk);
     }
 }

@@ -19,6 +19,7 @@ typedef struct _hub75_driver_s
     gpiod_chip* chip;
     gpiod_line* lines[32];
     gpiod_line_bulk rgb_bulk;
+    gpiod_line_bulk addr_bulk;
 } hub75_driver_s;
 
 

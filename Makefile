@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -O0 -g -std=c++20
 LDFLAGS = -lgpiod
 
 SRC_DIR = src
-SRC = $(shell find $(SRC_DIR) -name '*.cpp')
+SRC = $(shell find $(SRC_DIR) -name '*.c')
 OUT = stationfiftyone
 
 all: $(OUT)

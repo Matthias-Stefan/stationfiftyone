@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug stationfiftyone",
+      "name": "Debug stationfiftyone (sudo)",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/stationfiftyone",
@@ -10,7 +10,7 @@
       "stopAtEntry": true,
       "cwd": "${workspaceFolder}",
       "environment": [],
-      "externalConsole": false,
+      "externalConsole": true,
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",
       "preLaunchTask": "Build stationfiftyone",
@@ -20,7 +20,15 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "linux": {
+        "command": "sudo",
+        "args": [
+          "gdb",
+          "--interpreter=mi",
+          "${workspaceFolder}/stationfiftyone"
+        ]
+      }
     }
   ]
 }
